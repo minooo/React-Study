@@ -1,10 +1,6 @@
 ## 学前准备
 
-###本人电脑环境：
-
-1. ####系统：win10
-
-2. ####确保[node](http://nodejs.cn/)安装。（建议安装6.0+版本）
+1. ####确保[node](http://nodejs.cn/)安装。（建议安装6.0+版本）【必需】  
     node是一个服务器端的JavaScript的解释器。旨在提供一种简单的构建可伸缩网络程序的方法。
     我们这里主要使用npm这个强大的包管理器，那为什么不直接介绍npm呢，因为npm是node内置的。
     npm是包管理器，包括安装，卸载，更新，查看，搜索，发布等。
@@ -17,8 +13,8 @@
     - 更新 npm update XXX
     - 搜索 npm search XXX
 
-3. ####编译器: [webstorm](https://www.jetbrains.com/webstorm/)
-    [webstorm](https://www.jetbrains.com/webstorm/) 算是本人用过的最顺手的IDE了，它被称作前端开发神器，既然是神器，那它有哪些过人之处呢。
+1. ####编译器: [webstorm](https://www.jetbrains.com/webstorm/)【强烈建议】
+    webstorm 算是本人用过的最顺手的前端IDE了，它被称作前端开发神器，既然是神器，那它有哪些过人之处呢。
     - 智能的代码提，丰富的导航功能，敏捷的错误侦测，强大的语言重构。
     - webstorm紧随潮流，支持Angular,React,Meteor等流行前卫框架。
     - 内置功能强劲的工具方便调试，测试，追踪你的客户端和Node.js应用。
