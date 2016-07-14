@@ -27,9 +27,72 @@ react-dom.js。同时，react-dom.js依赖于react.js。
 ####[webpack-dev-middleware](https://npm.taobao.org/package/webpack-dev-middleware) [开发需要]
 > 它是一个用来组织包装webpack使其变成中间件的容器。（中间件的用途就是在输入和输出的过程中加工的一种手段）
 webpack本身只负责打包编译，webpack-dev-server是协助我们开发的服务器，这个服务器底层是靠express操作的。
-我们的页面如何在这个服务器上更新呢，首先是取得webpack打包好的资源，这就需要在请求到响应的过程中通过
+我们的页面如何在这个服务器上更新呢，首先是取得webpack打包好的资源，这就需要在`请求`到`响应`的过程中通过
 express的中间件取得资料， 而方法就是通过webpack-dev-middleware来实现。
 这个中间件只在开发环境中使用，切忌用在生产环境中。
-这个中间件有两点好处：
-1. webpack编译的结果会直接写在内存中
-1. 
+安装：`npm install --save-dev webpack-dev-middleware`
+
+####这个中间件有两点好处：
+
+1. 直接在内存中操作文件，而非磁盘中。这样处理速度更快。
+1. 在监视（watch）模式下，如果文件改变，中间件立即停止提供之前的bundle，并且会延迟
+请求回应，直到新的编译完成，如此一来，文件修改后，你可以直接刷新页面，而不用等待编译。
+
+---
+
+####[webpack-hot-middleware](https://npm.taobao.org/package/webpack-hot-middleware) [开发需要]
+>  `webpack-dev-middleware` + `webpack-hot-middleware` 即可让我们用 `express` 
+定制一个有热替换功能的 `webpack` 开发服务器。
+安装：`npm install --save-dev webpack-hot-middleware`
+
+---
+
+####[babel-core](https://npm.taobao.org/package/babel-core) [必需]
+> Babel是一个转换编译器，它能将ES6转换成可以在浏览器中运行的代码。作为下一代javascript语言标准，请拥抱
+ES6(ES2015)吧！`babel-core` 是Babel编译器的核心。
+安装：`npm install --save-dev babel-core`
+
+---
+
+####[babel-loader](https://npm.taobao.org/package/babel-loader) [必需]
+> loader 用于转换应用程序的资源文件，他们是运行在nodejs下的函数，
+使用参数来获取一个资源的来源并且返回一个新的来源针对webpack的babel加载器。
+`babel-loader` 就是告诉webpack去加载我们写的使用了es6语法的js文件。
+安装：`npm install --save-dev babel-loader`
+
+---
+
+####[babel-preset-es2015](https://github.com/babel/babel) [必需]
+> es2015转码规则。为所有es6插件所设置的babel预设，有了它，诸如，es6的箭头函数，类，等等语法特性才能向es5转换。
+安装：`npm install --save-dev babel-preset-es2015`
+
+---
+
+####[babel-preset-es2015-loose](https://github.com/bkonkle/babel-preset-es2015-loose) [非必需]
+> 使es6转译成的es5更具有兼容性！
+安装：`npm install --save-dev babel-preset-es2015-loose babel-preset-es2015`
+
+---
+
+####[babel-preset-react](https://github.com/babel/babel) [必需]
+> react转码规则。为所有react插件所设置的babel预设。有了它，才能识别转译jsx语法等。
+安装：`npm install --save-dev babel-preset-react`
+
+---
+
+####[babel-preset-stage-X](https://npm.taobao.org/package/babel-preset-stage-0) [必需]
+> ES7不同阶段语法提案的转码规则（共有4个阶段），选装**一个**
+在进行实际开发时，可以更具需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。
+npm install --save-dev babel-preset-stage-0
+npm install --save-dev babel-preset-stage-1
+npm install --save-dev babel-preset-stage-2
+npm install --save-dev babel-preset-stage-3
+[stage-X详解](http://www.cnblogs.com/flyingzl/p/5501247.html)
+
+---
+
+####[react-hot-loader](https://npm.taobao.org/package/react-hot-loader) [开发需要]
+> 可以使react组件在浏览器上实时更新而无需手动刷新。
+安装：`npm install --save-dev react-hot-loader`
+
+---
