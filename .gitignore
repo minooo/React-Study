@@ -1,6 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
-package.json
-step-01/node_modules/
 *.log
 node_modules

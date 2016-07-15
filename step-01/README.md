@@ -80,6 +80,12 @@ ES6(ES2015)吧！`babel-core` 是Babel编译器的核心。
 
 ---
 
+####[babel-preset-react-hmre](https://npm.taobao.org/package/babel-preset-react-hmre) [开发需要]
+> 一个babel的预设，关于React组件的热替换和错误捕捉。
+安装：`npm install --save-dev babel-preset-react-hmre`
+
+---
+
 ####[babel-preset-stage-X](https://npm.taobao.org/package/babel-preset-stage-0) [必需]
 > ES7不同阶段语法提案的转码规则（共有4个阶段），选装**一个**
 在进行实际开发时，可以更具需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。
@@ -96,3 +102,18 @@ npm install --save-dev babel-preset-stage-3
 安装：`npm install --save-dev react-hot-loader`
 
 ---
+
+####[html-webpack-plugin](https://npm.taobao.org/package/html-webpack-plugin) [小工具]
+> 一个服务于webpack打包资源的简易的HTML文件生成器。
+安装：`npm install --save-dev html-webpack-plugin`
+
+---
+
+####[express](https://npm.taobao.org/package/express) [开发需要]
+> 基于 Node.js 平台，快速、开放、极简的 web 开发框架。
+在这里用于配置开发服务器。
+安装：`npm install --save-dev express`
+
+---
+
+
