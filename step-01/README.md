@@ -100,6 +100,7 @@ npm install --save-dev babel-preset-stage-3
 ####[react-hot-loader](https://npm.taobao.org/package/react-hot-loader) [开发需要]
 > 可以使react组件在浏览器上实时更新而无需手动刷新。
 安装：`npm install --save-dev react-hot-loader`
+备注：rhl 3.0即将发布。
 
 ---
 
@@ -115,5 +116,3 @@ npm install --save-dev babel-preset-stage-3
 安装：`npm install --save-dev express`
 
 ---
-
-
