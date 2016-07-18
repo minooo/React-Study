@@ -2,8 +2,7 @@
 
 ####[react.js](https://facebook.github.io/react/index.html) [必需]
 > React是用来构建用户界面的js库，属于view层。  
-  它有两大特点：1，单向数据绑定；2，虚拟DOM
-  安装：`npm install --save react`
+  它有两大特点：1，单向数据绑定；2，虚拟DOM  安装：`npm install --save react`
   
 ---
 
