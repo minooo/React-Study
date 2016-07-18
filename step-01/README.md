@@ -81,9 +81,10 @@ express的中间件取得资料， 而方法就是通过webpack-dev-middleware�
 
 ---
 
-####[babel-preset-react-hmre](https://npm.taobao.org/package/babel-preset-react-hmre) [开发需要]  
-> 一个babel的预设，关于React组件的热替换和错误捕捉。  
-安装：`npm install --save-dev babel-preset-react-hmre`
+####[react-hot-loader](https://npm.taobao.org/package/react-hot-loader) [开发需要]  
+> 可以使react组件在浏览器上实时更新而无需手动刷新。  
+安装：`npm install --save-dev react-hot-loader`  
+备注：rhl 3.0即将发布。
 
 ---
 
@@ -98,15 +99,9 @@ npm install --save-dev babel-preset-stage-3
 
 ---
 
-####[react-hot-loader](https://npm.taobao.org/package/react-hot-loader) [开发需要]  
-> 可以使react组件在浏览器上实时更新而无需手动刷新。  
-安装：`npm install --save-dev react-hot-loader`  
-备注：rhl 3.0即将发布。
-
----
-
 ####[html-webpack-plugin](https://npm.taobao.org/package/html-webpack-plugin) [小工具]  
-> 一个服务于webpack打包资源的简易的HTML文件生成器。  
+> 一个服务于webpack打包资源的简易的HTML文件生成器,它可以动态生成HTML  
+之所以要动态生成，主要是希望webpack在完成前端资源打包以后，自动将打包后的资源路径和版本号写入HTML中，达到自动化的效果
 安装：`npm install --save-dev html-webpack-plugin`  
 
 ---
