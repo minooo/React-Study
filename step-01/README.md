@@ -20,6 +20,16 @@
 如何把这些资源模块“杂糅”在一起，这就是webpack要做的。  
 安装：`npm install --save-dev webpack`  
 备注：webpack 2.0 即将发布  
+webpack 最基本的启动webpack命令  
+webpack -w 提供watch方法，实时进行打包更新  
+webpack -p 压缩混淆脚本，这个非常非常重要！  
+webpack -d 生成map映射文件，告知哪些模块被最终打包到哪里了,方便调试  
+webpack --progress 显示打包进程，百分比显示  
+webpack --config XXX.js //使用另一份配置文件（比如webpack.config2.js）来打包
+webpack --colors 输出结果带彩色，比如：会用红色显示耗时较长的步骤  
+webpack --profile 输出性能数据，可以看到每一步的耗时  
+webpack  --display-error-details 方便出错时能查阅更详尽的信息（比如 webpack 寻找模块的过程），从而更好定位到问题。  
+webpack --display-modules 默认情况下 node_modules 下的模块会被隐藏，加上这个参数可以显示这些被隐藏的模块  
 [webpack入门配置](https://segmentfault.com/a/1190000005089993)
 
 ---
@@ -83,8 +93,8 @@ express的中间件取得资料， 而方法就是通过webpack-dev-middleware�
 
 ####[react-hot-loader](https://npm.taobao.org/package/react-hot-loader) [开发需要]  
 > 可以使react组件在浏览器上实时更新而无需手动刷新。  
-安装：`npm install --save-dev react-hot-loader`  
-备注：rhl 3.0即将发布。
+安装：`npm install --save-dev react-hot-loader@3.0.0-beta.2`  
+备注：用的是3.0最新版本，这版本很强大。
 
 ---
 
@@ -110,5 +120,23 @@ npm install --save-dev babel-preset-stage-3
 > 基于 Node.js 平台，快速、开放、极简的 web 开发框架。  
 在这里用于配置开发服务器。  
 安装：`npm install --save-dev express`
+
+---
+
+####[open-browser-webpack-plugin](https://npm.taobao.org/package/open-browser-webpack-plugin) [小工具]
+> 当webpack加载完成后，将自动打开浏览器（一般你需要手动打开，并且要输入localhost:3000），懒癌患者的福音。  
+安装：`npm install --save-dev open-browser-webpack-plugin`
+
+---
+
+####[cross-env](https://npm.taobao.org/package/cross-env) [小工具]
+> 它可以处理windows和其他Unix系统在设置环境变量的写法上不一致的问题。  
+安装：`npm install --save-dev cross-env`
+
+---
+
+####[rimraf](https://npm.taobao.org/package/rimraf) [小工具]
+> 一个基于node的深层删除工具（楼主曾经用window自带的删除命令删node_modules花了十分钟，用这个删十秒搞定！）  
+安装：`npm install --save-dev rimraf`
 
 ---
