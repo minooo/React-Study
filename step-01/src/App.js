@@ -68,15 +68,15 @@ class Counter extends Component {
 }
 
 export default class App extends Component {
-  state = { 
+  state = {
     names: [
-      {name: '123d'},
+      {name: '11'},
       {name: 'tom'},
-      {name: 'james'},
+      {name: 'jame'},
       {name: 'minooo'}
-    ] 
+    ]
   };
-    
+
   render() {
     const {names} = this.state;
     return (
@@ -88,6 +88,8 @@ export default class App extends Component {
         }
         <Counter increment={10} color={NICE} />
         <Counter increment={5} color={SUPER_NICE} />
+        <h1>sdsdff</h1>
+        <h2>minooo</h2>
       </div>
     );
   }
