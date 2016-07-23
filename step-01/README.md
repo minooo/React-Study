@@ -1,4 +1,35 @@
-## 需要哪些包
+# 基础前端模板
+
+这是React-Study的第一个版本，
+它综合运用了react+webpack+es2015。
+用处：
+这是一个基础的，综合运用react+webpack+es2015的模板，
+
+## 核心摘要
+
+- [x] [Webpack](https://webpack.github.io)
+- [x] [React](https://facebook.github.io/react/)
+- [x] [Babel](https://babeljs.io/)
+
+## 安装包
+
+```
+$ npm install
+```
+
+## 启动 开发模式
+
+```
+$ npm start
+```
+
+## 启动 生产模式（打包输出）
+
+```
+$ npm run build
+```
+
+## 本模板所用到的所有包的相关简要说明
 
 ####[react.js](https://facebook.github.io/react/index.html) [必需]
 > React是用来构建用户界面的js库，属于view层。  
@@ -134,3 +165,7 @@ npm install --save-dev babel-preset-stage-3
 安装：`npm install --save-dev rimraf`
 
 ---
+
+# License
+
+MIT
