@@ -14,6 +14,8 @@ var port = 3000;
 var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, {
   noInfo: true,
+  // 如果false，将会给你列出一大堆无聊的信息。
+  
   publicPath: config.output.publicPath,
   stats: {
     colors: true

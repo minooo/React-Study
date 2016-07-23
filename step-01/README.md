@@ -123,12 +123,6 @@ npm install --save-dev babel-preset-stage-3
 
 ---
 
-####[open-browser-webpack-plugin](https://npm.taobao.org/package/open-browser-webpack-plugin) [小工具]
-> 当webpack加载完成后，将自动打开浏览器（一般你需要手动打开，并且要输入localhost:3000），懒癌患者的福音。  
-安装：`npm install --save-dev open-browser-webpack-plugin`
-
----
-
 ####[cross-env](https://npm.taobao.org/package/cross-env) [小工具]
 > 它可以处理windows和其他Unix系统在设置环境变量的写法上不一致的问题。  
 安装：`npm install --save-dev cross-env`

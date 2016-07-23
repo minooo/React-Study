@@ -19,7 +19,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     // 这里reload=true的意思是，如果碰到不能hot reload的情况，就整页刷新。
-    path.resolve(__dirname, 'src/index.js'),
+    path.resolve(__dirname, 'src/index.js')
   ],
   // 页面入口文件配置
 
@@ -64,7 +64,7 @@ module.exports = {
       title: '开发模式',
       filename:'index.html',          //生成的html存放路径，相对于 path
       favicon:'src/favicon.ico',      //favicon路径
-      template:'src/index.tpl.html',  //html模板路径
+      template:'src/template.html',  //html模板路径
       inject:'body',                  //js插入的位置，true/'head'  false/'body'
       hash:true,                      //为静态资源生成hash值,作用就是清除缓存
       minify:{                        //压缩HTML文件
