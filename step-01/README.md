@@ -16,6 +16,9 @@
 - [x] [React](https://facebook.github.io/react/)
 - [x] [Babel](https://babeljs.io/)
 
+## [DEMO](https://raw.githubusercontent.com/minooo/test/master/react-study-01.gif)
+点击上方DEMO预览
+
 ## 安装包
 
 ```
@@ -109,9 +112,11 @@ express的中间件取得资料， 而方法就是通过webpack-dev-middleware�
 ---
 
 #### [babel-polyfill](https://github.com/babel/babel) [必需]
-> Babel默认只转换新的JavaScript语法，而不是转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect，Symbol、Promise
-等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。举例来说，ES6在Array对象上新增了Array.from方法。Babel
-就不会转码这个方法，如果想让这个方法运行，必须使用babel-polyfill
+> Babel默认只转换新的JavaScript语法，而不是转换新的API，  
+比如Iterator、Generator、Set、Maps、Proxy、Reflect，Symbol、Promise等全局对象，  
+以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。  
+举例来说，ES6在Array对象上新增了Array.from方法。  
+Babel就不会转码这个方法，如果想让这个方法运行，必须使用babel-polyfill  
 安装：`npm install --save babel-polyfill`
 
 ####[babel-preset-es2015](https://github.com/babel/babel) [必需]  
@@ -148,6 +153,11 @@ npm install --save-dev babel-preset-stage-1
 npm install --save-dev babel-preset-stage-2  
 npm install --save-dev babel-preset-stage-3  
 [stage-X详解](http://www.cnblogs.com/flyingzl/p/5501247.html)
+
+---
+
+####[redbox-react](https://github.com/KeywordBrain/redbox-react) [开发需要]  
+> 这个插件将会以一个非常优雅的方式（看demo演示）将你的错误呈现在页面上，这样就省去了查看console.log的麻烦；
 
 ---
 

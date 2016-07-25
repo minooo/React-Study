@@ -1,10 +1,6 @@
 {
-  "presets": ["es2015", "react", "es2015-loose", "stage-0"]
+  "presets": ["es2015", "react", "es2015-loose", "stage-0"],
   // stage-0 一定要放在最右边。这样组件中才可以直接用state，而不是放在construct里
 
-  // "plugins": ["react-hot-loader/babel"]
-  // 这个设置可以进行更深层次的热替换，如开启，可以实现如：改变计时器颜色，计时器不会从0开始
-  // 但是数组map的数据发生改变却不会热替换，而这个经常用到，思考再三，这个设置被我默认关闭
-  // 关闭之后，数组map的数据发生改变可以热替换，但是诸如计时器要从0开始计时了
-
+  "plugins": ["react-hot-loader/babel"]
 }
