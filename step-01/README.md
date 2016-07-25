@@ -1,9 +1,14 @@
 # 基础前端模板
 
-这是React-Study的第一个版本，
-它综合运用了react+webpack+es2015。
-用处：
-这是一个基础的，综合运用react+webpack+es2015的模板，
+本模板综合运用了react+webpack+es2015。  
+本模板是向着实际应用的目的，一步一步升级配置。  
+这是React-Study的第一个版本，它提供了React基础应用。  
+如果你刚学习react，这版本再适合你不过，练手用的！  
+本模板有两种模式：  
+
+1. 开发模式————有热替换功能
+1. 生产模式————将你的资源进行打包，压缩等。
+
 
 ## 核心摘要
 
@@ -29,7 +34,7 @@ $ npm start
 $ npm run build
 ```
 
-## 本模板所用到的所有包的相关简要说明
+## 本模板用到的 __所有包__ 的相关简要说明
 
 ####[react.js](https://facebook.github.io/react/index.html) [必需]
 > React是用来构建用户界面的js库，属于view层。  
@@ -102,6 +107,12 @@ express的中间件取得资料， 而方法就是通过webpack-dev-middleware�
 安装：`npm install --save-dev babel-loader`
 
 ---
+
+#### [babel-polyfill](https://github.com/babel/babel) [必需]
+> Babel默认只转换新的JavaScript语法，而不是转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect，Symbol、Promise
+等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。举例来说，ES6在Array对象上新增了Array.from方法。Babel
+就不会转码这个方法，如果想让这个方法运行，必须使用babel-polyfill
+安装：`npm install --save babel-polyfill`
 
 ####[babel-preset-es2015](https://github.com/babel/babel) [必需]  
 > es2015转码规则。为所有es6插件所设置的babel预设，  

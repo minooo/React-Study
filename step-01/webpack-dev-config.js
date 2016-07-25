@@ -6,7 +6,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
@@ -57,21 +56,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // 启用热替换,仅开发模式需要
 
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoErrorsPlugin()
     // 允许错误不打断程序，,仅开发模式需要
-
-    new HtmlWebpackPlugin({           //根据模板插入css/js等生成最终HTML
-      title: '开发模式',
-      filename:'index.html',          //生成的html存放路径，相对于 path
-      favicon:'src/favicon.ico',      //favicon路径
-      template:'src/template.html',  //html模板路径
-      inject:'body',                  //js插入的位置，true/'head'  false/'body'
-      hash:true,                      //为静态资源生成hash值,作用就是清除缓存
-      minify:{                        //压缩HTML文件
-        removeComments:true,          //移除HTML中的注释
-        collapseWhitespace:false      //删除空白符与换行符
-      }
-    }),
 
   ]
 };
