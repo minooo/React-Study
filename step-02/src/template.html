@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!--
+      描述：head中无需再引入css以及facicon，
+      webpack将根据入口JS文件的要求自动实现按需加载或者生成style标签
+  -->
+</head>
+<body>
+<div id="app"></div>
+<!--
+    描述：body中同样无需单独引入JS文件，
+    webpack会根据入口JS文件自动实现按需加载或者生成script标签，
+    还可以生成对应的hash值
+-->
+</body>
+</html>

@@ -146,7 +146,7 @@ Babel就不会转码这个方法，如果想让这个方法运行，必须使用
 
 ####[babel-preset-stage-X](https://npm.taobao.org/package/babel-preset-stage-0) [必需]  
 > ES7不同阶段语法提案的转码规则（共有4个阶段），选装**一个**  
-在进行实际开发时，可以根据需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。  
+在进行实际开发时，可以更具需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。  
 npm install --save-dev babel-preset-stage-0  
 npm install --save-dev babel-preset-stage-1  
 npm install --save-dev babel-preset-stage-2  
