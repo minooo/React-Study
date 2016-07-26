@@ -126,8 +126,8 @@ Babel就不会转码这个方法，如果想让这个方法运行，必须使用
 ---
 
 ####[babel-preset-es2015-loose](https://github.com/bkonkle/babel-preset-es2015-loose) [非必需]  
-> 使es6转译成的es5更具有兼容性！  
-安装：`npm install --save-dev babel-preset-es2015-loose babel-preset-es2015`
+> 使es6转译成的es5更具有兼容性！在移动端，很多安卓手机兼容性比较差，你懂的  
+安装：`npm install --save-dev babel-preset-es2015-loose`
 
 ---
 
