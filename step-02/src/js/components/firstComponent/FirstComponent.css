@@ -1,0 +1,6 @@
+.toRed {
+    color: red;
+    display: flex;
+    flexDirection: row;
+    justifyContent: center
+}

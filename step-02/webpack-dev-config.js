@@ -35,6 +35,15 @@ module.exports = {
   },
   // 文件输出目录
 
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    // 启用热替换,仅开发模式需要
+
+    new webpack.NoErrorsPlugin()
+    // 允许错误不打断程序，,仅开发模式需要
+  ],
+
   resolve: {
     extensions: ['', '.js', 'jsx']
   },
@@ -46,18 +55,22 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['babel'],
-        exclude: /node_modules/,
-        include: __dirname
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'src/js'),
+        loaders: [
+          'style',
+          'css?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
+          'postcss'
+        ]
       }
     ]
   },
-
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    // 启用热替换,仅开发模式需要
-
-    new webpack.NoErrorsPlugin()
-    // 允许错误不打断程序，,仅开发模式需要
-
-  ]
+  postcss: function (webpack) {
+    return [
+      require('autoprefixer')
+    ];
+  }
 };
