@@ -1,0 +1,46 @@
+@import "nihao.scss";
+
+$blue: #056ef0;
+$column: 200px;
+.toRed {
+  color: $blue;
+  display: flex;
+  flexDirection: row;
+  justifyContent: center
+}
+.myDiv {
+  width: calc(4 * $column);
+  @if 3 < 5 {
+    background: green;
+  } @else {
+    background: blue;
+  }
+}
+.myDiv2 {
+  composes: big from './nihao.scss';
+  margin: 20px;
+  padding: @margin;
+  position: relative 20% auto;
+}
+
+@define-mixin icon $name {
+  padding-left: 16px;
+
+  &::after {
+    content: "";
+    background-url: url(/icons/$(name).png);
+  }
+}
+
+.search {
+  @mixin icon
+  search;
+}
+
+@define-extend bgGreen {
+  background: green;
+}
+
+.noticeGlear {
+  @extend bgGreen;
+}
