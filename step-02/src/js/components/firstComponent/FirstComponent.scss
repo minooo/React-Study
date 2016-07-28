@@ -1,12 +1,51 @@
 @import "nihao.scss";
 
 $blue: #056ef0;
+$baseFontSize:  24px !default;
 $column: 200px;
+@alias {
+  fs: font-size;
+  br: border-radius;
+}
+.toYellow {
+  background: yellow;
+}
+.toRed2 {
+  background: red;
+}
 .toRed {
   color: $blue;
   display: flex;
-  flexDirection: row;
-  justifyContent: center
+  font-size: $baseFontSize;
+}
+
+@define-mixin center-block {
+  background: #000;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+li:between(4, 6) {
+  color: blue;
+}
+
+.myUlhj {
+  @mixin center-block;
+  li {
+    background: red;
+    margin-bottom: 10px;
+    fs: 25px;
+  }
+}
+input::placeholder {
+  color: red;
+  opacity: 0.8;
 }
 .myDiv {
   width: calc(4 * $column);
@@ -17,6 +56,7 @@ $column: 200px;
   }
 }
 
+
 //noinspection ALL
 .myDiv2 {
   composes: big from './nihao.scss';
@@ -26,25 +66,20 @@ $column: 200px;
 }
 
 //noinspection ALL
-@define-mixin icon $name {
-  padding-left: 16px;
-
-  &::after {
-    content: "";
-    background-url: url(/icons/$(name).png);
-  }
-}
-
-.search {
-  @mixin icon
-  search;
-}
-
-//noinspection ALL
 @define-extend bgGreen {
   background: green;
 }
 
 .noticeGlear {
   @extend bgGreen;
+}
+
+.parent {
+  background: white;
+
+  @at-root{
+    .child {
+      background: black;
+    }
+  }
 }
