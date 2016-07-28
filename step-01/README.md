@@ -190,5 +190,4 @@ npm install --save-dev babel-preset-stage-3
 QQ群：419922267
 
 # License
-
 MIT

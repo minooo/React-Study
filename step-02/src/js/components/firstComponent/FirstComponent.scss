@@ -16,6 +16,8 @@ $column: 200px;
     background: blue;
   }
 }
+
+//noinspection ALL
 .myDiv2 {
   composes: big from './nihao.scss';
   margin: 20px;
@@ -23,6 +25,7 @@ $column: 200px;
   position: relative 20% auto;
 }
 
+//noinspection ALL
 @define-mixin icon $name {
   padding-left: 16px;
 
@@ -37,6 +40,7 @@ $column: 200px;
   search;
 }
 
+//noinspection ALL
 @define-extend bgGreen {
   background: green;
 }
