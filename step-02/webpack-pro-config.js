@@ -3,9 +3,8 @@
  *
  * 注意。两种模式的配置有较大差异！！
  */
-
+var rucksack = require('rucksack-css');
 var path = require('path');
-
 var webpack = require('webpack');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -103,9 +102,25 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['babel'],
-        exclude: /node_modules/,
-        include: __dirname
+        exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/js'),
+        loaders: [
+          'style',
+          'css?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
+          'postcss?parser=postcss-scss'
+        ]
       }
     ]
+  },
+  postcss: function () {
+    return [
+      rucksack({
+        autoprefixer: true
+      }),
+      require('precss')
+    ];
   }
-}
+};
