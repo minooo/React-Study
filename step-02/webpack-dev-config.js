@@ -65,7 +65,15 @@ module.exports = {
           'css?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
           'postcss?parser=postcss-scss'
         ]
+      },
+      // 组件样式，需要私有化，单独配置
+
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/styles'),
+        loader: 'style!css!postcss?parser=postcss-scss'
       }
+      // 公有样式，不需要私有化，单独配置
     ]
   },
   postcss: function () {

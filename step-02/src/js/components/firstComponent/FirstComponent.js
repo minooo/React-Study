@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 import classNames from 'classnames';
 import styles from './FirstComponent.scss'
 
-class FirstComponent extends Component {
+class CssTest extends Component {
   state = {
     nihao: false
   };
@@ -13,7 +13,7 @@ class FirstComponent extends Component {
     this.setState({nihao: !this.state.nihao})
     console.log(this.state.nihao)
   };
-  
+
   render() {
 
     const cx = classNames({
@@ -36,6 +36,17 @@ class FirstComponent extends Component {
           <li>ccc</li>
           <li>nihao</li>
         </ul>
+      </div>
+    )
+  }
+}
+
+class FirstComponent extends Component {
+  
+  render() {
+    return (
+      <div>
+        <CssTest />
       </div>
     )
   }
