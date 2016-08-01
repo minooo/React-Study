@@ -174,12 +174,6 @@ npm install --save-dev babel-preset-stage-3
 
 ---
 
-####[cross-env](https://npm.taobao.org/package/cross-env) [小工具]
-> 它可以处理windows和其他Unix系统在设置环境变量的写法上不一致的问题。  
-安装：`npm install --save-dev cross-env`
-
----
-
 ####[rimraf](https://npm.taobao.org/package/rimraf) [小工具]
 > 一个基于node的深层删除工具（楼主曾经用window自带的删除命令删node_modules花了十分钟，用这个删十秒搞定！）  
 安装：`npm install --save-dev rimraf`

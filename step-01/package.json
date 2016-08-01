@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "clean": "rimraf dist",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack-pro-config.js --progress --colors",
+    "build:webpack": "webpack --config webpack-pro-config.js --progress --colors",
     "build": "npm run clean && npm run build:webpack"
   },
   "keywords": [
@@ -28,7 +28,6 @@
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
-    "cross-env": "^2.0.0",
     "express": "^4.14.0",
     "html-webpack-plugin": "^2.22.0",
     "react-hot-loader": "^3.0.0-beta.2",

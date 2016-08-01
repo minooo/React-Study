@@ -34,7 +34,7 @@ class FirstComponent extends Component {
           <li>aaa</li>
           <li>bbb</li>
           <li>ccc</li>
-          <li>ccc</li>
+          <li>nihao</li>
         </ul>
       </div>
     )
@@ -42,3 +42,4 @@ class FirstComponent extends Component {
 }
 
 export default CSSModules(FirstComponent, styles);
+

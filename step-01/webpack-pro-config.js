@@ -54,6 +54,9 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    // 很多库的内部，有process.NODE_ENV的判断语句，
+    // 改为production。最直观的就是没有所有的debug相关的东西，体积会减少很多
+
 
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js' ),
     // 'vendor' 就是把依赖库(比如react react-router, redux)全部打包到 vendor.js中
