@@ -89,6 +89,3 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 
 ---
 
-# License
-
-MIT
