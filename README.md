@@ -40,10 +40,10 @@
     - 预处理语言的支持，使less、sass、cofeescript 等等语言的自动编译变得很简单。
     - **内置版本控制系统——VCS**。
 
+## 开发交流
+QQ群： [419922267](http://jq.qq.com/?_wv=1027&k=2FnzuGM)
+
 # License
 MIT
-
-## 开发交流
-QQ群： 419922267
 
     
