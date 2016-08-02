@@ -179,6 +179,4 @@ npm install --save-dev babel-preset-stage-3
 
 ---
 
-## 开发交流
-QQ群：419922267
 
