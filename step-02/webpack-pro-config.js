@@ -26,9 +26,9 @@ module.exports = {
   // 文件输出配置
 
     path: path.join(__dirname, 'dist'),
-    // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
+    // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它.
 
-    publicPath: '',
+    publicPath: './',
     // 模板、样式、脚本、图片等资源对应的server上的路径
 
     filename: 'bundle.js'
@@ -111,7 +111,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src/js'),
         loaders: [
           'style',
-          'css?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
+          'css?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
           'postcss?parser=postcss-scss'
         ]
       },
@@ -121,8 +121,17 @@ module.exports = {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'src/styles'),
         loader: 'style!css!postcss?parser=postcss-scss'
-      }
+      },
       // 公有样式，不需要私有化，单独配置
+
+      {
+        test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
+        loader: 'url?limit=10000'
+      },
+      {
+        test: /\.(gif|jpe?g|png|ico)$/,
+        loader: 'url-loader?limit=10000'
+      }
     ]
   },
   postcss: function () {
