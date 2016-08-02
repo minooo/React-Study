@@ -72,8 +72,17 @@ module.exports = {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'src/styles'),
         loader: 'style!css!postcss?parser=postcss-scss'
-      }
+      },
       // 公有样式，不需要私有化，单独配置
+
+      {
+        test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
+        loader: 'url?limit=10000'
+      },
+      {
+        test: /\.(gif|jpe?g|png|ico)$/,
+        loader: 'url-loader?limit=10000'
+      }
     ]
   },
   postcss: function () {

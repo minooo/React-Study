@@ -3,15 +3,16 @@
 $blue: #056ef0;
 $baseFontSize:  24px !default;
 $column: 200px;
+
 @alias {
   fs: font-size;
   br: border-radius;
 }
 .toYellow {
-  background: green;
+  color: yellowgreen;
 }
 .toRed2 {
-  background: red;
+  color: red;
 }
 .toRed {
   color: $blue;
@@ -31,9 +32,6 @@ $column: 200px;
   }
 }
 
-li:between(4, 6) {
-  color: blue;
-}
 
 .myUlhj {
   @mixin center-block;
@@ -82,4 +80,17 @@ input::placeholder {
       background: black;
     }
   }
+}
+
+.smallBg {
+  width: 100px;
+  height: 100px;
+  background: url("../../../images/small.png");
+  background-size: 100% 100%;
+}
+.bigBg {
+  width: 748px;
+  height: 422px;
+  background: url("../../../images/big.png");
+  background-size: 100% 100%;
 }
