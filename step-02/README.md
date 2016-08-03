@@ -1,9 +1,9 @@
 # step-02 目前开发中...
 step-02 是在 step-01 的基础上开发的  
 step-02 添加了 样式，图标，图片，等加载器，样式使用目前最流行的 CssModules  
+此项目应用了rem布局，具体可参考我之前写的[手机端页面自适应解决方案—rem布局](https://segmentfault.com/a/1190000004705207)
 
-无规矩不成方圆，项目开发也需要一个良好的开发规范。
-向大家强烈推荐：   
+> 项目开发需要一个良好的开发规范，向大家强烈推荐：   
 [React编码规范-英文原版](https://github.com/airbnb/javascript/tree/master/react)  
 如果你实在不想看英文，这里是[中文版本](https://zhuanlan.zhihu.com/p/20616464?refer=FrontendMagazine)
 

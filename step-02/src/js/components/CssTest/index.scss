@@ -12,10 +12,13 @@ $column: 200px;
 .toRed2 {
   color: red;
 }
-.toRed {
-  color: $blue;
-  display: flex;
-  font-size: $baseFontSize;
+.btn {
+  padding: 0.2rem 0.4rem;
+  color: #fff;
+  background: #00A283;
+  &:hover {
+    background: #0b97c4;
+  }
 }
 
 @define-mixin center-block {

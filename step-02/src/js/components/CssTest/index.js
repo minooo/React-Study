@@ -22,9 +22,9 @@ class CssTest extends Component {
     });
 
     return (
-      <div>
+      <div className="mb20">
         <div styleName={cx}>sdf</div>
-        <a href="" stylestyleName="toRed" onClick={this.handleClick}>点击我吧！</a>
+        <a href="" styleName="btn" onClick={this.handleClick}>点击我吧！</a>
         <div styleName="myDiv">条件判断</div>
         <div styleName="myDiv2">test2</div>
         <div styleName="search">test2</div>
