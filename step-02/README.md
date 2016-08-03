@@ -2,10 +2,10 @@
 step-02 是在 step-01 的基础上开发的  
 step-02 添加了 样式，图标，图片，等加载器，样式使用目前最流行的 CssModules  
 
-> 本项目将是彻底的组件化开发，而页面是由组件构成的。我们约定：  
-1:每个components下的每个文件夹都只包含一个js文件，一个对应的scss文件，js文件内只有一个组件。
-2:如果这个组件较大较复杂，则在这个组件文件夹内继续拆分小的组件文件夹，文件夹内保持同样的单一js,单一scss的结构。
-3:组件的JS文件名应和组件名一致。对应的scss也是如此。
+无规矩不成方圆，项目开发也需要一个良好的开发规范。
+向大家强烈推荐：   
+[React编码规范-英文原版](https://github.com/airbnb/javascript/tree/master/react)  
+如果你实在不想看英文，这里是[中文版本](https://zhuanlan.zhihu.com/p/20616464?refer=FrontendMagazine)
 
 
 

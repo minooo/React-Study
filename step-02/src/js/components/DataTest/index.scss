@@ -1,0 +1,13 @@
+.common {
+  color: white;
+  margin-bottom: 5px;
+  transition: all 500ms ease-out-cubic;
+}
+.toGreen {
+  composes: common;
+  background: green;
+}
+.toRed {
+  composes: common;
+  background: red;
+}

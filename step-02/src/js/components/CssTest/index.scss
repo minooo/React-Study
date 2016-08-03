@@ -1,5 +1,3 @@
-@import "nihao.scss";
-
 $blue: #056ef0;
 $baseFontSize:  24px !default;
 $column: 200px;
@@ -53,11 +51,12 @@ input::placeholder {
     background: blue;
   }
 }
-
+.search {
+  color: #00ccff;
+}
 
 //noinspection ALL
 .myDiv2 {
-  composes: big from './nihao.scss';
   margin: 20px;
   padding: @margin;
   position: relative 20% auto;
@@ -82,15 +81,6 @@ input::placeholder {
   }
 }
 
-.smallBg {
-  width: 100px;
-  height: 100px;
-  background: url("../../../images/small.png");
-  background-size: 100% 100%;
-}
-.bigBg {
-  width: 748px;
-  height: 422px;
-  background: url("../../../images/big.png");
-  background-size: 100% 100%;
+.myUl li:at-most(4) {
+  color: red;
 }
