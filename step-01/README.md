@@ -17,7 +17,7 @@
 ## [DEMO](https://raw.githubusercontent.com/minooo/test/master/react-study-01.gif)
 点击上方DEMO预览
 
-## 安装包
+## 安装所有包
 
 ```
 $ npm install
