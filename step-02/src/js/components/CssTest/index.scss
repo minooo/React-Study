@@ -1,5 +1,5 @@
 @import "../../../styles/mixins.scss";
 
 .btnTest {
-  @mixin btn 200px, 40px;
+  @mixin btn 200px, 0.1rem;
 }
