@@ -23,6 +23,8 @@ class CssTest extends Component {
 
     return (
       <div className="mb20">
+        <div styleName="nihaoa">我是按钮</div>
+        <div className="wohao center-center">我是按钮</div>
         <div styleName={cx}>sdf</div>
         <a href="" styleName="btn" onClick={this.handleClick}>点击我吧！</a>
         <div styleName="myDiv">条件判断</div>

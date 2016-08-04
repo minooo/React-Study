@@ -1,3 +1,5 @@
+@import "../../../styles/mixins.scss";
+
 $blue: #056ef0;
 $baseFontSize:  24px !default;
 $column: 200px;
@@ -86,4 +88,11 @@ input::placeholder {
 
 .myUl li:at-most(4) {
   color: red;
+}
+
+.myBtn {
+  color: red;
+}
+.nihaoa {
+  @mixin btn 200px;
 }

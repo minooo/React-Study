@@ -1,4 +1,4 @@
-// 使用建议 2016/3/22
+// 使用建议
 // --------------------------------------------------
 // CSS Modules 是对现有的 CSS 做减法。为了追求简单可控，建议遵循如下原则：
 // ·不使用选择器（id,伪类，标签等)，只使用class名来定义样式
@@ -6,6 +6,10 @@
 // ·所有样式通过 composes 组合来实现复用
 // ·不嵌套
 // --------------------------------------------------
+
+// 公有样式引入mixins的目的是为了方便默认设置若干常用的样式
+// 公有样式不可以使用composes
+@import "./mixins.scss";
 
 // 颜色设置
 $white: #fff; // 白
@@ -467,7 +471,6 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -726,4 +729,10 @@ input[type="radio"]:checked:before {
     z-index: 10;
     pointer-events: none;
   }
+}
+
+
+
+.wohao {
+  @mixin btn 300px, 0.5rem, green;
 }

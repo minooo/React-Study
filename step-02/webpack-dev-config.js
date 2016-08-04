@@ -3,7 +3,6 @@
  * 在整个项目开发过程中，几乎99%的时间都是在这个模式下进行的
  * 注意。两种模式的配置有较大差异！！
  */
-var rucksack = require('rucksack-css');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -87,10 +86,9 @@ module.exports = {
   },
   postcss: function () {
     return [
-      rucksack({
-        autoprefixer: true
-      }), 
-      require('precss')
+      require('precss'),
+      require('autoprefixer'),
+      require('rucksack-css')
     ];
   }
 };

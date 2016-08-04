@@ -1,7 +1,5 @@
-
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules';
-import classNames from 'classnames';
 import styles from './index.scss'
 
 class Tab extends Component {
@@ -16,10 +14,6 @@ class Tab extends Component {
   render() {
     const { items } = this.props;
     const { focused } = this.state;
-    const cx = classNames({
-      focused: this.state.nihao,
-      toRed2: !this.state.nihao
-    });
 
     return (
       <div className="mb20 text-center">
