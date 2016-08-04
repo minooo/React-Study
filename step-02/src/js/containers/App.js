@@ -17,10 +17,10 @@ export default class App extends Component {
       <div className="box">
         <CommonTitle title="Tab示例" />
         <Tab items={items} />
-        <CommonTitle title="图片转换" />
-        <BigComponent />
         <CommonTitle title="CSS各种插件语法测试" />
         <CssTest />
+        <CommonTitle title="图片转换" />
+        <BigComponent />
       </div>
     )
   }

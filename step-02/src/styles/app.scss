@@ -12,12 +12,12 @@
 @import "./mixins.scss";
 
 // 颜色设置
-$white: #fff; // 白
-$border-color: #e9e9e9; // 边框颜色
-$body-color: #333; // 设置通用的字体颜色
-$body-bg: #f2f2f2; // 设置通用的 body 背景色
-$link-color: #333; // 设置通用的链接颜色
-$link-visited: #333; // 设置链接访问后的颜色
+$white: #fff; //白
+$border-color: #e9e9e9; //边框颜色
+$body-color: #333; //设置通用的字体颜色
+$body-bg: #f2f2f2; //设置通用的 body 背景色
+$link-color: #333; //设置通用的链接颜色
+$link-visited: #333; //设置链接访问后的颜色
 $main-color: #1BBC9B; //主体颜色
 
 // 字体
@@ -114,20 +114,11 @@ a {
 }
 
 //字体颜色
-
+.main-color {
+  color: $main-color;
+}
 
 //背景颜色
-.bg-main {
-  background: $main-color;
-}
-
-.bg-white {
-  background-color: $white;
-}
-
-.bg-eb {
-  background-color: #ebebeb;
-}
 
 // 设置block
 .block {
@@ -282,12 +273,19 @@ a {
 }
 
 // 布局相关
-//垂直居中
+// 水平居中
 .hor-center {
   display: flex;
   align-items: center;
 }
 
+// 垂直居中
+.ver-center {
+  display: flex;
+  justify-content: center;
+}
+
+// 水平垂直居中
 .center-center {
   display: flex;
   align-items: center;
@@ -729,10 +727,4 @@ input[type="radio"]:checked:before {
     z-index: 10;
     pointer-events: none;
   }
-}
-
-
-
-.wohao {
-  @mixin btn 300px, 0.5rem, green;
 }
