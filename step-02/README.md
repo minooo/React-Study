@@ -25,20 +25,45 @@ step-02 添加了 样式，图标，图片，等加载器，样式使用目前�
     - 为了在写组件样式中，公有样式和私有样式不会混淆，本项目经过相关配置，公样式只能写在 `className`中，  
     私有样式只能写在 `styleName`中，并且为了更好的管理样式，`className`中的公有样式可以写多个，而 `styleName`  
     中的样式只能写一个。私有样式，可以通过 `composes` 实现复用。示例如下:  
+    
     ```js
+    // index.scss
+    .root {
+      list-style:none;
+      display: inline-block;
+    }
+    
+    .common {
+      display: inline-block;
+      padding: 10px 20px;
+      cursor:pointer;
+      transition:0.3s;
+      &:hover {
+        background-color:#beecea ;
+      }
+    }
+    
+    .normal {
+      composes: common;
+      background-color:#eee;
+      color:#7B8585;
+    }
+    
+    .focused {
+      composes: common;
+      color:#fff;
+      background-color:#41c7c2;
+      &:hover {
+        background-color:#41c7c2;
+      }
+    }
+    
+    // js
     import React, { Component } from 'react'
     import CSSModules from 'react-css-modules';
     import styles from './index.scss'
     
     class Tab extends Component {
-      state = {
-        focused: 0
-      };
-    
-      handleClick = (index) => {
-        this.setState({focused: index})
-      };
-    
       render() {
         const { items } = this.props;
         const { focused } = this.state;
@@ -49,8 +74,7 @@ step-02 添加了 样式，图标，图片，等加载器，样式使用目前�
               {items.map((item, index) =>
                 <li
                   key={index}
-                  styleName={focused === index ? 'focused' : 'normal'}
-                  onClick={this.handleClick.bind(null, index)}
+                  styleName="normal"
                 >
                   {item}
                 </li>
