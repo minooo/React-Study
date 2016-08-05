@@ -3,7 +3,6 @@
  *
  * 注意。两种模式的配置有较大差异！！
  */
-var rucksack = require('rucksack-css');
 var path = require('path');
 var webpack = require('webpack');
 
@@ -136,10 +135,9 @@ module.exports = {
   },
   postcss: function () {
     return [
-      rucksack({
-        autoprefixer: true
-      }),
-      require('precss')
+      require('precss'),
+      require('autoprefixer'),
+      require('rucksack-css')
     ];
   }
 };

@@ -25,16 +25,6 @@ class CssTest extends Component {
         <a href="#" styleName="btnTest" className="text-overflow-1 block mb20">
           a标签按钮测试字符长度试字符长度试字符长度试字符长度试字符长度
         </a>
-
-        <div styleName="btnTest" className="center-center mb5">
-          <i className="i-shoucang40 main-color font-size-24 pr5" />div标签按钮带图标
-        </div>
-        <div styleName="btnTest" className="text-overflow-1 mb5">
-          div标签按钮
-        </div>
-        <div styleName="btnTest" className="text-overflow-1">
-          div标签按钮测试字符长度测试字符长度测试字符长度测试字符长度测试字符长符长
-        </div>
       </div>
     )
   }

@@ -4,7 +4,7 @@ import BigTwo from './BigTwo'
 
 const BigComponent = () => {
   return (
-    <div>
+    <div className="mb20">
       <BigOne />
       <BigTwo />
     </div>

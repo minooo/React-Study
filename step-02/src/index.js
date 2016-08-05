@@ -6,6 +6,7 @@ import App from './js/containers/App'
 import './styles/normalize.scss'
 import './styles/app.scss'
 import './styles/font.scss'
+import './styles/animations.scss'
 
 const rootEl = document.getElementById('app');
 render(

@@ -280,13 +280,12 @@ a {
 // 水平居中
 .hor-center {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
-
 // 垂直居中
 .ver-center {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 // 水平垂直居中

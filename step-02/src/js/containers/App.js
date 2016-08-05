@@ -3,7 +3,8 @@ import {
   BigComponent,
   CommonTitle,
   CssTest,
-  Tab
+  Tab,
+  Animation
 } from '../components'
 
 export default class App extends Component {
@@ -15,12 +16,14 @@ export default class App extends Component {
 
     return (
       <div className="box">
-        <CommonTitle title="Tab示例" />
-        <Tab items={items} />
-        <CommonTitle title="一个简单的按钮mixin示例" />
-        <CssTest />
         <CommonTitle title="图片转换" />
         <BigComponent />
+        <CommonTitle title="一个简单的按钮mixin示例" />
+        <CssTest />
+        <CommonTitle title="Animation示例，点击列表删除" />
+        <Animation />
+        <CommonTitle title="Tab示例" />
+        <Tab items={items} />
       </div>
     )
   }
