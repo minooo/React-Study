@@ -152,26 +152,32 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 ---
 
 ####[classnames](https://github.com/JedWatson/classnames) [强烈推荐]
-> classnames 是一个简单的 JavaScript 工具包用来有条件的将不同的 classNames 联合在一起。
+> classnames 是一个简单的 JavaScript 工具包用来有条件的将不同的 classNames 联合在一起。  
 安装：`npm install react-css-modules --save-dev`
 
 ---
 
 ####[json-loader](https://github.com/webpack/json-loader) [必需]
-> webpack用来解析json文件的加载器。
-安装：`npm install json-loader] --save-dev`
+> webpack用来解析json文件的加载器。  
+安装：`npm install json-loader --save-dev`
 
 ---
 
 ####[url-loader](https://github.com/webpack/url-loader) [必需]
-> 这个加载器的工作方式很像file-loader。只是当文件大小小于限制值时，它可以返回一个Data Url。限制值可以作为查询参数传入。默认不限制。
-安装：`npm install url-loader] --save-dev`
+> 这个加载器的工作方式很像file-loader。只是当文件大小小于限制值时，它可以返回一个Data Url。限制值可以作为查询参数传入。默认不限制。  
+安装：`npm install url-loader --save-dev`
 
 ---
 
 ####[file-loader](https://github.com/webpack/file-loader) [必需]
-> 修改文件名，放在输出目录下，并返其对应的 url .默认修改后的文件名，是文件内容的MD5哈希串。你也可以自定义文件名。
-安装：`npm install file-loader] --save-dev`
+> 修改文件名，放在输出目录下，并返其对应的 url .默认修改后的文件名，是文件内容的MD5哈希串。你也可以自定义文件名。  
+安装：`npm install file-loader --save-dev`
+
+---
+
+####[react-addons-css-transition-group](https://facebook.github.io/react/docs/animation.html#getting-started) [如果你需要来点React动画]
+> ReactCSSTransitionGroup是基于ReactTransitionGroup的，在React组件进入或者离开DOM的时候，它是一种简单地执行CSS过渡和动画的方式。  
+安装：`npm install react-addons-css-transition-group --save-dev`
 
 ---
 

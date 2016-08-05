@@ -17,7 +17,7 @@ export default class App extends Component {
       <div className="box">
         <CommonTitle title="Tab示例" />
         <Tab items={items} />
-        <CommonTitle title="CSS各种插件语法测试" />
+        <CommonTitle title="一个简单的按钮mixin示例" />
         <CssTest />
         <CommonTitle title="图片转换" />
         <BigComponent />
