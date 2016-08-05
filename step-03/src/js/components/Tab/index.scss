@@ -1,0 +1,29 @@
+.root {
+  list-style:none;
+  display: inline-block;
+}
+
+.common {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor:pointer;
+  transition:0.3s;
+  &:hover {
+    background-color:#beecea ;
+  }
+}
+
+.normal {
+  composes: common;
+  background-color:#eee;
+  color:#7B8585;
+}
+
+.focused {
+  composes: common;
+  color:#fff;
+  background-color:#41c7c2;
+  &:hover {
+    background-color:#41c7c2;
+  }
+}

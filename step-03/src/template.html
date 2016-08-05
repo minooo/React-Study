@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Cache-Control" content="private">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'onorientationchange' in window ? 'onorientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if(clientWidth>=750){
+            docEl.style.fontSize = '100px';
+          }else{
+            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+          }
+        };
+
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!--
+      描述：head中无需再引入css以及facicon，
+      webpack将根据入口JS文件的要求自动实现按需加载或者生成style标签
+  -->
+</head>
+<body>
+<div id="app"></div>
+<!--
+    描述：body中同样无需单独引入JS文件，
+    webpack会根据入口JS文件自动实现按需加载或者生成script标签，
+    还可以生成对应的hash值
+-->
+</body>
+</html>

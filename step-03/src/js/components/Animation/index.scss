@@ -1,0 +1,29 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/app.scss";
+
+.addBtn {
+  @mixin btn 200px, 0.1rem;
+  i {
+    color: $main-color;
+  }
+  &:hover {
+    @mixin btn 200px, 0.1rem, $white, $main-color, 14px, 4px, 1px solid $main-color;
+    i {
+      color: $white;
+    }
+  }
+}
+
+.item {
+  @mixin btn 400px, 0.15rem, #fff, #9b9b9b, 14px, 0px, 1px solid #9b9b9b;
+  margin-bottom: 5px;
+}
+
+/*
+$width: 100%,
+$padding-tb: 0.15rem,
+$color: #333,
+$background-color: #fff,
+$font-size: 14px,
+$border-radius: 4px,
+$border: 1px solid #ddd,*/

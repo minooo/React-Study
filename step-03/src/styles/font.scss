@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?8nraly');
+  src:  url('../fonts/icomoon.eot?8nraly#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?8nraly') format('truetype'),
+  url('../fonts/icomoon.woff?8nraly') format('woff'),
+  url('../fonts/icomoon.svg?8nraly#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-sousuo40:before {
+  content: "\e904";
+}
+.i-duihuan40:before {
+  content: "\e90d";
+}
+.i-wode42un:before {
+  content: "\e912";
+}
+.i-wode42:before {
+  content: "\e913";
+}
+.i-haodian42un:before {
+  content: "\e916";
+}
+.i-haodian42:before {
+  content: "\e917";
+}
+.i-shoucang40un:before {
+  content: "\e925";
+}
+.i-shoucang40:before {
+  content: "\e926";
+}
+.i-weixinzhifu32:before {
+  content: "\e92c";
+}
+.i-youhui42un:before {
+  content: "\e935";
+}
+.i-youhui42:before {
+  content: "\e936";
+}
+.i-zhoubian42un:before {
+  content: "\e938";
+}
+.i-zhoubian42:before {
+  content: "\e939";
+}
+.i-zhuye42un:before {
+  content: "\e93c";
+}
+.i-zhuye42:before {
+  content: "\e93d";
+}
+.i-zuixinyouhui40:before {
+  content: "\e93e";
+}
+.i-spinner:before {
+  content: "\e900";
+}
+

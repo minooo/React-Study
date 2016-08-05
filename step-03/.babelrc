@@ -1,0 +1,6 @@
+{
+  "presets": ["es2015", "react", "es2015-loose", "stage-0"],
+  // stage-0 一定要放在最右边。这样组件中才可以直接用state，而不是放在construct里
+
+  "plugins": ["react-hot-loader/babel"]
+}
