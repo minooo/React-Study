@@ -55,7 +55,7 @@ class Animation extends Component {
         >
           <i className="i-shoucang40 font-size-24 pr5" />点击添加
         </button>
-        <div className="hor-center">
+        <div className="hor-center overflow-h">
           <ReactCSSTransitionGroup
             transitionName="example"
             transitionEnterTimeout={500}

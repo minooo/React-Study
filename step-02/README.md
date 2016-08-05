@@ -1,13 +1,12 @@
-# step-02 目前开发中...
+# step-02 目前已完成，你可以完整运行
 step-02 是在 step-01 的基础上开发的  
-step-02 添加了 样式，图标，图片，等加载器，样式使用目前最流行的 CssModules  
-此项目应用了rem布局，具体可参考我之前写的[手机端页面自适应解决方案—rem布局](https://segmentfault.com/a/1190000004705207)
+step-02 添加了 样式，字形，图片，等加载器配置。  
+注意，虽然都是基础配置，但是本项目涵盖东西较多，所以要有耐心:wink:
 
-> 项目开发需要一个良好的开发规范，向大家强烈推荐：   
-[React编码规范-英文原版](https://github.com/airbnb/javascript/tree/master/react)  
-如果你实在不想看英文，这里是[中文版本](https://zhuanlan.zhihu.com/p/20616464?refer=FrontendMagazine)
+## [DEMO](https://github.com/minooo/test/blob/master/step-02-demo.gif?raw=true)
+点击上方DEMO预览
 
-### 关于本项目样式使用的基本规则
+### 关于本项目的一些说明
 - 样式分为公有样式和私有样式，前者位于styles文件夹内，后者位于每一个组件文件夹内，  
     - 公有样式我这里主要包含六部分：  
     第一部分是 [normalize.scss](https://github.com/necolas/normalize.css), 这是CSS的基础设置。  
@@ -88,7 +87,14 @@ step-02 添加了 样式，图标，图片，等加载器，样式使用目前�
     
     export default CSSModules(Tab, styles);
     ```
-
+- 关于字形图标，很多朋友都会使用这个库 [Font Awesome](http://fontawesome.io/), 我以前也经常用，但是它的最大的问题不能定制，只能去选择想要的图标  
+    后来同事推荐了这个兼顾制作和供选择图标的网站，[icomoon](https://icomoon.io/#home)，具体使用教程自行百度吧，这是我推荐的一篇教程，[详解使用icomoon生成字体图标的方法并应用](http://blog.csdn.net/u013938465/article/details/50680468)  
+    这个网站的图标分为免费和收费的，一般来讲，上面的免费图标足够使用了，之所以用它就是用它允许你上传自己制作的SVG（设计师同学使用AI可以把自己画的图标直接生成SVG文件）生成本地字形文件。    
+- 项目开发需要一个良好的开发规范，向大家强烈推荐：   
+  [React编码规范-英文原版](https://github.com/airbnb/javascript/tree/master/react)  
+  如果你实在不想看英文，这里是[中文版本](https://zhuanlan.zhihu.com/p/20616464?refer=FrontendMagazine)  
+  step-02 编码规范就是以此为标准写的。
+- 此项目应用了rem布局，具体可参考我之前写的[手机端页面自适应解决方案—rem布局](https://segmentfault.com/a/1190000004705207)
 
 
 ## 本模板包含step-01用到的所有包，下面将介绍 **额外** 添加的包
