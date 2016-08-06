@@ -1,4 +1,3 @@
-# 项目地址：[React-Study](https://github.com/minooo/React-Study)
 > [react.js](https://github.com/facebook/react) 本是一个构建用户界面的javascript库，它因单向数据绑定和虚拟DOM两大特点在前端界大放异彩，因为它解决了当下网页性能陷入的瓶颈（因为直接操作DOM导致页面性能损失很大，而虚拟DOM避免了直接操作DOM），再加上单向数据绑定使得业务逻辑更加清晰可控，另外，`react.js` 是大名鼎鼎的Facebook一手打造维护，基于此，react社区也异常活跃，从而良性的推动了react的发展和流行,而React现在已经发展为一个生态圈。
 
 ## 认识React生态圈
