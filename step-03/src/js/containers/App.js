@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {
-  BigComponent,
   CommonTitle,
   CssTest,
   Tab,
@@ -16,8 +15,6 @@ export default class App extends Component {
 
     return (
       <div className="box">
-        <CommonTitle title="图片转换" />
-        <BigComponent />
         <CommonTitle title="一个简单的按钮mixin示例" />
         <CssTest />
         <CommonTitle title="Animation示例，点击列表删除" />

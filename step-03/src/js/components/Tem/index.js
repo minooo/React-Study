@@ -6,7 +6,7 @@ import styles from './index.scss'
 class Tem extends Component {
   render() {
     return (
-      <h1>hello</h1>
+      <h1 styleName="something">hello</h1>
     )
   }
 }
