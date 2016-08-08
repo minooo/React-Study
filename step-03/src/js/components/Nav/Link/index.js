@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import CSSModules from 'react-css-modules'
 import styles from './index.scss'
 
-/*class Link extends Component {
+class Link extends Component {
   render() {
     const { pathUrl, icoName, linkName, ...rest } = this.props;
     return (
@@ -23,9 +23,9 @@ import styles from './index.scss'
       </Link>
     )
   }
-}*/
+}
 
-const Link = ({pathUrl, icoName, linkName, ...rest}) => {
+/*const Link = ({pathUrl, icoName, linkName, ...rest}) => {
   return (
     <Link
       {...rest}
@@ -41,7 +41,7 @@ const Link = ({pathUrl, icoName, linkName, ...rest}) => {
       <span styleName="text">{linkName}</span>
     </Link>
   )
-};
+};*/
 
 /*如果是无状态组件就用下面的形式*/
 /*const Z = ({}) => {

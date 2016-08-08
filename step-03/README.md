@@ -10,3 +10,9 @@ step-03 主要围绕添加 react-router 进行配置
   
 ---
 
+####[babel-plugin-transform-object-rest-spread](https://npm.taobao.org/package/babel-plugin-transform-object-rest-spread) [必需]
+> Compile object rest and spread to ES5  
+  安装：`npm install babel-plugin-transform-object-rest-spread --save-dev`
+  
+---
+
