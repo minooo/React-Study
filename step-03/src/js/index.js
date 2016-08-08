@@ -2,11 +2,7 @@ import 'babel-polyfill'
 import {AppContainer} from 'react-hot-loader'
 import React from 'react'
 import {render} from 'react-dom'
-import App from './js/containers/App'
-import './styles/normalize.scss'
-import './styles/app.scss'
-import './styles/font.scss'
-import './styles/animations.scss'
+import App from './containers/App'
 
 const rootEl = document.getElementById('app');
 render(

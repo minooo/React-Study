@@ -56,12 +56,12 @@ class Nav extends Component {
             pathUrl="/tour"
             icoName="i-zhoubian42un"
             activeLink={styles.navFour}
-            linkName="优惠"
+            linkName="周边"
           />
           <NavLink
             pathUrl="/user"
             icoName="i-wode42un"
-            activeLink={styles.navFour}
+            activeLink={styles.navFive}
             linkName="我的"
           />
         </div>
@@ -71,10 +71,10 @@ class Nav extends Component {
 }
 
 /*如果是无状态组件就用下面的形式*/
-/*const Tem = ({}) => {
+/*const Z = ({}) => {
  return (
  <h1>hello</h1>
  )
  };*/
 
-export default CSSModules(Tem, styles);
+export default CSSModules(Nav, styles);

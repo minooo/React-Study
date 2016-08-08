@@ -44,7 +44,7 @@ const Link = ({pathUrl, icoName, linkName, ...rest}) => {
 };
 
 /*如果是无状态组件就用下面的形式*/
-/*const Tem = ({}) => {
+/*const Z = ({}) => {
  return (
  <h1>hello</h1>
  )

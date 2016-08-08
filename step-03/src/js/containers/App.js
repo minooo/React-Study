@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 import {
   CommonTitle,
   CssTest,
@@ -23,5 +23,14 @@ export default class App extends Component {
         <Tab items={items} />
       </div>
     )
+  }
+}*/
+
+import React,{ Component } from 'react';
+
+export default class App extends Component {
+  render() {
+    const { children } =this.props;
+    return children
   }
 }

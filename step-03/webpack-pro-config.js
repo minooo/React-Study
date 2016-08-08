@@ -12,7 +12,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
   // 文件入口配置
-    index: './src/index',
+    index: './src/js/index',
     vendor: [
       'react',
       'react-dom',

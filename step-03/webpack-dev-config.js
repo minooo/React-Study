@@ -17,7 +17,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     // 这里reload=true的意思是，如果碰到不能hot reload的情况，就整页刷新。
-    path.resolve(__dirname, 'src/index.js')
+    path.resolve(__dirname, 'src/js/index.js')
   ],
   // 页面入口文件配置
 
