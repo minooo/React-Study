@@ -34,7 +34,7 @@ class Animation extends Component {
           id: this.state.items.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1
         }]);
       this.setState({items: newItems});
-    } else {alert('不能为空')}
+    } else {alert('不能为空!')}
   };
 
   removeItem = (i) => {
