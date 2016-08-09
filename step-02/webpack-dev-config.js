@@ -39,8 +39,15 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // 启用热替换,仅开发模式需要
 
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
     // 允许错误不打断程序，,仅开发模式需要
+
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'),
+      __DEV__: true
+    })
+    // 很多库的内部，有process.NODE_ENV的判断语句，
+    // 改为development，开启相关DEBUG。
   ],
 
   resolve: {
