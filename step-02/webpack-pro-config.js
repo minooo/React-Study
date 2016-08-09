@@ -48,9 +48,8 @@ module.exports = {
     }),
 
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      __DEV__: false
     }),
     // 很多库的内部，有process.NODE_ENV的判断语句，
     // 改为production。最直观的就是没有所有的debug相关的东西，体积会减少很多
