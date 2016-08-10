@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import CSSModules from 'react-css-modules'
+
 import styles from './index.scss'
 
 class Animation extends Component {
@@ -49,8 +49,7 @@ class Animation extends Component {
     return (
       <div className="center-center-column">
         <button
-          className="mb10 center-center"
-          styleName="addBtn"
+          className={"mb10 center-center " + styles.addBtn}
           onClick={this.addItem}
         >
           <i className="i-shoucang40 font-size-24 pr5" />点击添加
@@ -65,8 +64,7 @@ class Animation extends Component {
               <div
                 key={item.id}
                 onClick={this.removeItem.bind(null, index)}
-                styleName="item"
-                className="text-overflow-1"
+                className={"text-overflow-1 " + styles.item}
               >
                 {item.name}
               </div>
@@ -79,4 +77,4 @@ class Animation extends Component {
   }
 }
 
-export default CSSModules(Animation, styles);
+export default Animation;

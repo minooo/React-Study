@@ -187,3 +187,67 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 
 ---
 
+
+####[open](https://npm.taobao.org/package/open) [开发需要]
+> 开发编译完成后，自动打开浏览器，懒癌福音  
+安装：`npm install open --save-dev`
+
+---
+
+####[browser-sync](https://npm.taobao.org/package/browser-sync) [开发需要]
+> 使你可以在电脑上开发，手机上同步测试  
+安装：`npm install browser-sync --save-dev`
+
+---
+
+####[connect-history-api-fallback](https://github.com/bripkens/connect-history-api-fallback) [开发需要]
+> Middleware to proxy requests through a specified index page, useful for Single Page Applications that utilise the HTML5 History API.  
+安装：`npm install connect-history-api-fallback --save-dev`
+
+---
+
+####[cross-env](https://npm.taobao.org/package/cross-env) [开发需要]
+> 即设置跨平台的环境变量运行命令  
+安装：`npm install cross-env --save-dev`
+
+---
+
+####[babel-cli](http://www.ruanyifeng.com/blog/2016/01/babel.html) [开发需要]
+> 命令行转码  
+安装：`npm install babel-cli --save-dev`
+
+---
+
+####[npm-run-all](https://npm.taobao.org/package/npm-run-all) [开发需要]
+> 一个命令工具，可以并行运行多个 npm-scripts  
+
+```js
+# 继发执行
+$ npm-run-all build:html build:js
+# 等同于
+$ npm run build:html && npm run build:js
+
+# 并行执行
+$ npm-run-all --parallel watch:html watch:js
+# 等同于
+$ npm run watch:html & npm run watch:js
+
+# 混合执行
+$ npm-run-all clean lint --parallel watch:html watch:js
+# 等同于
+$ npm-run-all clean lint
+$ npm-run-all --parallel watch:html watch:js
+
+# 通配符
+$ npm-run-all --parallel watch:*
+```
+
+安装：`npm install npm-run-all --save-dev`
+
+---
+
+####[chalk](https://github.com/chalk/chalk) [开发需要]
+> 终端字符串色彩管理  
+安装：`npm install chalk --save-dev`
+
+---

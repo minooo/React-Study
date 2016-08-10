@@ -3,7 +3,9 @@
  *
  * 注意。两种模式的配置有较大差异！！
  */
+
 var path = require('path');
+
 var webpack = require('webpack');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -25,7 +27,7 @@ module.exports = {
   // 文件输出配置
 
     path: path.join(__dirname, 'dist'),
-    // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它.
+    // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
 
     publicPath: '',
     // 模板、样式、脚本、图片等资源对应的server上的路径
@@ -46,13 +48,15 @@ module.exports = {
         warnings: false
       }
     }),
-
+    
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-      __DEV__: false
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
     }),
     // 很多库的内部，有process.NODE_ENV的判断语句，
     // 改为production。最直观的就是没有所有的debug相关的东西，体积会减少很多
+
 
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js' ),
     // 'vendor' 就是把依赖库(比如react react-router, redux)全部打包到 vendor.js中
@@ -60,17 +64,16 @@ module.exports = {
     // 一般依赖库放到前面，所以vendor放第一个
 
     new HtmlWebpackPlugin({
-      template:'./src/template.html',
-      // html模板的路径
-      
       title: '产品模式',
-      
       filename:'index.html',
       // 文件名以及文件将要存放的位置
 
       favicon:'./src/favicon.ico',
       // favicon路径
-      
+
+      template:'./src/template.html',
+      // html模板的路径
+
       inject:'body',
       // js插入的位置，true/'head'  false/'body'
 
@@ -103,41 +106,9 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['babel'],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/js'),
-        loaders: [
-          'style',
-          'css?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
-          'postcss?parser=postcss-scss'
-        ]
-      },
-      // 组件样式，需要私有化，单独配置
-
-      {
-        test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/styles'),
-        loader: 'style!css!postcss?parser=postcss-scss'
-      },
-      // 公有样式，不需要私有化，单独配置
-
-      {
-        test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
-        loader: 'url?limit=10000'
-      },
-      {
-        test: /\.(gif|jpe?g|png|ico)$/,
-        loader: 'url-loader?limit=10000'
+        exclude: /node_modules/,
+        include: __dirname
       }
     ]
-  },
-  postcss: function () {
-    return [
-      require('precss'),
-      require('autoprefixer'),
-      require('rucksack-css')
-    ];
   }
-};
+}

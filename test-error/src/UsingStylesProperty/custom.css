@@ -1,0 +1,19 @@
+.table {
+    composes: table from './../table.css';
+}
+
+.row {
+    composes: row from './../table.css';
+}
+
+/* .cell {
+    composes: cell from './table.css';
+} */
+
+.table {
+    width: 400px;
+}
+
+.cell {
+    float: left; width: 154px; background: #eee; padding: 10px; margin: 10px 0 10px 10px;
+}

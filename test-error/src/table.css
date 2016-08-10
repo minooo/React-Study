@@ -1,0 +1,21 @@
+.table {
+    width: 200px;
+}
+
+.table,
+.row,
+.cell {
+    margin: 10px; overflow: hidden;
+}
+
+.table {
+    border: 1px solid #000;
+}
+
+.row {
+    border: 1px solid #f00;
+}
+
+.cell {
+    border: 1px solid #00f; padding: 10px;
+}
