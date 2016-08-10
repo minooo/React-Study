@@ -22,7 +22,7 @@ step-02 是在 step-01的基础上添加额外配置完成的，这一部分添�
 - step-03（目前开发中）
 step-03 是在 step-02 的基础上添加额外配置完成，目前处于开发中，这部分主要添加 [react-router](https://github.com/reactjs/react-router)。推荐教程 [React Router 使用教程](http://www.ruanyifeng.com/blog/2016/05/react_router.html) 
 - step-04（计划中）
-同理，step-04 是在 step-03 的基础上添加额外配置完成，目前仍处于开发中，这部分主要添加 [redux](https://github.com/reactjs/redux)。推荐教程 [React Router 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) 
+同理，step-04 是在 step-03 的基础上添加额外配置完成，目前仍处于开发中，这部分主要添加 [redux](https://github.com/reactjs/redux)。推荐教程 [redux-tutorial 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) 
 
 ## 启动React生态圈
 本项目启动前默认你已经安装[node](http://nodejs.cn/)（建议安装6.0+版本）
