@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import CSSModules from 'react-css-modules';
 import styles from './index.scss'
 
 class Tab extends Component {
@@ -17,11 +16,11 @@ class Tab extends Component {
 
     return (
       <div className="mb20 text-center">
-        <ul styleName="root">
+        <ul className={styles.root}>
           {items.map((item, index) =>
             <li
               key={index}
-              styleName={focused === index ? 'focused' : 'normal'}
+              className={focused === index ? styles.focused : styles.normal}
               onClick={this.handleClick.bind(null, index)}
             >
               {item}
@@ -34,4 +33,4 @@ class Tab extends Component {
   }
 }
 
-export default CSSModules(Tab, styles);
+export default Tab

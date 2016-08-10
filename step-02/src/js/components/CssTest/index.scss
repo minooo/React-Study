@@ -2,6 +2,9 @@
 @import "../../../styles/app.scss";
 
 .btnTest {
+  span {
+    line-height: 1;
+  }
   @mixin btn 200px, 0.1rem;
   i {
     color: $main-color;
