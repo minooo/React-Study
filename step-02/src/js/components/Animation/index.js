@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-
 import styles from './index.scss'
 
 class Animation extends Component {
