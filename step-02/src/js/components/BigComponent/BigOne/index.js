@@ -6,6 +6,7 @@ const BigOne = () => {
     <div>
       <h2 className={"font-size-16 mt10 " + styles.title}>
         这是一张大图开发！(该图片&gt;10k,图片不转代码)
+        继续开发
       </h2>
       <div className={styles.bigImg}></div>
     </div>
