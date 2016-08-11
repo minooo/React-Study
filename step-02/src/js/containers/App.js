@@ -9,7 +9,7 @@ import {
 
 export default class App extends Component {
   state = {
-    items: ['webpack','react','babel','npm','react-router']
+    items: ['webpack','react','babel','npm']
   };
   render() {
     const {items} = this.state;
@@ -28,14 +28,3 @@ export default class App extends Component {
     )
   }
 }
-
-
-
-/*
-* <CommonTitle title="图片转换" />
- <BigComponent />
- <CommonTitle title="Animation示例，点击列表删除" />
- <Animation />
- <CommonTitle title="Tab示例" />
- <Tab items={items} />
-* */

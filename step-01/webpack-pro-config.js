@@ -13,7 +13,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-  // 文件入口配置
+    // 文件入口配置
     index: './src/index',
     vendor: [
       'react',
@@ -24,7 +24,7 @@ module.exports = {
   // 页面入口文件配置
 
   output: {
-  // 文件输出配置
+    // 文件输出配置
 
     path: path.join(__dirname, 'dist'),
     // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
@@ -43,12 +43,12 @@ module.exports = {
     // 具体是的优化是：webpack就能够比对id的使用频率和分布来得出最短的id分配给使用频率高的模块
 
     new webpack.optimize.UglifyJsPlugin({
-    // 压缩代码
+      // 压缩代码
       compressor: {
         warnings: false
       }
     }),
-    
+
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
@@ -85,7 +85,7 @@ module.exports = {
       // 在项目后续过程中，经常需要做些改动更新什么的，一但有改动，客户端页面就会自动更新！
 
       minify:{
-      // 压缩HTML文件
+        // 压缩HTML文件
         removeComments:true,
         // 移除HTML中的注释
 

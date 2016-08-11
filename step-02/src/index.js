@@ -14,14 +14,16 @@ const rootEl = document.getElementById('app');
 try {
   render(
     <AppContainer>
-    <App />
-      </AppContainer>,
+      <App />
+    </AppContainer>,
     rootEl
   )
 } catch (e) {
   render(
     <RedBox error={e}>
-      <App />
+      <AppContainer>
+        <App />
+      </AppContainer>
     </RedBox>,
     rootEl
   )

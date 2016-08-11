@@ -151,12 +151,6 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 
 ---
 
-####[react-css-modules](https://github.com/gajus/react-css-modules) [强烈推荐]
-> 关于`react-css-modules`,这是我翻译他们官网的[译文](https://segmentfault.com/a/1190000004530909)。相关说明都在里面，这里不再赘述。  
-安装：`npm install react-css-modules --save-dev`
-
----
-
 ####[classnames](https://github.com/JedWatson/classnames) [强烈推荐]
 > classnames 是一个简单的 JavaScript 工具包用来有条件的将不同的 classNames 联合在一起。  
 安装：`npm install react-css-modules --save-dev`
@@ -243,11 +237,5 @@ $ npm-run-all --parallel watch:*
 ```
 
 安装：`npm install npm-run-all --save-dev`
-
----
-
-####[chalk](https://github.com/chalk/chalk) [开发需要]
-> 终端字符串色彩管理  
-安装：`npm install chalk --save-dev`
 
 ---

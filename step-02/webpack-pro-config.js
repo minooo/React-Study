@@ -60,7 +60,7 @@ module.exports = {
     // 一般依赖库放到前面，所以vendor放第一个
 
     new HtmlWebpackPlugin({
-      template:'./src/template.html',
+      template:'src/index.ejs',
       // html模板的路径
       
       title: '产品模式',
@@ -86,7 +86,7 @@ module.exports = {
         removeComments:true,
         // 移除HTML中的注释
 
-        collapseWhitespace:false
+        collapseWhitespace:true
         // 删除空白符与换行符
       }
     })
@@ -129,7 +129,7 @@ module.exports = {
       },
       {
         test: /\.(gif|jpe?g|png|ico)$/,
-        loader: 'url-loader?limit=10000'
+        loader: 'url?limit=10000'
       }
     ]
   },

@@ -38,7 +38,7 @@ export default {
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
       template: 'src/index.ejs',
-      title: 'minooo',
+      title: '开发模式',
       favicon:'./src/favicon.ico',
       minify: {
         removeComments: true,
@@ -84,7 +84,7 @@ export default {
       },
       {
         test: /\.(gif|jpe?g|png|ico)$/,
-        loader: 'url-loader?limit=10000'
+        loader: 'url?limit=10000'
       }
     ]
   },
