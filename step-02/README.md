@@ -4,8 +4,15 @@ step-02 添加了 样式，字形，图片，等加载器配置。
 注意，虽然都是基础配置，但是本项目涵盖东西较多，所以要有耐心:wink:
 
 ## 开发模式有重大更新
-- 采用了[browser-sync](https://npm.taobao.org/package/browser-sync)这个包，它可以使你在电脑上开发的同时，页面  
+采用了[browser-sync](https://npm.taobao.org/package/browser-sync)这个包，它可以使你在电脑上开发的同时，页面  
 效果也能同步在你的手机上展示（比如本人公司电脑连的网线，手机连的wifi，在这种情况下我的手机就可以链接电脑上的开发页面）
+下面以本模板为例，简要展示一下步骤
+
+- 确保本模板的包安装完毕后(npm install), 运行 `npm start`, 大概十秒后，编译完成，浏览器自动打开进入开发页面 http://localhost:8888/
+- 然后打开 http://localhost:8889/ ，这个页面正是[browser-sync](https://npm.taobao.org/package/browser-sync)提供的，你会看到大概这样
+![adsf](https://github.com/minooo/test/blob/master/browserSync.png?raw=true)
+- 上方的红色箭头指的是你的开发页面在PC端的地址，下方的红色箭头指的是你的开发页面在用了wifi设备上的浏览地址。
+- 它的意义显而易见，你可以随时看到你的页面在手机端会是什么样子，极大方便调试！
 
 ## [DEMO](https://github.com/minooo/test/blob/master/step-02-demo.gif?raw=true)
 点击上方DEMO预览
