@@ -3,6 +3,10 @@ step-02 是在 step-01 的基础上开发的
 step-02 添加了 样式，字形，图片，等加载器配置。  
 注意，虽然都是基础配置，但是本项目涵盖东西较多，所以要有耐心:wink:
 
+## 开发模式有重大更新
+- 采用了[browser-sync](https://npm.taobao.org/package/browser-sync)这个包，它可以使你在电脑上开发的同时，页面  
+效果也能同步在你的手机上展示（比如本人公司电脑连的网线，手机连的wifi，在这种情况下我的手机就可以链接电脑上的开发页面）
+
 ## [DEMO](https://github.com/minooo/test/blob/master/step-02-demo.gif?raw=true)
 点击上方DEMO预览
 
@@ -20,73 +24,7 @@ step-02 添加了 样式，字形，图片，等加载器配置。
     - 私有样式在本项目中与它对应的组件文件是严格的“一夫一妻制”，它们是一对一的关系。私有样式最大的特点就是，  
     在整个项目中，这个样式是唯一的，想要样式唯一的办法就是给它取一个独一无二的名字。本项目引用CSSModules技术，  
     可以把你的类“加工”，保证其成为独一无二的类名。所以你也不用担心你给出的类名是否唯一。比如你可以放心使用  
-    `tip`, `title`, `nav`, `left`等等，这类“稀有”类名，在不同的组件样式文件中大胆的复用吧，不会有任何问题。
-    - 为了在写组件样式中，公有样式和私有样式不会混淆，本项目经过相关配置，公样式只能写在 `className`中，  
-    私有样式只能写在 `styleName`中，并且为了更好的管理样式，`className`中的公有样式可以写多个，而 `styleName`  
-    中的样式只能写一个。私有样式，可以通过 `composes` 实现复用。示例如下:  
-    
-    ```js
-    // index.scss
-    .root {
-      list-style:none;
-      display: inline-block;
-    }
-    
-    .common {
-      display: inline-block;
-      padding: 10px 20px;
-      cursor:pointer;
-      transition:0.3s;
-      &:hover {
-        background-color:#beecea ;
-      }
-    }
-    
-    .normal {
-      composes: common;
-      background-color:#eee;
-      color:#7B8585;
-    }
-    
-    .focused {
-      composes: common;
-      color:#fff;
-      background-color:#41c7c2;
-      &:hover {
-        background-color:#41c7c2;
-      }
-    }
-    
-    // js
-    import React, { Component } from 'react'
-    import CSSModules from 'react-css-modules';
-    import styles from './index.scss'
-    
-    class Tab extends Component {
-      render() {
-        const { items } = this.props;
-        const { focused } = this.state;
-    
-        return (
-          <div className="mb20 text-center">
-            <ul styleName="root">
-              {items.map((item, index) =>
-                <li
-                  key={index}
-                  styleName="normal"
-                >
-                  {item}
-                </li>
-              )}
-            </ul>
-            <p className="pt20">当前选择是：{items[this.state.focused]}</p>
-          </div>
-        )
-      }
-    }
-    
-    export default CSSModules(Tab, styles);
-    ```
+    `tip`, `title`, `nav`, `left`等等，这类“稀有”类名，在不同的组件样式文件中大胆的复用吧，不会有任何问题。  
 - 关于字形图标，很多朋友都会使用这个库 [Font Awesome](http://fontawesome.io/), 我以前也经常用，但是它的最大的问题不能定制，只能去选择想要的图标  
     后来同事推荐了这个兼顾制作和供选择图标的网站，[icomoon](https://icomoon.io/#home)，具体使用教程自行百度吧，这是我推荐的一篇教程，[详解使用icomoon生成字体图标的方法并应用](http://blog.csdn.net/u013938465/article/details/50680468)  
     这个网站的图标分为免费和收费的，一般来讲，上面的免费图标足够使用了，之所以用它就是用它允许你上传自己制作的SVG（设计师同学使用AI可以把自己画的图标直接生成SVG文件）生成本地字形文件。    
