@@ -8,6 +8,7 @@ const BigOne = () => {
         这是一张大图开发(该图片&gt;10k,图片不转代码)
         sf
       </h2>
+      <h2>master</h2>
       <div className={styles.bigImg}></div>
     </div>
   )
