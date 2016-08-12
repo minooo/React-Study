@@ -29,7 +29,7 @@ class Counter extends Component {
 class Lists extends Component {
   state = {
     lists: [
-      {name: '张学友'},
+      {name: 'minooo'},
       {name: '刘德华'},
       {name: '郭富城'},
       {name: '黎明'}
