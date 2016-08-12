@@ -6,6 +6,7 @@ const CommonTitle = ({title}) => {
       <h1 className="font-size-24">{title}</h1>
       <h1>dev 开发1</h1>
       <h1>dev 开发2</h1>
+      <h1>dev 开发3</h1>
       <hr/>
     </div>
   )
