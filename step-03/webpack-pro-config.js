@@ -15,8 +15,7 @@ module.exports = {
     index: './src/js/index',
     vendor: [
       'react',
-      'react-dom',
-      'react-router'
+      'react-dom'
     ]
     // 为了优化，切割代码，提取第三方库（实际上，我们将会引入很多第三方库）
   },
@@ -49,9 +48,8 @@ module.exports = {
     }),
 
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      __DEV__: false
     }),
     // 很多库的内部，有process.NODE_ENV的判断语句，
     // 改为production。最直观的就是没有所有的debug相关的东西，体积会减少很多
@@ -62,16 +60,17 @@ module.exports = {
     // 一般依赖库放到前面，所以vendor放第一个
 
     new HtmlWebpackPlugin({
+      template:'src/index.ejs',
+      // html模板的路径
+      
       title: '产品模式',
+      
       filename:'index.html',
       // 文件名以及文件将要存放的位置
 
       favicon:'./src/favicon.ico',
       // favicon路径
-
-      template:'./src/template.html',
-      // html模板的路径
-
+      
       inject:'body',
       // js插入的位置，true/'head'  false/'body'
 
@@ -87,7 +86,7 @@ module.exports = {
         removeComments:true,
         // 移除HTML中的注释
 
-        collapseWhitespace:false
+        collapseWhitespace:true
         // 删除空白符与换行符
       }
     })
@@ -130,7 +129,7 @@ module.exports = {
       },
       {
         test: /\.(gif|jpe?g|png|ico)$/,
-        loader: 'url-loader?limit=10000'
+        loader: 'url?limit=10000'
       }
     ]
   },
