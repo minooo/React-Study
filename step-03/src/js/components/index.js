@@ -1,1 +1,1 @@
-export { default as Animation } from './Animation'
+export { default as Nav } from './Nav'

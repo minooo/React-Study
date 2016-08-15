@@ -1,0 +1,22 @@
+.root {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #666;
+}
+
+.ico {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.text {
+  display: block;
+  line-height: 1;
+  font-size: 12px;
+}

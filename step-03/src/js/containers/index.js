@@ -5,6 +5,7 @@ export { default as Home } from './Home'
 
 // 优惠
 export { default as Coupon } from './Coupon'
+export { default as CouponDetail } from './Coupon/Detail'
 
 // 好店
 export { default as Shop } from './Shop'
