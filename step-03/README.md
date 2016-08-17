@@ -10,9 +10,14 @@ step-03 主要围绕添加 react-router 进行配置
   
 ---
 
-####[babel-plugin-transform-object-rest-spread](https://npm.taobao.org/package/babel-plugin-transform-object-rest-spread) [必需]
-> Compile object rest and spread to ES5  
-  安装：`npm install babel-plugin-transform-object-rest-spread --save-dev`
+####[antd-mobile](http://mobile.ant.design/) [强烈推荐]
+> antd的移动端版本  
+  安装：`npm install antd-mobile --save`
   
 ---
 
+####[rc-form](http://mobile.ant.design/) [开发需要需要]
+> antd-mobile 表单组件需要  
+  安装：`npm install rc-form --save-dev`
+  
+---
