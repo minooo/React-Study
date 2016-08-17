@@ -51,7 +51,8 @@ export default {
     })
   ],
   resolve: {
-    extensions: ['', '.js', 'jsx']
+    modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
+    extensions: ['', '.web.js', '.js']
   },
   module: {
     loaders: [
@@ -78,6 +79,11 @@ export default {
       },
       // 公有样式，不需要私有化，单独配置
 
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
         loader: 'url?limit=10000'

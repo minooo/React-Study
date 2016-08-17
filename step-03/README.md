@@ -16,8 +16,14 @@ step-03 主要围绕添加 react-router 进行配置
   
 ---
 
-####[rc-form](http://mobile.ant.design/) [开发需要需要]
+####[rc-form](http://mobile.ant.design/) [搭配antd-mobile必需]
 > antd-mobile 表单组件需要  
   安装：`npm install rc-form --save-dev`
+  
+---
+
+####[babel-plugin-antd](https://npm.taobao.org/package/babel-plugin-antd) [搭配antd-mobile必需]
+> Modular antd build plugin for babel.  
+  安装：`npm install babel-plugin-antd --save-dev`
   
 ---

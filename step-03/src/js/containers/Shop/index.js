@@ -1,11 +1,122 @@
 import React, { Component } from 'react'
+import { ActionSheet, Button } from 'antd-mobile';
 
 export default class Shop extends Component {
+  state = {
+    clicked: 'none',
+    clicked1: 'none',
+    BUTTONS: [
+      '操作 0',
+      '操作 1',
+      '操作 2',
+      '删除',
+      '取消',
+    ],
+    icons: [
+      {
+        icon: <img src="https://os.alipayobjects.com/rmsportal/zfQfLxUmXfgWech.png" style={{
+            height: 27,
+            verticalAlign: 'top',
+          }} />,
+        title: '支付宝',
+      },
+      {
+        icon: <img src="https://os.alipayobjects.com/rmsportal/pTINxOHGLBxzEAG.png" style={{
+            height: 27,
+            verticalAlign: 'top',
+          }} />,
+        title: '微信好友',
+      },
+      {
+        icon: <img src="https://os.alipayobjects.com/rmsportal/VMjNbIuafpXfjQE.png" style={{
+            height: 27,
+            verticalAlign: 'top',
+          }} />,
+        title: 'QQ',
+      },
+      { iconName: 'android', title: '用Android' },
+      { iconName: 'apple', title: '用Apple' },
+    ]
+  };
+
+  showActionSheet = () => {
+    const BUTTONS = this.state.BUTTONS;
+    ActionSheet.showActionSheetWithOptions({
+        options: BUTTONS,
+        cancelButtonIndex: BUTTONS.length - 1,
+        destructiveButtonIndex: BUTTONS.length - 2,
+        // title: '标题',
+        message: '我是描述我是描述',
+        maskClosable: true,
+      },
+      (buttonIndex) => {
+        this.setState({ clicked: BUTTONS[buttonIndex] });
+      });
+  };
+
+  showShareActionSheet = () => {
+    const icons = this.state.icons;
+    ActionSheet.showShareActionSheetWithOptions({
+        options: icons,
+        title: '标题',
+        message: '我是描述我是描述',
+      },
+      (buttonIndex) => {
+        this.setState({ clicked1: icons[buttonIndex].title });
+      });
+  };
+
+  showActionSheetWithCustom= () => {
+    ActionSheet.showActionSheetWithCustom({
+      title: '自定义 ActionSheet',
+      message: '我是描述我是描述',
+      component: <div style={{ color: 'red', padding: 20 }}>
+        自定义内容 &nbsp;
+        <Button inline size="small" onClick={() => ActionSheet.close()}>关闭</Button>
+      </div>,
+    });
+  };
+
   render() {
     return (
       <div className="absolute">
-        <h1>Shop</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div style={{ margin: '0 8px' }}>
+          <div style={{ margin: '32px 0' }}>
+            <div style={{ padding: '8px 0' }}>
+              <Button
+                type="primary"
+                onClick={this.showActionSheet}
+              >
+                默认状态操作列表
+              </Button>
+            </div>
+            <p className="demo-p">点击过的按钮: &nbsp;
+              <span style={{ color: '#222' }}>{this.state.clicked}</span>
+            </p>
+          </div>
+
+          <div style={{ margin: '32px 0' }}>
+            <div style={{ padding: '8px 0' }}>
+              <Button
+                type="primary"
+                onClick={this.showShareActionSheet}
+              >
+                带分享功能的操作列表
+              </Button>
+            </div>
+          </div>
+
+          <div style={{ margin: '32px 0' }}>
+            <div style={{ padding: '8px 0' }}>
+              <Button
+                type="primary"
+                onClick={this.showActionSheetWithCustom}
+              >
+                自定义的操作列表
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -93,7 +93,8 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', 'jsx']
+    modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
+    extensions: ['', '.web.js', '.js', '.json']
   },
   // 实际就是自动添加后缀，默认是当成js文件来查找路径
   // 空字符串在此是为了resolve一些在import文件时不带文件扩展名的表达式
@@ -123,6 +124,11 @@ module.exports = {
       },
       // 公有样式，不需要私有化，单独配置
 
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
         loader: 'url?limit=10000'
