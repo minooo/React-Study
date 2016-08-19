@@ -79,7 +79,7 @@ export default class Shop extends Component {
 
   render() {
     return (
-      <div className="absolute">
+      <div className="pageAnimate">
         <div style={{ margin: '0 8px' }}>
           <div style={{ margin: '32px 0' }}>
             <div style={{ padding: '8px 0' }}>
