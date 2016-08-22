@@ -1,31 +1,21 @@
 import React,{ Component } from 'react'
-import { Button, NavBar, SearchBar } from 'antd-mobile';
-import { createForm } from 'rc-form';
+import { SearchBar, NavBar, Icon } from 'antd-mobile'
+import { Header } from '../components'
 
 class Home extends Component {
   state = {
     dark: false
   }
-  switchDark() {
-    this.setState({ dark: !this.state.dark });
-  }
+  
   render() {
-    const { getFieldProps } = this.props.form;
-    console.log(this.props.form.getFieldsValue());
     return (
       <div className="pageAnimate">
-        <SearchBar
-          {...getFieldProps('SearchBar')}
-          placeholder="嗖的一声"
-          onSubmit={(value) => { console.log(`onSubmit: ${value}`); }}
-          onClear={() => { console.log('onClear'); }}
-          onCancel={() => { console.log('onCancel'); }}
-        />
+        <Header />
       </div>
     )
   }
 }
 
-Home = createForm()(Home);
 
-export default Home;
+
+export default Home

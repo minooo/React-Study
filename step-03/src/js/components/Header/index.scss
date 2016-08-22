@@ -1,0 +1,58 @@
+.root {
+  background: #1bbc9b;
+  height: 45px;
+  padding: 0 15px;
+  display: flex;
+}
+
+.left {
+  color: #fff;
+  margin-right: 15px;
+  line-height: 3.3;
+  &:hover, &:active {
+    color: #fff;
+  }
+}
+
+.right {
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  line-height: 2.1;
+  margin-left: 15px;
+  &:hover, &:active {
+    color: #fff;
+  }
+}
+
+.linkTwoTwo {
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fe535c;
+  left: 14px;
+  top: 10px;
+}
+
+.center {
+  flex-grow: 1;
+  margin-top: 10px;
+  padding-left: 8px;
+  display: flex;
+  background: #fff;
+  height: 25px;
+  line-height: 2.1;
+  border-radius: 13px;
+  color: #858585;
+  &:hover, &:active {
+    color: #858585;
+  }
+}
+
+.linkThreeOne {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-right: 5px;
+}

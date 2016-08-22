@@ -11,7 +11,7 @@ import {
   User
 } from './containers'
 
-import {Nav} from './components'
+import {Nav, Header} from './components'
 
 export default (
   <Route>

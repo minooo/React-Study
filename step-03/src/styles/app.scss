@@ -110,6 +110,7 @@ a {
   }
   &:visited {
 
+
   }
 }
 
@@ -242,6 +243,7 @@ a {
   min-width: $web-min-width;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 // 半透明弹层
@@ -299,7 +301,8 @@ a {
 .center-center-column {
   display: flex;
   align-items: center;
-  flex-flow: column nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 
@@ -308,7 +311,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 // last-no-border
