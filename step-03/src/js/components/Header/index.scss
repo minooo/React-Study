@@ -14,28 +14,6 @@
   }
 }
 
-.right {
-  position: relative;
-  color: #fff;
-  font-size: 22px;
-  line-height: 2.1;
-  margin-left: 15px;
-  &:hover, &:active {
-    color: #fff;
-  }
-}
-
-.linkTwoTwo {
-  position: absolute;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #fe535c;
-  left: 14px;
-  top: 10px;
-}
-
 .center {
   flex-grow: 1;
   margin-top: 10px;
@@ -51,7 +29,29 @@
   }
 }
 
-.linkThreeOne {
+.right {
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  line-height: 2.1;
+  margin-left: 15px;
+  &:hover, &:active {
+    color: #fff;
+  }
+}
+
+.tip {
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fe535c;
+  left: 14px;
+  top: 10px;
+}
+
+.search {
   font-size: 15px;
   line-height: 1.7;
   margin-right: 5px;

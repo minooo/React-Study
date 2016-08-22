@@ -13,28 +13,35 @@ export default class Header extends Component {
       messageBool: true
     }
   }
+
   render () {
-    const {
-      autoCity,
-      searchData
-    } = this.state;
+    const { autoCity, searchData } = this.state
+
     return (
       <div className={styles.root}>
-        <Link to={searchData.cityLink} className={styles.left}>
+        <Link
+          to={searchData.cityLink}
+          className={styles.left}
+        >
           <span className="font-size-14">{autoCity}</span>
           <span>▼</span>
         </Link>
 
-        <Link to={searchData.searchLink} className={styles.center}>
-          <i className={"i-4019 " + styles.linkThreeOne}></i>
+        <Link 
+          to={searchData.searchLink} 
+          className={styles.center}
+        >
+          <i className={"i-4019 " + styles.search} />
           <span>嗖的一声</span>
         </Link>
 
-        <Link to={searchData.messageLink} className={styles.right}>
-          {searchData.messageBool ? <span className={styles.linkTwoTwo}></span> : ''}
-          <i className="i-4020"></i>
+        <Link 
+          to={searchData.messageLink} 
+          className={styles.right}
+        >
+          {searchData.messageBool && <span className={styles.tip}/>}
+          <i className="i-4020"/>
         </Link>
-
       </div>
     )
   }
