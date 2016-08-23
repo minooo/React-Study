@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, IndexRoute} from 'react-router'
+import {Route, IndexRoute, Redirect} from 'react-router'
 
 import {
   App,
@@ -8,7 +8,9 @@ import {
   CouponDetail,
   Shop,
   Tour,
-  User
+  User,
+
+  NotFoundPage,
 } from './containers'
 
 import {Nav, Header} from './components'
@@ -17,11 +19,15 @@ export default (
   <Route>
     <Route path="/" component={Nav}>
       <IndexRoute component={Home}/>
-      <Route path="coupon" component={Coupon}/>
+      <Route path="coupon">
+        <IndexRoute component={Coupon}/>
+        <Route path=":id" component={CouponDetail}/>
+      </Route>
       <Route path="shop" component={Shop}/>
       <Route path="tour" component={Tour}/>
       <Route path="user" component={User}/>
     </Route>
-    <Route path="coupon:id" component={CouponDetail}/>
+
+    <Route path="*" component={NotFoundPage}/>
   </Route>
-)
+);

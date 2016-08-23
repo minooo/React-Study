@@ -15,3 +15,6 @@ export { default as Tour } from './Tour'
 
 // 我的
 export { default as User } from './User'
+
+// 404
+export { default as NotFoundPage } from './404.js'
