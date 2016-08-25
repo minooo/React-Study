@@ -28,6 +28,7 @@ export default (
       <Route path="user" component={User}/>
     </Route>
 
+    
     <Route path="*" component={NotFoundPage}/>
   </Route>
 );
