@@ -1,3 +1,8 @@
 a:hover, a:active {
   color: #1BBC9B;
 }
+
+html.pixel-ratio-3 .am-action-sheet-button-list > li:before {
+  transform: scaleY(5);
+  border-color: red;
+}

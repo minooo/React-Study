@@ -7,6 +7,9 @@
   align-items: center;
   line-height: 1;
   color: #666;
+  &:hover {
+    color: #1abc9c;
+  }
 }
 
 .ico {

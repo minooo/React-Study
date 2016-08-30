@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { ActionSheet, Button } from 'antd-mobile';
+import { Nav } from '../../components'
 
 export default class Shop extends Component {
   state = {
@@ -79,7 +80,7 @@ export default class Shop extends Component {
 
   render() {
     return (
-      <div className="pageAnimate">
+      <div>
         <div style={{ margin: '0 8px' }}>
           <div style={{ margin: '32px 0' }}>
             <div style={{ padding: '8px 0' }}>
@@ -117,6 +118,7 @@ export default class Shop extends Component {
             </div>
           </div>
         </div>
+        <Nav />
       </div>
     )
   }

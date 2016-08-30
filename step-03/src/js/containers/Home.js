@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import { SearchBar, NavBar, Icon } from 'antd-mobile'
-import { Header } from '../components'
+import { Header, Nav } from '../components'
 
 class Home extends Component {
   state = {
@@ -9,13 +9,12 @@ class Home extends Component {
   
   render() {
     return (
-      <div className="pageAnimate">
+      <div>
         <Header />
+        <Nav />
       </div>
     )
   }
 }
-
-
 
 export default Home

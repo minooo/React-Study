@@ -12,6 +12,9 @@
 
 .navOne, .navTwo, .navThree, .navFour, .navFive {
   color: #1abc9c;
+  &:hover, &:active {
+    color: #1abc9c;
+  }
 }
 .navOne i:before {
   content: "\e93d";
