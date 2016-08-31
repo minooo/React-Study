@@ -7,7 +7,7 @@ export default class Nav extends Component {
     return (
       <div>
         <div style={{height:'60px'}}></div>
-        <div className={"ui-border-t " + styles.root}>
+        <div className={"one-px-border " + styles.root}>
           <NavLink
             pathUrl="/"
             icoName={"i-zhuye42un"}

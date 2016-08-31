@@ -118,6 +118,7 @@ export default class Shop extends Component {
             </div>
           </div>
         </div>
+        <h1>asdfa</h1>
         <Nav />
       </div>
     )

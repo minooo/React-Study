@@ -109,14 +109,31 @@ a {
     text-decoration: none;
   }
   &:visited {
-
-
   }
 }
 
 //字体颜色
 .main-color {
   color: $main-color;
+}
+
+// 手机端1像素边的设置
+// 默认顶部
+.one-px-border:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-top: 1px solid #ccc;
+  display: block;
+  z-index: 15;
+  transform-origin: 50% 0;
+  transform: scaleY(0.33);
 }
 
 //背景颜色
@@ -228,7 +245,7 @@ a {
 }
 
 .line40 {
-  line-height: 40px !important;
+  line-height: 40px;
 }
 
 .lb0 {
@@ -347,21 +364,6 @@ img {
 
 .text-center {
   text-align: center;
-}
-
-// 全部小写
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-// 全部大写
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-// 首字母大写
-.text-capitalize {
-  text-transform: capitalize;
 }
 
 // 字符溢出隐藏
@@ -549,7 +551,7 @@ img {
 // ------------------------------------------------------------
 
 // radio 样式重写
-input[type="radio"] {
+/*input[type="radio"] {
   position: relative;
   vertical-align: middle;
   width: 0.36rem;
@@ -603,7 +605,7 @@ input[type="radio"]:checked:before {
   background: #1abc9c;
   border-radius: 50%;
   border: none;
-}
+}*/
 
 // 1px边框解决方案
 .ui-border-t {
