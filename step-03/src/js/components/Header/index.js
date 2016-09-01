@@ -23,16 +23,16 @@ export default class Header extends Component {
           to={searchData.cityLink}
           className={styles.left}
         >
-          <span className="font-size-14">{autoCity}</span>
+          <span className="font-36">{autoCity}</span>
           <span>▼</span>
         </Link>
 
         <Link 
           to={searchData.searchLink} 
-          className={styles.center}
+          className={`ver-center ${styles.center}`}
         >
-          <i className={"i-4019 " + styles.search} />
-          <span>嗖的一声</span>
+          <i className={`i-4019 ${styles.search}`} />
+          <span >嗖的一声</span>
         </Link>
 
         <Link 
