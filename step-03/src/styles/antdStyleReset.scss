@@ -1,5 +1,8 @@
 //重置antd-mobile样式
-
+.am-carousel .slick-dots li.slick-active button:before {
+  color: #1bbc9b;
+  opacity: 1;
+}
 // 重写radio样式
 .am-radio.am-radio-checked .am-radio-inner:after {
   position: absolute;
