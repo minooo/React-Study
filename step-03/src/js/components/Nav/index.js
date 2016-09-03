@@ -1,26 +1,13 @@
 import React, { Component } from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import NavLink from './NavLink'
 import styles from './index.scss'
 
 export default class Nav extends Component {
   render() {
-    const { children, location } = this.props;
-
     return (
-      <div className="box">
-        <ReactCSSTransitionGroup
-          component="div"
-          transitionName="swap"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-        >
-          {React.cloneElement(children, {
-            key: location.pathname
-          })}
-        </ReactCSSTransitionGroup>
+      <div>
         <div style={{height:'60px'}}></div>
-        <div className={"ui-border-t " + styles.root}>
+        <div className={styles.root}>
           <NavLink
             pathUrl="/"
             icoName={"i-zhuye42un"}

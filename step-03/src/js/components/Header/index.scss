@@ -1,14 +1,14 @@
 .root {
   background: #1bbc9b;
-  height: 45px;
-  padding: 0 15px;
+  height: 107px;
+  padding: 0 34px;
   display: flex;
 }
 
 .left {
   color: #fff;
-  margin-right: 15px;
-  line-height: 3.3;
+  margin-right: 40px;
+  line-height: 3;
   &:hover, &:active {
     color: #fff;
   }
@@ -16,13 +16,11 @@
 
 .center {
   flex-grow: 1;
-  margin-top: 10px;
-  padding-left: 8px;
-  display: flex;
+  margin-top: 23px;
+  padding-left: 20px;
   background: #fff;
-  height: 25px;
-  line-height: 2.1;
-  border-radius: 13px;
+  height: 60px;
+  border-radius: 30px;
   color: #858585;
   &:hover, &:active {
     color: #858585;
@@ -32,9 +30,9 @@
 .right {
   position: relative;
   color: #fff;
-  font-size: 22px;
+  font-size: 50px;
   line-height: 2.1;
-  margin-left: 15px;
+  margin-left: 30px;
   &:hover, &:active {
     color: #fff;
   }
@@ -43,16 +41,16 @@
 .tip {
   position: absolute;
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #fe535c;
-  left: 14px;
-  top: 10px;
+  left: 30px;
+  top: 24px;
 }
 
 .search {
-  font-size: 15px;
+  font-size: 37px;
   line-height: 1.7;
-  margin-right: 5px;
+  margin-right: 20px;
 }
