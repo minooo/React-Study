@@ -27,8 +27,6 @@ step-03 主要围绕添加 react-router 进行配置
   安装：`npm install babel-plugin-antd --save-dev`
   
 ---
-<<<<<<< HEAD
-=======
 
 #### 高清方案实践
 ```
