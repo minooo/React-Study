@@ -50,7 +50,7 @@
     "precss": "^1.4.0",
     "rc-form": "^0.17.2",
     "react-addons-css-transition-group": "^15.3.0",
-    "react-hot-loader": "^3.0.0-beta.2",
+    "react-hot-loader": "^3.0.0-beta.3",
     "react-router": "^2.6.1",
     "redbox-react": "^1.2.10",
     "rimraf": "^2.5.3",
