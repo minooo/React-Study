@@ -6,19 +6,20 @@
 }
 
 .list {
+  position: relative;
   padding: 0 35px;
-  height: 94px;
-  border-top: 1px solid #ddd;
-  background: #fff;
+  height: 0.9rem;
+  background: #F7FAF7;
 }
 
 .active {
-  background: #efefef;
-  color: #1abc9c;
+  background: #ddd;
 }
 
 .sonActive {
-  background: #efefef;
+  background: #fff;
+  padding-right: 0.3rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .conMulti {
@@ -26,8 +27,8 @@
   display: flex;
 }
 .left {
-  flex-grow: 3;
+  flex-basis: 3rem;
 }
 .right {
-  flex-grow: 7;
+  flex-grow: 1;
 }

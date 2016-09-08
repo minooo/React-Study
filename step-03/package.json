@@ -18,7 +18,7 @@
   "author": "minooo",
   "license": "MIT",
   "dependencies": {
-    "antd-mobile": "^0.8.0",
+    "antd-mobile": "^0.8.2",
     "babel-polyfill": "^6.9.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"

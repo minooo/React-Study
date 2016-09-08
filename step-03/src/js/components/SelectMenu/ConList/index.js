@@ -52,7 +52,7 @@ export default class ConList extends Component {
             <div className={styles.root}>
               {
                 items.map(item =>
-                  <Item {...item} onClick={() => onClick()}/>
+                  <Item {...item} SonBool onClick={() => onClick()}/>
                 )
               }
             </div>
