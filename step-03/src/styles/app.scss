@@ -97,7 +97,21 @@ a {
 }
 
 // 字体颜色
-.main-color {  color: $main-color;  }
+.main-color {
+  color: $main-color;
+}
+
+.color333 {
+  color: #333
+}
+
+.color666 {
+  color: #666
+}
+
+.color999 {
+  color: #999
+}
 
 // 背景颜色
 .bg-white { background-color: #fff }
@@ -328,6 +342,24 @@ img {
   position: fixed;
 }
 
+.z-50 {
+  z-index: 50;
+}
+.z-100 {
+  z-index: 100;
+}
+.z-150 {
+  z-index: 150;
+}
+.z-200 {
+  z-index: 200;
+}
+.z-250 {
+  z-index: 250;
+}
+.z-max {
+  z-index: 999999;
+}
 .overflow-h {
   overflow: hidden;
 }

@@ -1,0 +1,34 @@
+.root {
+  position: absolute;
+  top: 100px;
+  z-index: 150;
+  width: 100%;
+}
+
+.list {
+  padding: 0 35px;
+  height: 94px;
+  border-top: 1px solid #ddd;
+  border-right:1px solid #fff;
+  background: #fff;
+}
+
+.active {
+  background: #efefef;
+  color: #1abc9c;
+}
+
+.sonActive {
+  background: #efefef;
+}
+
+.conMulti {
+  composes: root;
+  display: flex;
+}
+.left {
+  flex-grow: 3;
+}
+.right {
+  flex-grow: 7;
+}
