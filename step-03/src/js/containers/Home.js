@@ -56,18 +56,18 @@ class Home extends Component {
       <div>
         <Header />
         <Carousel {...settings}>
-            <div className="item">
-              <img src="http://temp.im/1125x354/444/fff" alt=""/>
-            </div>
-            <div className="item">
-              <img src="http://temp.im/1125x354/444/fff" alt=""/>
-            </div>
-            <div className="item">
-              <img src="http://temp.im/1125x354/444/fff" alt=""/>
-            </div>
-            <div className="item">
-              <img src="http://temp.im/1125x354/444/fff" alt=""/>
-            </div>
+          <div className="item">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+          </div>
+          <div className="item">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+          </div>
+          <div className="item">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+          </div>
+          <div className="item">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+          </div>
           </Carousel>
         <div className="bg-white hor pt30">
           {fastNav.map((item, index) =>

@@ -23,7 +23,7 @@ export default class Header extends Component {
           to={searchData.cityLink}
           className={styles.left}
         >
-          <span className="font-36">{autoCity}</span>
+          <span className="font-28">{autoCity}</span>
           <span>▼</span>
         </Link>
 

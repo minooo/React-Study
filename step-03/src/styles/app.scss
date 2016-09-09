@@ -80,7 +80,7 @@ body {
   line-height: 1.5;
   color: $body-color;
   background-color: $body-bg;
-  font-size: 28px;
+  font-size: 0.24rem;
 }
 
 // Links
@@ -94,6 +94,12 @@ a {
   }
   &:visited {
   }
+}
+// 暂时放置样式，后期需处理
+.homeImg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 // 字体颜色
@@ -134,15 +140,16 @@ a {
 }
 
 // 请保证你的设计稿为750px宽，如果有其余字体大小，请在私有样式中设置
-.font-24 {font-size: 24px;}
-.font-26 {font-size: 26px;}
-.font-28 {font-size: 28px;}
-.font-30 {font-size: 30px;}
-.font-32 {font-size: 32px;}
-.font-34 {font-size: 34px;}
-.font-36 {font-size: 36px;}
-.font-38 {font-size: 38px;}
-.font-40 {font-size: 40px;}
+.font-20 {font-size: 0.2rem;}
+.font-24 {font-size: 0.24rem;}
+.font-26 {font-size: 0.26rem;}
+.font-28 {font-size: 0.28rem;}
+.font-30 {font-size: 0.3rem;}
+.font-32 {font-size: 0.32rem;}
+.font-34 {font-size: 0.34rem;}
+.font-36 {font-size: 0.36rem;}
+.font-38 {font-size: 0.38rem;}
+.font-40 {font-size: 0.4rem;}
 
 // 设置block
 .block {

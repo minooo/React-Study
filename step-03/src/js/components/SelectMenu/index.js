@@ -143,7 +143,7 @@ export default class SelectMenu extends Component {
           <ConList {...cate} onClick={this.onClick}/>
         )}
 
-        {isExpend && <div onClick={this.hideHandle.bind(this)} className="alpha-bg"></div>}
+        {isExpend && <div onClick={this.hideHandle} className="alpha-bg"></div>}
       </div>
     )
   }
