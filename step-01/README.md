@@ -2,7 +2,7 @@
 
 本模板综合运用了react+webpack+es2015。  
 本模板是以实际应用为目的，由基础配置向高级配置逐步递进。  
-这是React-Study的第一个版本，React版本为15.2.1，该版本完全满足你单纯学习React的需求  
+这是React-Study的第一个版本，React版本为15.3.1，该版本完全满足你单纯学习React的需求  
 本模板有两种模式：  
 
 1. 开发模式————有热替换功能，可以将错误信息捕捉并高亮显示到页面。
@@ -138,7 +138,7 @@ Babel就不会转码这个方法，如果想让这个方法运行，必须使用
 
 ####[react-hot-loader](https://npm.taobao.org/package/react-hot-loader) [开发需要]  
 > 可以使react组件在浏览器上实时更新而无需手动刷新。  
-安装：`npm install --save-dev react-hot-loader@3.0.0-beta.2`  
+安装：`npm install --save-dev react-hot-loader@3.0.0-beta.3`  
 备注：用的是3.0最新版本，这版本很强大。
 
 ---
