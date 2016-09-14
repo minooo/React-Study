@@ -12,16 +12,12 @@ export default class SelectMenu extends Component {
         label: '分类',
         items: [
           {
-            key: 0,
             label: '全部分类'
           },{
-            key: 1,
             label: '住宿'
           },{
-            key: 2,
             label: '美食'
           },{
-            key: 3,
             label: '旅游'
           }
         ]
@@ -31,16 +27,12 @@ export default class SelectMenu extends Component {
         label: '商圈',
         items: [
           {
-            key: 0,
             label: '全部分类2'
           },{
-            key: 1,
             label: '住宿2'
           },{
-            key: 2,
             label: '美食2'
           },{
-            key: 3,
             label: '旅游2'
           }
         ]
@@ -51,47 +43,35 @@ export default class SelectMenu extends Component {
         type: 'multi',
         items: [
           {
-            key: 0,
             label: '父级项目',
             items: [
               {
-                key: 0,
                 label: '子项目1'
               },{
-                key: 1,
                 label: '子项目2'
               },{
-                key: 2,
                 label: '子项目3'
               }
             ]
           },{
-            key: 1,
             label: '父级项目222',
             items: [
               {
-                key: 0,
                 label: '子项目11'
               },{
-                key: 1,
                 label: '子项目22'
               },{
-                key: 2,
                 label: '子项目33'
               }
             ]
           },{
-            key: 2,
             label: '父级项目333',
             items: [
               {
-                key: 0,
                 label: '子项目111'
               },{
-                key: 1,
                 label: '子项目222'
               },{
-                key: 2,
                 label: '子项目333'
               }
             ]

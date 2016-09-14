@@ -5,7 +5,7 @@ const Item = ({label, onClick, activeBool, SonBool}) => {
   return (
     <a
       href="javascript:void(0)"
-      onClick={() => onClick()}
+      onClick={onClick}
       className={`ver-center ${styles.list} ${activeBool ? styles.active:null} ${SonBool ? styles.sonActive :null}`}
     >
       {label}
@@ -34,6 +34,7 @@ export default class ConList extends Component {
                   items.map((item, index) =>
                     <Item
                       {...item}
+                      key={index}
                       activeBool={index === focus}
                       onClick={this.onClickFocus.bind(null, index)}
                     />
@@ -42,8 +43,8 @@ export default class ConList extends Component {
               </div>
               <div className={styles.right}>
                 {
-                  items[focus].items.map(item =>
-                    <Item {...item} SonBool onClick={() => onClick()} />
+                  items[focus].items.map((item, index) =>
+                    <Item {...item} key={index} SonBool onClick={onClick} />
                   )
                 }
               </div>
@@ -51,8 +52,8 @@ export default class ConList extends Component {
 
             <div className={styles.root}>
               {
-                items.map(item =>
-                  <Item {...item} SonBool onClick={() => onClick()}/>
+                items.map((item, index) =>
+                  <Item {...item} key={index} SonBool onClick={onClick}/>
                 )
               }
             </div>
