@@ -60,8 +60,6 @@ export default class SelectMenu extends Component {
                 label: '子项目11'
               },{
                 label: '子项目22'
-              },{
-                label: '子项目33'
               }
             ]
           },{
@@ -73,6 +71,10 @@ export default class SelectMenu extends Component {
                 label: '子项目222'
               },{
                 label: '子项目333'
+              },{
+                label: '子项目444'
+              },{
+                label: '子项目555'
               }
             ]
           }

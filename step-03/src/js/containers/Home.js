@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import {WhiteSpace, Carousel } from 'antd-mobile'
-import { Header, Nav, FastNav, Title } from '../components'
+import { Header, Nav, FastNav, Title, ShopList } from '../components'
 
 class Home extends Component {
   state = {
@@ -75,6 +75,7 @@ class Home extends Component {
           )}
         </div>
         <Title text="精品好店" linkName="查看全部" path="/shop" />
+        <ShopList/>
         <Nav />
       </div>
     )

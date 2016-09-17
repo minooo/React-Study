@@ -1,6 +1,6 @@
 .root {
   position: absolute;
-  top: 100px;
+  top: 0.89rem;
   z-index: 150;
   width: 100%;
 }
@@ -28,7 +28,9 @@
 }
 .left {
   flex-basis: 3rem;
+  background: #F7FAF7;
 }
 .right {
   flex-grow: 1;
+  background: #fff;
 }
