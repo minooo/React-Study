@@ -36,6 +36,20 @@ class Home extends Component {
         thumb: "http://temp.im/140x140",
         title: "大牌抢购"
       }
+    ],
+    shopLists: [
+      {
+        id: 1,
+        thumb: 'http://temp.im/240x180/FF9500/000',
+        label: '五折优惠',
+        discount_scale: '8',
+        title: '年年有鱼',
+        caption: '本市最棒的烤鱼店',
+        tag: '美食',
+        distance: '25',
+        discount_text: '本店支持微信支付',
+        discount_time: '周一到周五每天9:00-24:00'
+      }
     ]
   }
   
@@ -50,7 +64,7 @@ class Home extends Component {
       afterChange: this.slideTo,
       lazyLoad: true
     }
-    const { fastNav } = this.state
+    const { fastNav, shopLists } = this.state
 
     return (
       <div>
@@ -75,7 +89,9 @@ class Home extends Component {
           )}
         </div>
         <Title text="精品好店" linkName="查看全部" path="/shop" />
-        <ShopList/>
+        {shopLists.map(item =>
+          <ShopList key={item.id} data={item} />
+        )}
         <Nav />
       </div>
     )

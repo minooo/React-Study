@@ -1,0 +1,114 @@
+.root {
+  display: block;
+  position: relative;
+  padding: 0.15rem 0 0.1rem 0;
+  flex-grow:1;
+}
+.listBox:last-child .root {
+  border-bottom: none;
+  background: none;
+}
+.rootOneOne {
+  display: block;
+  width: 1.6rem;
+  height: 1.2rem;
+}
+.rootOneTwoCommon {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  left: -0.15rem;
+  top: 0.07rem;
+  width: 0.6rem;
+  height: 0.16rem;
+  line-height: 0.16rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.08rem;
+  transform:rotateZ(315deg)
+}
+.rootOneTwo {
+  composes: rootOneTwoCommon;
+  background: #19bd9a;
+}
+
+.rootTwo {
+  margin-left: 0.9rem;
+  margin-right: 0.75rem;
+}
+.rootTwoZero {
+  font-size: 0.3rem;
+  line-height: 1;
+  margin-bottom: 0.09rem;
+}
+.rootTwoOne {
+  line-height: 1;
+  margin-bottom: 0.09rem;
+  color: #999;
+}
+.rootTwoTwo {
+  line-height:1;
+  margin-bottom: 0.09rem;
+}
+.rootTwoTwoOne {
+  color: #666;
+}
+.rootTwoTwoTwo {
+  color: #999;
+}
+
+.rootTwoThr {
+  display: flex;
+  align-items: center;
+  line-height:1;
+  margin-bottom: 0.03rem;
+}
+.rootTwoThrOne {
+  font-size: 0.32rem;
+  color: #33b433;
+  margin-right: 0.03rem;
+}
+.rootTwoThrTwo {
+  color: #999;
+}
+
+.rootTwoTFour {
+  height: 0.24rem;
+  line-height: 0.24rem;
+}
+.rootTwoTFourOne {
+  font-size: 0.32rem;
+  color: #848484;
+  margin-right: 0.03rem;
+  vertical-align: sub;
+}
+.rootTwoTFourTwo {
+  color: #999;
+}
+
+.rootThr {
+  position: absolute;
+  right: 0.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rootThrOne {
+  font-size: 0.7rem;
+  color: #ec6957;
+}
+.rootThrTwo {
+  color: #ec6957;
+}
+
+
+.listBox {
+  display: flex;
+}
+.listDelete {
+  flex-basis: 0.45rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.4rem;
+  color: red;
+}
