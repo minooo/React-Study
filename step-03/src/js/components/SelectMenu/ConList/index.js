@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import styles from './index.scss'
 
-const Item = ({label, onClick, activeBool, SonBool}) => {
+const Item = ({label, selectHandle, activeBool, SonBool}) => {
   return (
     <a
       href="javascript:void(0)"
-      onClick={onClick}
+      onClick={selectHandle}
       className={`ver-center ${styles.list} ${activeBool ? styles.active:null} ${SonBool ? styles.sonActive :null}`}
     >
       {label}
@@ -15,50 +15,44 @@ const Item = ({label, onClick, activeBool, SonBool}) => {
 
 export default class ConList extends Component {
   state = {
-    focus: 0
+    focus: -1
   }
   onClickFocus = (i) => {
     this.setState({focus: i})
   }
+
   render() {
-    const { type, items, onClick } = this.props
+    const { items, selectHandle } = this.props
     const { focus } = this.state
     return (
       <div>
-        {
-          type === 'multi' ?
+        <div className={styles.root}>
+          <div className={styles.left}>
+            {items.map((item, index) =>
+              <Item
+                {...item}
+                key={index}
+                SonBool={!(item.items&&index===focus)}
+                activeBool={item.items&&index===focus}
+                selectHandle={item.items ? this.onClickFocus.bind(null, index, item) : () => selectHandle()}
+              />
+            )}
+          </div>
 
-            <div className={styles.conMulti}>
-              <div className={styles.left}>
-                {
-                  items.map((item, index) =>
-                    <Item
-                      {...item}
-                      key={index}
-                      activeBool={index === focus}
-                      onClick={this.onClickFocus.bind(null, index)}
-                    />
-                  )
-                }
-              </div>
-              <div className={styles.right}>
-                {
-                  items[focus].items.map((item, index) =>
-                    <Item {...item} key={index} SonBool onClick={onClick} />
-                  )
-                }
-              </div>
-            </div> :
-
-            <div className={styles.root}>
-              {
-                items.map((item, index) =>
-                  <Item {...item} key={index} SonBool onClick={onClick}/>
-                )
-              }
+          {items.map((item, index) =>
+            item.items && index===focus &&
+            <div className={styles.right}>
+              {item.items.map((item, index) =>
+                <Item
+                  {...item}
+                  key={index}
+                  SonBool
+                  selectHandle={() => selectHandle()}
+                />
+              )}
             </div>
-        }
-
+          )}
+        </div>
       </div>
     )
   }

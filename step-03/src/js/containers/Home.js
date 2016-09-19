@@ -46,13 +46,24 @@ class Home extends Component {
         title: '年年有鱼',
         caption: '本市最棒的烤鱼店',
         tag: '美食',
-        distance: '25',
+        distance: '2.5km',
+        discount_text: '本店支持微信支付',
+        discount_time: '周一到周五每天9:00-24:00'
+      },{
+        id: 2,
+        thumb: 'http://temp.im/240x180/FF9500/000',
+        label: '五折优惠',
+        discount_scale: '9',
+        title: '年年有鱼2',
+        caption: '本市最棒的烤鱼店2',
+        tag: '美食',
+        distance: '12.5km',
         discount_text: '本店支持微信支付',
         discount_time: '周一到周五每天9:00-24:00'
       }
     ]
   }
-  
+
   render() {
     const settings = {
       dots: true,

@@ -3,13 +3,13 @@
   top: 0.89rem;
   z-index: 150;
   width: 100%;
+  display: flex;
 }
 
 .list {
   position: relative;
   padding: 0 35px;
   height: 0.9rem;
-  background: #F7FAF7;
 }
 
 .active {
@@ -27,10 +27,11 @@
   display: flex;
 }
 .left {
-  flex-basis: 3rem;
-  background: #F7FAF7;
-}
-.right {
-  flex-grow: 1;
+  flex-grow: 4;
   background: #fff;
+}
+
+.right {
+  flex-grow: 6;
+  background: #f2f2f2;
 }

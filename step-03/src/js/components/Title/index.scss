@@ -1,11 +1,10 @@
 .root {
-  height: 40px;
-  padding-top: 5px;
+  height: 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
 }
 .left {
   color: #999;
@@ -20,5 +19,5 @@
   font-style: normal;
 }
 .icon {
-  font-size: 30px;
+  font-size: 0.3rem;
 }

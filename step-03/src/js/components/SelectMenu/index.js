@@ -40,7 +40,6 @@ export default class SelectMenu extends Component {
         activeBool: false,
         key: 'aid',
         label: '位置',
-        type: 'multi',
         items: [
           {
             label: '父级项目',
@@ -105,7 +104,7 @@ export default class SelectMenu extends Component {
     });
     this.setState({isExpend : false});
   }
-  onClick = () => {
+  selectHandle = () => {
     alert(111)
   }
   render() {
@@ -122,7 +121,7 @@ export default class SelectMenu extends Component {
         </div>
         {isExpend && filters.map((cate) =>
           cate.activeBool &&
-          <ConList {...cate} onClick={this.onClick}/>
+          <ConList {...cate} selectHandle={this.selectHandle}/>
         )}
 
         {isExpend && <div onClick={this.hideHandle} className="alpha-bg"></div>}
