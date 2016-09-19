@@ -41,11 +41,11 @@ export default class ConList extends Component {
 
           {items.map((item, index) =>
             item.items && index===focus &&
-            <div className={styles.right}>
+            <div key={index} className={styles.right}>
               {item.items.map((item, index) =>
                 <Item
                   {...item}
-                  key={index}
+                  key={item.label}
                   SonBool
                   selectHandle={() => selectHandle()}
                 />

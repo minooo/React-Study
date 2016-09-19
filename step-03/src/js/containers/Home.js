@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import {WhiteSpace, Carousel } from 'antd-mobile'
+import {WhiteSpace, WingBlank, Carousel } from 'antd-mobile'
 import { Header, Nav, FastNav, Title, ShopList } from '../components'
 
 class Home extends Component {
@@ -100,9 +100,11 @@ class Home extends Component {
           )}
         </div>
         <Title text="精品好店" linkName="查看全部" path="/shop" />
-        {shopLists.map(item =>
-          <ShopList key={item.id} data={item} />
-        )}
+        <div className="plr20 bg-white">
+          {shopLists.map(item =>
+            <ShopList key={item.id} data={item} />
+          )}
+        </div>
         <Nav />
       </div>
     )

@@ -13,19 +13,14 @@
 }
 
 .active {
-  background: #ddd;
+  background: #f2f2f2;
 }
 
 .sonActive {
-  background: #fff;
   padding-right: 0.3rem;
   border-bottom: 1px solid #ddd;
 }
 
-.conMulti {
-  composes: root;
-  display: flex;
-}
 .left {
   flex-grow: 4;
   background: #fff;

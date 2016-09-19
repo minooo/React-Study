@@ -6,7 +6,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div>
-        <div style={{height:'60px'}}></div>
+        <div style={{height:'1.2rem'}}></div>
         <div className={styles.root}>
           <NavLink
             pathUrl="/"
