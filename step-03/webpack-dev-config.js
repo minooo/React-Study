@@ -6,7 +6,7 @@
 
 const path = require('path');
 import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import precss from 'precss'
 import autoprefixer from 'autoprefixer'

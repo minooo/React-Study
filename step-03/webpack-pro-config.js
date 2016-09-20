@@ -7,6 +7,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const pxtorem = require('postcss-pxtorem');
 // webpack中生成HTML的插件，
 
 module.exports = {
@@ -129,6 +130,11 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
+
+      {
+        test: /\.less$/,
+        loader: "style!css!less"
+      },
       
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
@@ -144,7 +150,11 @@ module.exports = {
     return [
       require('precss'),
       require('autoprefixer'),
-      require('rucksack-css')
+      require('rucksack-css'),
+      pxtorem({
+        rootValue: 100,
+        propWhiteList: [],
+      })
     ];
   }
 };
