@@ -8,9 +8,10 @@ const path = require('path');
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-import precss from 'precss';
-import autoprefixer from 'autoprefixer';
-import rucksackCss from 'rucksack-css';
+import precss from 'precss'
+import autoprefixer from 'autoprefixer'
+import rucksackCss from 'rucksack-css'
+import pxtorem from 'postcss-pxtorem'
 
 export default {
   debug: true,
@@ -83,6 +84,11 @@ export default {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
+
+      {
+        test: /\.less$/,
+        loader: "style!css!less"
+      },
       
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
@@ -94,5 +100,5 @@ export default {
       }
     ]
   },
-  postcss: ()=> [precss,autoprefixer,rucksackCss]
+  postcss: ()=> [precss,autoprefixer,rucksackCss,pxtorem({rootValue: 100, propWhiteList: []})]
 };

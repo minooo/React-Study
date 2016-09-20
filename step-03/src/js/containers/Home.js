@@ -8,39 +8,39 @@ class Home extends Component {
     fastNav: [
       {
         link: "https://www.github.com",
-        thumb: "http://temp.im/140x140",
+        thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       },
       {
         link: "https://www.github.com",
-        thumb: "http://temp.im/140x140",
+        thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       },
       {
         link: "https://www.github.com",
-        thumb: "http://temp.im/140x140",
+        thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       },
       {
         link: "https://www.github.com",
-        thumb: "http://temp.im/140x140",
+        thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       },
       {
         link: "https://www.github.com",
-        thumb: "http://temp.im/140x140",
+        thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       },
       {
-        link: "https://www.github.com",
-        thumb: "http://temp.im/140x140",
+        link: "/hello/",
+        thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       }
     ],
     shopLists: [
       {
         id: 1,
-        thumb: 'http://temp.im/240x180/FF9500/000',
+        thumb: 'http://temp.im/160x120/FF9500/000',
         label: '五折优惠',
         discount_scale: '8',
         title: '年年有鱼',
@@ -51,7 +51,7 @@ class Home extends Component {
         discount_time: '周一到周五每天9:00-24:00'
       },{
         id: 2,
-        thumb: 'http://temp.im/240x180/FF9500/000',
+        thumb: 'http://temp.im/160x120/FF9500/000',
         label: '五折优惠',
         discount_scale: '9',
         title: '年年有鱼2',
@@ -67,7 +67,7 @@ class Home extends Component {
   render() {
     const settings = {
       dots: true,
-      autoplay: 1,
+      autoplay: true,
       autoplaySpeed: 3000,
       infinite: true,
       mode: 'banner',
@@ -82,16 +82,16 @@ class Home extends Component {
         <Header />
         <Carousel {...settings}>
           <div className="item">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           <div className="item">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           <div className="item">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           <div className="item">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           </Carousel>
         <div className="bg-white hor pt30">

@@ -25,7 +25,7 @@ export default class FastNav extends React.Component {
       return (
         <Link
           to={data.link}
-          className={styles.root}
+          className={`center-center-column ${styles.root}`}
         >
           <img
             src={data.thumb}

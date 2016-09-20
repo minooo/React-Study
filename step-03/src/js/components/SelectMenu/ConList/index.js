@@ -34,7 +34,7 @@ export default class ConList extends Component {
                 key={index}
                 SonBool={!(item.items&&index===focus)}
                 activeBool={item.items&&index===focus}
-                selectHandle={item.items ? this.onClickFocus.bind(null, index, item) : () => selectHandle()}
+                selectHandle={item.items ? this.onClickFocus.bind(null, index, item) : () => selectHandle(item.label)}
               />
             )}
           </div>
@@ -47,7 +47,7 @@ export default class ConList extends Component {
                   {...item}
                   key={item.label}
                   SonBool
-                  selectHandle={() => selectHandle()}
+                  selectHandle={() => selectHandle(item.label)}
                 />
               )}
             </div>

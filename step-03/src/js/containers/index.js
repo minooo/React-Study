@@ -9,6 +9,7 @@ export { default as CouponDetail } from './Coupon/Detail'
 
 // 好店
 export { default as Shop } from './Shop'
+export { default as ShopDetail } from './Shop/Detail'
 
 // 周边
 export { default as Tour } from './Tour'

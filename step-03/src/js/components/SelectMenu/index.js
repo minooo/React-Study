@@ -104,8 +104,8 @@ export default class SelectMenu extends Component {
     });
     this.setState({isExpend : false});
   }
-  selectHandle = () => {
-    alert(111)
+  selectHandle = (item) => {
+    alert(`当前点击的是: ${item}`)
   }
   render() {
     const { filters, isExpend } = this.state
