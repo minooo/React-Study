@@ -11,7 +11,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import precss from 'precss'
 import autoprefixer from 'autoprefixer'
 import rucksackCss from 'rucksack-css'
-import pxtorem from 'postcss-pxtorem'
+import px2rem from 'postcss-pxtorem';
+const px2remOpts = {
+  rootValue: 100,
+  propWhiteList: []
+};
 
 export default {
   debug: true,
@@ -100,5 +104,5 @@ export default {
       }
     ]
   },
-  postcss: ()=> [precss,autoprefixer,rucksackCss,pxtorem({rootValue: 100, propWhiteList: []})]
+  postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
 };

@@ -3,6 +3,12 @@ import { Link } from 'react-router'
 import styles from './index.scss'
 
 export default class Title extends Component {
+  componentDidMount() {
+    window.addEventListener('resize', this.handleClick.bind(this))
+  }
+  handleClick = () => {
+    console.log('1112')
+  }
   render() {
     const { text, linkName, path } = this.props;
     return (
