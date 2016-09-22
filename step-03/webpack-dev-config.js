@@ -14,7 +14,7 @@ import rucksackCss from 'rucksack-css'
 import px2rem from 'postcss-pxtorem';
 const px2remOpts = {
   rootValue: 100,
-  propWhiteList: []
+  propWhiteList: [],
 };
 
 export default {
@@ -57,7 +57,7 @@ export default {
   ],
   resolve: {
     modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
-    extensions: ['', '.web.js', '.js']
+    extensions: ['', '.web.js', '.js', '.json']
   },
   module: {
     loaders: [
@@ -86,12 +86,8 @@ export default {
 
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
-
-      {
-        test: /\.less$/,
-        loader: "style!css!less"
+        include: path.resolve(__dirname, 'node_modules'),
+        loader: 'style!css!postcss'
       },
       
       {

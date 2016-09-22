@@ -128,14 +128,10 @@ module.exports = {
 
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        include: path.resolve(__dirname, 'node_modules'),
+        loader: 'style!css!postcss'
       },
 
-      {
-        test: /\.less$/,
-        loader: "style!css!less"
-      },
-      
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
         loader: 'url?limit=10000'

@@ -4,7 +4,6 @@ import { Header, Nav, FastNav, Title, ShopList } from '../components'
 
 class Home extends Component {
   state = {
-    dark: false,
     fastNav: [
       {
         link: "https://www.github.com",
@@ -72,8 +71,7 @@ class Home extends Component {
       infinite: true,
       mode: 'banner',
       initialSlide: this.state.current,
-      afterChange: this.slideTo,
-      lazyLoad: true
+      afterChange: this.slideTo
     }
     const { fastNav, shopLists } = this.state
 
@@ -81,19 +79,19 @@ class Home extends Component {
       <div>
         <Header />
         <Carousel {...settings}>
-          <div className="item">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
+          <div className="HomeItem">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
           </div>
-          <div className="item">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
+          <div className="HomeItem">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
           </div>
-          <div className="item">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
+          <div className="HomeItem">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
           </div>
-          <div className="item">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
+          <div className="HomeItem">
+            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
           </div>
-          </Carousel>
+        </Carousel>
         <div className="bg-white hor pt30">
           {fastNav.map((item, index) =>
             <FastNav key={index} data={item}/>

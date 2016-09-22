@@ -19,7 +19,7 @@
   "author": "minooo",
   "license": "MIT",
   "dependencies": {
-    "antd-mobile": "^0.8.5",
+    "antd-mobile": "^0.8.2",
     "babel-polyfill": "^6.9.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
@@ -45,7 +45,6 @@
     "html-webpack-plugin": "^2.22.0",
     "json-loader": "^0.5.4",
     "kb-merchant-theme": "^1.0.2",
-    "less-loader": "^2.2.3",
     "npm-run-all": "^2.3.0",
     "open": "0.0.5",
     "postcss-loader": "^0.9.1",
