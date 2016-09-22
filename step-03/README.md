@@ -1,9 +1,12 @@
-# step-03 目前开发中...
+# step-03 目前已完成，你可以完整运行
 step-03 是在 step-02 的基础上开发的  
 step-03 主要围绕添加 react-router 进行配置，以及在react移动端开发中，强烈推荐使用[antd-mobile](http://mobile.ant.design/docs/react/introduce)  
 这个特别符合我国国情的react组件库。
 本模板延续组件化的思想，以及样式的模块化（cssModules), 并以真实项目实践写了几个简单的组件，包括底部导航，好店列表，以及下拉菜单等。  
 目的就是展示下，在真实项目中，组件化的思想是如何实践的。
+
+## [DEMO](https://segmentfault.com/img/remote/1460000006979999)
+点击上方DEMO预览
 
 ## 高清方案布局
 ```
@@ -32,12 +35,13 @@ flex(100, 1);</script>
     width: 100%
 }
 ```
-
+4. 本人心得，关于图片，比如640px宽度的效果图下，你量取某图片宽120px, 高80px, 它的样式应该是`width: 1.2rem; height: 0.8rem` 没问题，但是图片实际尺寸应该是此基础上的1.5倍，即图片应该宽180px, 高120px，这是因为现在很多设备的屏幕的`DPR`达到了3的水平。如此，图片在次屏幕上会“高清显示”。 
 
 ## 本模板包含step-02用到的所有包，下面将介绍 **额外** 添加的包
 
 #### [react-router](https://github.com/reactjs/react-router) [必需]
 > `React Router` 一个针对 `React` 而设计的路由解决方案、可以友好的帮你解决 `React components` 到 `URl` 之间的同步映射关系。  
+推荐教程 [React Router 使用教程](http://www.ruanyifeng.com/blog/2016/05/react_router.html) 
   安装：`npm install react-router --save`
   
 ---
@@ -56,6 +60,22 @@ flex(100, 1);</script>
 
 #### [babel-plugin-antd](https://npm.taobao.org/package/babel-plugin-antd) [搭配antd-mobile必需]
 > Modular antd build plugin for babel.  
+  安装：`npm install babel-plugin-antd --save-dev`
+  
+---
+
+#### [postcss-pxtorem](https://npm.taobao.org/package/postcss-pxtorem) [antd-mobile高清方案需要]
+> 顾名思义，就是将px转化为rem的小插件，实际生产中，我们完全可以直接写rem,这个小插件就是为  
+antd-mobile 的样式服务的。
+使用方法参照[高清方案](https://github.com/ant-design/ant-design-mobile/wiki/antd-mobile-0.8%E9%AB%98%E6%B8%85%E6%96%B9%E6%A1%88%E5%AE%9E%E8%B7%B5),另外特别指出，在次基础上还需在webpack.config.js上配置
+```
+{
+    test: /\.css$/,
+    include: /node_modules/,
+    loader: 'style!css!postcss'
+}
+```
+
   安装：`npm install babel-plugin-antd --save-dev`
   
 ---
