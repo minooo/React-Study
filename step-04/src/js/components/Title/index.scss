@@ -1,0 +1,23 @@
+.root {
+  height: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}
+.left {
+  color: #999;
+  font-weight: normal;
+}
+.link {
+  color: #19bd9b;
+  display: flex;
+  align-items: center;
+}
+.text {
+  font-style: normal;
+}
+.icon {
+  font-size: 0.3rem;
+}

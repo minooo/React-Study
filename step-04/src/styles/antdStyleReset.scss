@@ -1,0 +1,41 @@
+//重置antd-mobile样式
+.am-carousel .slick-dots li.slick-active button:before {
+  color: #1bbc9b;
+  opacity: 1;
+}
+.am-navbar-light {
+  color: #1abc9c;
+}
+// 重写radio样式
+.am-radio.am-radio-checked .am-radio-inner:after {
+  position: absolute;
+  z-index: 100;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  left: 5px;
+  top: 5px;
+  background: #1abc9c;
+  border-radius: 50%;
+  border: none;
+}
+
+.am-radio-inner:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  background: #fff;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-radius: 50%;
+  outline: 0;
+}
+
+.am-radio-inner {
+  right: 3px;
+}

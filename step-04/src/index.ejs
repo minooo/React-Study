@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  **NOTE:** This is a template for index.html. It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment. htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles to this file. The generated bundles have hash-based filenames, so it's necessary to add the references dynamically.
+  For more info on ejs, see http://www.embeddedjs.com/. For examples of using it with htmlWebpackPlugin, see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+  -->
+<head>
+  <!--
+    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+    This is an example of how to add features to index.html for only one environment.
+    To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token in /webpack.config.prod.js on line 55.
+   -->
+  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+  <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
+  <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
+  <% } %>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8"/>
+  <meta name="Cache-Control" content="private">
+  <script>!function(e){function t(a){if(i[a])return i[a].exports;var n=i[a]={exports:{},id:a,loaded:!1};return e[a].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.flex=function(e,t){var a=e||100,n=t||1,r=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),c=l&&parseInt(l[1].split(".").join(""),10)>=80,p=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),s=i.devicePixelRatio||1;p||d&&d[1]>534||c||(s=1);var u=1/s,m=r.querySelector('meta[name="viewport"]');m||(m=r.createElement("meta"),m.setAttribute("name","viewport"),r.head.appendChild(m)),m.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+u+",maximum-scale="+u+",minimum-scale="+u),r.documentElement.style.fontSize=a/2*s*n+"px"},e.exports=t["default"]}]);
+    flex(100, 1);</script>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/javascript" src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+<script type="text/javascript">
+  if ('addEventListener' in document) {
+    window.addEventListener('load', function() {
+      FastClick.attach(document.body);
+    }, false);
+  }
+</script>
+</body>
+</html>
+<!--░░░░░░░░░░░░░░░░░░░░░░░░▄░░-->
+<!--░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░-->
+<!--░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐-->
+<!--░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐-->
+<!--░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐-->
+<!--░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌-->
+<!--░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒-->
+<!--░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐-->
+<!--░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄-->
+<!--░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒-->
+<!--▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒-->
+<!--单身狗就这样默默地看着你，一句话也不说。-->
