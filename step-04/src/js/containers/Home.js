@@ -73,6 +73,7 @@ class Home extends Component {
       initialSlide: this.state.current,
       afterChange: this.slideTo
     }
+
     const { fastNav, shopLists } = this.state
 
     return (
@@ -80,16 +81,16 @@ class Home extends Component {
         <Header />
         <Carousel {...settings}>
           <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
           <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
           </div>
         </Carousel>
         <div className="bg-white hor pt30">
