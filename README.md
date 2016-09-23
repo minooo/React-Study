@@ -22,7 +22,7 @@ step-02 是在 step-01的基础上添加额外配置完成的，这一部分添�
 - [step-03](https://github.com/minooo/React-Study/tree/master/step-03)（已完成）
 step-03 是在 step-02 的基础上开发的 step-03 主要围绕添加 react-router 进行配置，以及在react移动端开发中，强烈推荐使用antd-mobile 这个特别符合我国国情的react组件库。本模板延续组件化的思想，以及样式的模块化（cssModules), 并以真实项目实践写了几个简单的组件，包括底部导航，好店列表，以及下拉菜单等。 目的就是展示下，在真实项目中，组件化的思想是如何实践的。
 - step-04（开发中）
-同理，step-04 是在 step-03 的基础上添加额外配置完成，目前仍处于开发中，这部分主要添加 [redux](https://github.com/reactjs/redux)。推荐教程 [redux-tutorial 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) 
+同理，step-04 是在 step-03 的基础上添加额外配置完成，目前仍处于开发中，这部分主要添加 [redux](https://github.com/reactjs/redux)。推荐教程 [redux-tutorial 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) [redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
 
 ## 启动React生态圈
 本项目启动前默认你已经安装[node](http://nodejs.cn/)（建议安装6.0+版本）
