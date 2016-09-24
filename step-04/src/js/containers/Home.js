@@ -67,12 +67,10 @@ class Home extends Component {
     const settings = {
       dots: true,
       autoplay: true,
-      autoplaySpeed: 3000,
       infinite: true,
-      mode: 'banner',
-      initialSlide: this.state.current,
-      afterChange: this.slideTo
-    }
+      speed: 600,
+      mode: 'banner'
+    };
 
     const { fastNav, shopLists } = this.state
 
@@ -81,7 +79,7 @@ class Home extends Component {
         <Header />
         <Carousel {...settings}>
           <div className="HomeItem">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
+            <img src="http://temp.im/640x260/f99/fff" className="homeImg" alt=""/>
           </div>
           <div className="HomeItem">
             <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
