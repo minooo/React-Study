@@ -1,16 +1,19 @@
 import 'babel-polyfill'
-import { AppContainer } from 'react-hot-loader'
 import React from 'react'
 import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import configureStore from './store/configureStore'
 import { browserHistory } from 'react-router'
 import Root from './containers/Root'
+
 const RedBox = require('redbox-react').default;
 const rootEl = document.getElementById('app');
+const store = configureStore()
 
 try {
   render(
     <AppContainer>
-      <Root history={browserHistory} />
+      <Root store={store} history={browserHistory} />
     </AppContainer>,
     rootEl
   )
@@ -18,7 +21,7 @@ try {
   render(
     <RedBox error={e}>
       <AppContainer>
-        <Root history={browserHistory} />
+        <Root store={store} history={browserHistory} />
       </AppContainer>
     </RedBox>,
     rootEl
@@ -46,7 +49,7 @@ if (module.hot) {
     try {
       render(
         <AppContainer>
-          <NextApp history={browserHistory} />
+          <NextApp store={store} history={browserHistory} />
         </AppContainer>,
         rootEl
       )
@@ -54,7 +57,7 @@ if (module.hot) {
       render(
         <RedBox error={e}>
           <AppContainer>
-            <NextApp history={browserHistory} />
+            <NextApp store={store} history={browserHistory} />
           </AppContainer>
         </RedBox>,
         rootEl

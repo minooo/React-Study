@@ -17,7 +17,9 @@ module.exports = {
     vendor: [
       'react',
       'react-dom',
-      'react-router'
+      'react-router',
+      'react-redux',
+      'react-router-redux'
     ]
     // 为了优化，切割代码，提取第三方库（实际上，我们将会引入很多第三方库）
   },

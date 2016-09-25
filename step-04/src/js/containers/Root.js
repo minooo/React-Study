@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
 import routes from '../routes'
 import { Router } from 'react-router'
 import '../../styles/normalize.scss'
@@ -7,11 +8,10 @@ import '../../styles/antdStyleReset.scss'
 import '../../styles/font.scss'
 import '../../styles/animations.scss'
 
-export default class Root extends Component {
-  render() {
-    const { history } = this.props;
-    return (
-      <Router history={history} routes={routes} />
-    )
-  }
-}
+const Root = ({ store, history }) => (
+  <Provider store={store}>
+    <Router history={history} routes={routes} />
+  </Provider>
+)
+
+export default Root
