@@ -16,3 +16,21 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
   
 ---
 
+#### [react-router-redux](https://github.com/reactjs/react-router-redux) [强烈推荐]
+> 一个简单的绑定，使 react-router 和 redux 保持同步。  
+  安装：`npm install react-router-redux --save`
+  
+---
+
+#### [redux-thunk](https://github.com/gaearon/redux-thunk) [强烈推荐]
+> 使用redux-thunk中间件，改造`store.dispatch`，使得后者可以接受函数作为参数。  
+  安装：`npm install react-thunk --save`
+  
+---
+
+
+#### [redux-logger](https://github.com/evgenyrodionov/redux-logger) [开发需要]
+> 实时监控Redux的状态树的Store  
+  安装：`npm install redux-logger --save-dev`
+  
+---
