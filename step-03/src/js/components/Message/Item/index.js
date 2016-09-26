@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import styles from './index.scss'
 export default class Item extends Component {
-  state = {
-    focus: 0
+  constructor(props) {
+    super(props);
+    this.state = { focus: 0 };
+    this.interval = setInterval(() => this.tick(), 2000);
   }
 
   tick() {
@@ -11,10 +13,6 @@ export default class Item extends Component {
     this.setState({
       focus: nowFocus
     });
-  }
-
-  componentDidMount() {
-    setInterval(() => this.tick(), 5000);
   }
 
   componentWillUnmount() {
