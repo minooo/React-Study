@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import {WhiteSpace, WingBlank, Carousel } from 'antd-mobile'
-import { Header, Nav, FastNav, Title, ShopList } from '../components'
+import { Header, Nav, FastNav, Title, ShopList, Message } from '../components'
 
 class Home extends Component {
   state = {
@@ -60,6 +60,19 @@ class Home extends Component {
         discount_text: '本店支持微信支付',
         discount_time: '周一到周五每天9:00-24:00'
       }
+    ],
+    messages: [
+      {
+        link: 'https://github.com/minooo',
+        desc: 'React-Study step-1 开发完成'
+      },{
+        link: 'https://github.com/minooo',
+        desc: 'React-Study step-2 开发完成'
+      },{
+        link: 'https://github.com/minooo',
+        desc: 'React-Study step-3 开发完成, 如果很长很长如果很长很长如果很长很长如果很长很长'
+      }
+
     ]
   }
 
@@ -72,7 +85,7 @@ class Home extends Component {
       mode: 'banner'
     };
 
-    const { fastNav, shopLists } = this.state
+    const { fastNav, shopLists, messages } = this.state
 
     return (
       <div>
@@ -96,6 +109,7 @@ class Home extends Component {
             <FastNav key={index} data={item}/>
           )}
         </div>
+        <Message data={messages}/>
         <Title text="精品好店" linkName="查看全部" path="/shop" />
         <div className="plr20 bg-white">
           {shopLists.map(item =>

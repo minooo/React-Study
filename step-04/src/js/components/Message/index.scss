@@ -1,0 +1,26 @@
+.root {
+  height: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+}
+.left {
+  padding: 0 0.2rem;
+  line-height: 1.9;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ccc;
+}
+.right {
+  flex-grow: 1;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.ico {
+  padding-right: 0.1rem;
+}
