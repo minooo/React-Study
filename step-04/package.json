@@ -1,7 +1,7 @@
 {
   "name": "step-04",
   "version": "1.0.0",
-  "description": "react-base",
+  "description": "react react-router redux",
   "main": "index.js",
   "theme": "./node_modules/kb-merchant-theme/index.js",
   "scripts": {
@@ -13,10 +13,11 @@
   },
   "keywords": [
     "react",
+    "react-router",
+    "redux",
     "es6",
     "webpack",
-    "react-router",
-    "redux"
+    "npm"
   ],
   "author": "minooo",
   "license": "MIT",
