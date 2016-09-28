@@ -1,19 +1,19 @@
 import React from 'react'
-import { Button } from 'antd-mobile'
+import styles from './index.scss'
 
 const Counter = ({counter, increment, decrement, incrementIfOdd, incrementAsync}) => {
   return (
-    <p>
-      点击: {counter} 次.
-      {' '}
-      <Button onClick={increment}>+</Button>
-      {' '}
-      <Button onClick={decrement}>-</Button>
-      {' '}
-      <Button onClick={incrementIfOdd}>如果是偶数就是加1</Button>
-      {' '}
-      <Button onClick={incrementAsync}>点击后1秒后加1</Button>
-    </p>
+    <div className={styles.root}>
+      <div className={styles.wrap}>
+        <h1 className={styles.counter}>{counter}</h1>
+        <div className={styles.wrapBtns}>
+          <button onClick={increment} className={styles.increment}>+</button>
+          <button onClick={decrement} className={styles.decrement}>-</button>
+          <button onClick={incrementIfOdd} className={styles.ifOdd}>如果是偶数+1</button>
+          <button onClick={incrementAsync} className={styles.async}>1秒后+1</button>
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -12,7 +12,6 @@ class Coupon extends Component {
     const { counter, dispatch } = this.props
     return (
       <div>
-        <h1>一个简单的redux小程序</h1>
         <Counter
           counter={counter}
           {...bindActionCreators(CounterActions, dispatch)}
