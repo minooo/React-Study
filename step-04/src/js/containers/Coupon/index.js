@@ -6,7 +6,6 @@ import { Nav, Counter } from '../../components'
 
 import * as CounterActions from '../../actions/CounterActions'
 
-
 class Coupon extends Component {
   render() {
     const { counter, dispatch } = this.props

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { NavBar, Icon } from 'antd-mobile';
 export default class Detail extends Component {
-
   render() {
     const settings = {
       dots: true,
