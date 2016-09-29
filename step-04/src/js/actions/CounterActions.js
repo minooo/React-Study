@@ -23,11 +23,3 @@ export function incrementIfOdd() {
     dispatch(increment());
   };
 }
-
-export function incrementAsync() {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(increment());
-    }, 1000);
-  };
-}

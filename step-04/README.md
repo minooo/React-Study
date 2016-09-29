@@ -34,3 +34,10 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
   安装：`npm install redux-logger --save-dev`
   
 ---
+
+#### [react-fastclick](https://github.com/JakeSidSmith/react-fastclick) [可选]
+> 众所周知，移动设备屏幕的点击有300毫秒的延迟，这个库就是用来消除那300毫秒延迟的，从而  
+获得更加灵敏的点击体验。
+  安装：`npm install react-fastclick --save`
+  
+---
