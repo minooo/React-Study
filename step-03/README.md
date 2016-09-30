@@ -8,7 +8,7 @@ step-03 主要围绕添加 react-router 进行配置，以及在react移动端�
 ## [DEMO](https://raw.githubusercontent.com/minooo/test/master/step-03-demo.gif)
 点击上方DEMO预览
 
-## 高清方案布局
+## 高清方案布局(step-03以及step-04已采用此方案)
 ```
  // flex模式
 <script>!function(e){function t(a){if(i[a])return i[a].exports;var n=i[a]={exports:{},id:a,loaded:!1};return e[a].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.flex=function(e,t){var a=e||100,n=t||1,r=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),c=l&&parseInt(l[1].split(".").join(""),10)>=80,p=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),s=i.devicePixelRatio||1;p||d&&d[1]>534||c||(s=1);var u=1/s,m=r.querySelector('meta[name="viewport"]');m||(m=r.createElement("meta"),m.setAttribute("name","viewport"),r.head.appendChild(m)),m.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+u+",maximum-scale="+u+",minimum-scale="+u),r.documentElement.style.fontSize=a/2*s*n+"px"},e.exports=t["default"]}]);
@@ -65,9 +65,8 @@ flex(100, 1);</script>
 ---
 
 #### [postcss-pxtorem](https://npm.taobao.org/package/postcss-pxtorem) [antd-mobile高清方案需要]
-> 顾名思义，就是将px转化为rem的小插件，实际生产中，我们完全可以直接写rem,这个小插件就是为  
-antd-mobile 的样式服务的。
-使用方法参照[高清方案](https://github.com/ant-design/ant-design-mobile/wiki/antd-mobile-0.8%E9%AB%98%E6%B8%85%E6%96%B9%E6%A1%88%E5%AE%9E%E8%B7%B5),另外特别指出，在次基础上还需在webpack.config.js上配置
+> 顾名思义，就是将px转化为rem的小插件，实际生产中，我们完全可以直接写rem,这个小插件就是为antd-mobile 的样式服务的。  
+使用方法参照[高清方案](https://github.com/ant-design/ant-design-mobile/wiki/antd-mobile-0.8%E9%AB%98%E6%B8%85%E6%96%B9%E6%A1%88%E5%AE%9E%E8%B7%B5),另外特别指出，在此基础上还需在webpack.config.js上配置
 ```
 {
     test: /\.css$/,
@@ -75,7 +74,6 @@ antd-mobile 的样式服务的。
     loader: 'style!css!postcss'
 }
 ```
-
-  安装：`npm install babel-plugin-antd --save-dev`
+安装：`npm install babel-plugin-antd --save-dev`
   
 ---
