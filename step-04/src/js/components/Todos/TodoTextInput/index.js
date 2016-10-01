@@ -34,12 +34,8 @@ export default class TodoTextInput extends Component {
           'new-todo': this.props.newTodo
         })}
         type="text"
-        placeholder={this.props.placeholder}
+        placeholder="填写你要计划完成的事情"
         autoFocus="true"
-        value={this.state.value}
-        onBlur={this.handleBlur}
-        onChange={this.handleChange}
-        onKeyDown={this.handleSubmit}
       />
     )
   }

@@ -95,11 +95,6 @@ a {
   &:visited {
   }
 }
-// 暂时放置样式，后期需处理
-.homeImg {
-  display: block;
-  width: 100%;
-}
 
 // 字体颜色
 .main-color {
@@ -266,7 +261,7 @@ img {
 
 .img-responsive {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

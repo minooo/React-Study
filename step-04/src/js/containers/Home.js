@@ -1,6 +1,5 @@
 import React,{ Component } from 'react'
-import {WhiteSpace, WingBlank, Carousel } from 'antd-mobile'
-import { Header, Nav, FastNav, Title, ShopList, Message } from '../components'
+import { Header, Nav, FastNav, Title, ShopList, Message, Swipe } from '../components'
 
 class Home extends Component {
   state = {
@@ -73,37 +72,34 @@ class Home extends Component {
         desc: 'React-Study step-3 开发完成, 如果很长很长如果很长很长如果很长很长如果很长很长'
       }
 
+    ],
+    data: [
+      {
+        link: 'https://github.com/minooo',
+        thumb: 'http://temp.im/640x260/444/fff'
+      },{
+        link: 'https://github.com/minooo',
+        thumb: 'http://temp.im/640x260/444/fff'
+      },{
+        link: 'https://github.com/minooo',
+        thumb: 'http://temp.im/640x260/444/fff'
+      }
     ]
   }
 
   render() {
     const settings = {
-      dots: true,
-      autoplay: true,
       infinite: true,
-      speed: 600,
-      mode: 'banner'
-    };
+      autoplayInterval: 2000,
+      cellSpacing: 30
+    }
 
-    const { fastNav, shopLists, messages } = this.state
+    const { fastNav, shopLists, messages, data } = this.state
 
     return (
       <div>
         <Header />
-        <Carousel {...settings}>
-          <div className="HomeItem">
-            <img src="http://temp.im/640x260/f99/fff" className="homeImg" alt=""/>
-          </div>
-          <div className="HomeItem">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
-          </div>
-          <div className="HomeItem">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
-          </div>
-          <div className="HomeItem">
-            <img src="http://temp.im/640x260/444/fff" className="homeImg" alt=""/>
-          </div>
-        </Carousel>
+        {data && <Swipe data={data} {...settings}/>}
         <div className="bg-white hor pt30">
           {fastNav.map((item, index) =>
             <FastNav key={index} data={item}/>
