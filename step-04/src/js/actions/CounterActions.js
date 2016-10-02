@@ -1,18 +1,13 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from './actionsTypes';
+import {
+  INCREMENT_COUNTER,
+  DECREMENT_COUNTER
+} from './actionsTypes';
 
-export function increment() {
-  return {
-    type: INCREMENT_COUNTER
-  };
-}
+export const increment = () => ({ type: INCREMENT_COUNTER })
 
-export function decrement() {
-  return {
-    type: DECREMENT_COUNTER
-  };
-}
+export const decrement = () => ({ type: DECREMENT_COUNTER})
 
-export function incrementIfOdd() {
+export const incrementIfOdd = () => {
   return (dispatch, getState) => {
     const { counter } = getState();
 

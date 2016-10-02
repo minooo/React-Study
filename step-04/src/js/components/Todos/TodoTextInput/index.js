@@ -16,27 +16,37 @@ export default class TodoTextInput extends Component {
     this.setState({text: e.target.value})
   }
 
-  handleSubmit = e => {
-    const text = e.target.value.trim()
-    if (e.which === 13) {
-      this.props.onSave(text)
-      if (this.props.newTodo) {
-        this.setState({text: ''})
-      }
+  handleSubmit = (val) => {
+    const text = val.trim()
+    this.props.onSave(text)
+    if (this.props.newTodo) {
+      this.setState({text: ''})
     }
   }
 
   render() {
+    let input
+
     return (
-      <input
-        className={classnames({
-          edit: this.props.editing,
-          'new-todo': this.props.newTodo
-        })}
-        type="text"
-        placeholder="填写你要计划完成的事情"
-        autoFocus="true"
-      />
+      <div>
+        <input
+          className={classnames({
+            edit: this.props.editing,
+            'new-todo': this.props.newTodo
+          })}
+          ref={node => {input = node}}
+          type="text"
+          placeholder={this.props.placeholder}
+          autoFocus="true"
+          value={this.state.text}
+          onChange={this.handleChange}
+        />
+        <button
+          onClick={() => this.handleSubmit(input.value)}
+        >
+          点击添加
+        </button>
+      </div>
     )
   }
 }
