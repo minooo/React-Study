@@ -33,6 +33,34 @@
 }
 
 .completed {
-  color: #ccc;
-  text-decoration: line-through;
+  opacity: 0.5
+}
+
+.con {
+  position: relative;
+  opacity: 1;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: calc( 100% + .5em );
+    left: -.25em;
+    height: 2px;
+    top: 50%;
+    border-radius: 1px;
+    background: #2E2E2E;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+}
+
+.conComplete:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
 }

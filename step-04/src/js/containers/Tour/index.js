@@ -8,7 +8,7 @@ import * as TodoActions from '../../actions/TodoActions'
 
 const Tour = ({todos, actions}) => (
   <div>
-    <Todos todos={todos} addTodo={actions.addTodo} actions={actions}/>
+    <Todos todos={todos} {...actions}/>
     <Nav/>
   </div>
 )

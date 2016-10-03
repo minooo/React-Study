@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 import classnames from 'classnames'
 import styles from './index.scss'
 
@@ -22,7 +22,12 @@ export default class TodoItem extends Component {
           })}
           onClick={() => completeTodo(todo.id)}
         >
-          {todo.text}
+          <span
+            className={classnames({
+              [styles.con]: true,
+              [styles.conComplete]: todo.completed
+            })}
+          >{todo.text}</span>
         </label>
       </li>
     )

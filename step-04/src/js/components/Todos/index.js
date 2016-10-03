@@ -4,11 +4,11 @@ import MainSection from './MainSection'
 
 export default class Todos extends Component {
   render() {
-    const { addTodo, todos, actions } = this.props
+    const { addTodo, todos, completeTodo } = this.props
     return (
       <div>
         <Header addTodo={addTodo}/>
-        <MainSection todos={todos} actions={actions}/>
+        <MainSection todos={todos} completeTodo={completeTodo}/>
       </div>
     );
   }

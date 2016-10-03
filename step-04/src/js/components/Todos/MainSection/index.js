@@ -3,12 +3,12 @@ import TodoItem from '../TodoItem'
 
 export default class MainSection extends Component {
   render() {
-    const { todos, actions } = this.props
+    const { todos, completeTodo } = this.props
     return (
       <section>
         <ul>
           {todos.map(item =>
-            <TodoItem key={item.id} todo={item} {...actions} />
+            <TodoItem key={item.id} todo={item} completeTodo={completeTodo} />
           )}
         </ul>
       </section>
