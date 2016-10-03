@@ -1,0 +1,38 @@
+.root {
+  border-bottom: 1px solid #ccc;
+}
+.text {
+  display: block;
+  line-height: 1.2;
+  padding: 25px 60px 25px 25px;
+  margin-left: 60px;
+}
+.toggle {
+  text-align: center;
+  width: 40px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  appearance: none;
+  &:after {
+    display: block;
+    content: '';
+    width: 0.7rem;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 -18 100 136"><circle cx="50" cy="50" r="50" fill="none" stroke="#ccc" stroke-width="4"/></svg>') center no-repeat;
+    background-size: 70% 70%;
+  };
+
+  &:checked:after {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 -18 100 136"><circle cx="50" cy="50" r="50" fill="none" stroke="#1abc9c" stroke-width="4"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>') center center no-repeat;
+    background-size: 70% 70%;
+  }
+}
+
+.completed {
+  color: #ccc;
+  text-decoration: line-through;
+}

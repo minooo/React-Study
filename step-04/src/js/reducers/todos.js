@@ -1,9 +1,11 @@
 import {
-  ADD_TODO
+  ADD_TODO,
+  COMPLETE_TODO
 } from '../actions/actionsTypes'
 
 const initialState = [{
   text: 'Learn Redux',
+  completed: false,
   id: 0
 }]
 
@@ -13,10 +15,17 @@ export default function todos(state = initialState, action) {
       return [
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
+          completed: false,
           text: action.text
         },
         ...state
       ]
+    case COMPLETE_TODO:
+      return state.map(todo =>
+        todo.id === action.id ?
+          { ...todo, completed: !todo.completed } :
+          todo
+      )
     default:
       return state
   }
