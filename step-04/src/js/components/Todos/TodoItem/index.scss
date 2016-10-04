@@ -64,3 +64,29 @@
   -webkit-transform-origin: center left;
   transform-origin: center left;
 }
+
+.btns {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btnCancle, .btnEdit, .btnDelete {
+  padding: 0 30px;
+  border: none;
+  color: #fff;
+}
+.btnCancle {
+  background: #999;
+}
+.btnEdit {
+  background: #1abc9c;
+}
+.btnDelete {
+  background: tomato;
+}
