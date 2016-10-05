@@ -74,8 +74,9 @@ export default class TodoItem extends Component {
     this.setState({btnsShow: false})
   }
 
+
   render() {
-    const { todo, completeTodo } = this.props
+    const { todo, completeTodo, deleteTodo } = this.props
     const { btnsShow } = this.state
 
     return (
@@ -112,7 +113,12 @@ export default class TodoItem extends Component {
             <div
               className={styles.btns}
             >
-              <button className={styles.btnDelete}>删除</button>
+              <button
+                className={styles.btnDelete}
+                onClick={() => deleteTodo(todo.id)}
+              >
+                删除
+              </button>
               <button className={styles.btnEdit}>编辑</button>
               <button
                 className={styles.btnCancle}
