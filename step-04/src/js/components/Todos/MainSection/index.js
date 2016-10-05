@@ -3,7 +3,7 @@ import TodoItem from '../TodoItem'
 
 export default class MainSection extends Component {
   render() {
-    const { todos, completeTodo, deleteTodo } = this.props
+    const { todos, completeTodo, deleteTodo, editTodo } = this.props
     return (
       <section>
         <ul>
@@ -13,6 +13,7 @@ export default class MainSection extends Component {
               todo={item}
               completeTodo={completeTodo}
               deleteTodo={deleteTodo}
+              editTodo={editTodo}
             />
           )}
         </ul>

@@ -1,6 +1,6 @@
 import 'babel-polyfill'
 import React from 'react'
-import 'react-fastclick'  // 这个需要放到react下方才行
+//import 'react-fastclick'  // 这个需要放到react下方才行
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import configureStore from './store/configureStore'

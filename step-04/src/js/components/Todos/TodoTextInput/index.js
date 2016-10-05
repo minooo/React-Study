@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './index.scss'
 import classnames from 'classnames'
 
 export default class TodoTextInput extends Component {
@@ -31,21 +32,26 @@ export default class TodoTextInput extends Component {
       <div>
         <input
           className={classnames({
-            edit: this.props.editing,
-            'new-todo': this.props.newTodo
+            [styles.edit]: this.props.editing,
+            [styles.newTodo]: this.props.newTodo
           })}
           ref={node => {input = node}}
           type="text"
           placeholder={this.props.placeholder}
           autoFocus="true"
           value={this.state.text}
+          onBlur={this.handleBlur}
           onChange={this.handleChange}
         />
-        <button
-          onClick={() => this.handleSubmit(input.value)}
-        >
-          点击添加
-        </button>
+        {
+          this.props.newTodo &&
+          <button
+            onClick={() => this.handleSubmit(input.value)}
+          >
+            点击添加
+          </button>
+        }
+
       </div>
     )
   }

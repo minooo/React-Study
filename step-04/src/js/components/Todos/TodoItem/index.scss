@@ -59,9 +59,7 @@
 }
 
 .conComplete:after {
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
-  -webkit-transform-origin: center left;
   transform-origin: center left;
 }
 
@@ -76,12 +74,12 @@
   flex-direction: row-reverse;
 }
 
-.btnCancle, .btnEdit, .btnDelete {
+.btnCancel, .btnEdit, .btnDelete {
   padding: 0 30px;
   border: none;
   color: #fff;
 }
-.btnCancle {
+.btnCancel {
   background: #999;
 }
 .btnEdit {
