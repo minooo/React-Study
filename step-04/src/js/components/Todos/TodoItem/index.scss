@@ -42,6 +42,11 @@
   text-transform: capitalize;
   cursor: pointer;
   transition: opacity 0.25s ease-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   &:after {
     content: '';
     position: absolute;

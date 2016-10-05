@@ -76,13 +76,14 @@ export default class TodoItem extends Component {
             })}
             onClick={() => completeTodo(todo.id)}
           >
-          <span
-            className={classnames({
-              'text-overflow-one': true,
-              [styles.con]: true,
-              [styles.conComplete]: todo.completed
-            })}
-          >{todo.text}</span>
+            <span
+              className={classnames({
+                [styles.con]: true,
+                [styles.conComplete]: todo.completed
+              })}
+            >
+              {todo.text}
+            </span>
           </label>
 
           <ReactCSSTransitionGroup
