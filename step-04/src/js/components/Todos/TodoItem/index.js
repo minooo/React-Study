@@ -60,7 +60,7 @@ export default class TodoItem extends Component {
       )
     } else {
       element = (
-        <div className="relative">
+        <div>
           <input
             className={styles.toggle}
             type="checkbox"
@@ -122,7 +122,7 @@ export default class TodoItem extends Component {
     }
 
     return (
-      <li className={`relative bg-white last-no-border ${styles.root}`}>
+      <li className={`last-no-border ${styles.root}`}>
         {element}
       </li>
     )

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Icon } from 'antd-mobile'
 import styles from './index.scss'
 import classnames from 'classnames'
 
@@ -29,7 +30,7 @@ export default class TodoTextInput extends Component {
     let input
 
     return (
-      <div>
+      <div className="relative">
         <input
           className={classnames({
             [styles.edit]: this.props.editing,
@@ -47,8 +48,9 @@ export default class TodoTextInput extends Component {
           this.props.newTodo &&
           <button
             onClick={() => this.handleSubmit(input.value)}
+            className={styles.btn}
           >
-            点击添加
+            <Icon type="plus" />
           </button>
         }
 

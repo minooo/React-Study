@@ -16,7 +16,7 @@ const touchFunc = (obj,type,func) => {
   }, false);
 
   obj.addEventListener("touchmove",function() {
-    event.preventDefault();//阻止触摸时浏览器的缩放、滚动条滚动
+    // event.preventDefault();//阻止触摸时浏览器的缩放、滚动条滚动
     init.ex = event.targetTouches[0].pageX;
     init.ey = event.targetTouches[0].pageY;
     if(type.indexOf("move")!=-1) func();

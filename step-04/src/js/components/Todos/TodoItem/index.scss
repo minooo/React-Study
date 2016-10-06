@@ -1,11 +1,12 @@
 .root {
+  position: relative;
   border-bottom: 1px solid #ccc;
+  padding-left: 0.6rem;
 }
 .text {
   display: block;
   line-height: 1.2;
   padding: 25px 60px 25px 25px;
-  margin-left: 60px;
 }
 .toggle {
   text-align: center;
@@ -13,6 +14,7 @@
   height: auto;
   position: absolute;
   top: 0;
+  left: 0;
   bottom: 0;
   margin: auto 0;
   border: none;
@@ -39,6 +41,7 @@
 .con {
   position: relative;
   opacity: 1;
+  line-height: 1;
   text-transform: capitalize;
   cursor: pointer;
   transition: opacity 0.25s ease-out;

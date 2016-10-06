@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './index.scss'
 import TodoTextInput from '../TodoTextInput'
 
 export default class Header extends Component {
@@ -11,8 +12,8 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header>
-        <h1>Todos</h1>
+      <header className={`relative ${styles.root}`}>
+        <h1 className={styles.title}>Todos</h1>
         <TodoTextInput
           newTodo
           placeholder="添加要去做的事"

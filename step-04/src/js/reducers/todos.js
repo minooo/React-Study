@@ -6,7 +6,7 @@ import {
 } from '../actions/actionsTypes'
 
 const initialState = [{
-  text: 'Learn Redux',
+  text: 'learn redux',
   completed: false,
   id: 0
 }]
