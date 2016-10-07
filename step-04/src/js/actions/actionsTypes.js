@@ -15,6 +15,6 @@ export const COMPLETE_ALL = 'COMPLETE_ALL'
 export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
 
 // TodoFilters
-export const SHOW_ALL = 'show_all';
-export const SHOW_MARKED = 'show_marked';
-export const SHOW_UNMARKED = 'show_unmarked';
+export const SHOW_ALL = 'show_all'
+export const SHOW_COMPLETED = 'show_completed'
+export const SHOW_ACTIVE = 'show_active'
