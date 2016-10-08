@@ -6,7 +6,7 @@ import styles from './index.scss'
 
 const FILTER_TITLES = {
   [SHOW_ALL]: '全部',
-  [SHOW_ACTIVE]: '进行中',
+  [SHOW_ACTIVE]: '未完成',
   [SHOW_COMPLETED]: '已完成'
 }
 

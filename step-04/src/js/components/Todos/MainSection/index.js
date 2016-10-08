@@ -36,10 +36,14 @@ export default class MainSection extends Component {
 
   render() {
     const { todos, completeTodo, deleteTodo, editTodo } = this.props
+    const { filter } = this.state
+
+    const filteredTodos = todos.filter(TODO_FILTERS[filter])
+
     return (
       <section className={styles.root}>
         <ul className={styles.wrap}>
-          {todos.map(item =>
+          {filteredTodos.map(item =>
             <TodoItem
               key={item.id}
               todo={item}
