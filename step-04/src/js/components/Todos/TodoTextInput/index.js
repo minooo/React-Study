@@ -30,7 +30,12 @@ export default class TodoTextInput extends Component {
     let input
 
     return (
-      <div className="relative">
+      <div
+        className={classnames({
+          'relative': true,
+          [styles.root]: this.props.newTodo
+        })}
+      >
         <input
           className={classnames({
             [styles.edit]: this.props.editing,

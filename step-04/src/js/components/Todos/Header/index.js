@@ -13,7 +13,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className={`relative ${styles.root}`}>
-        <h1 className={styles.title}>Todos</h1>
+        <h1 className={styles.title}>记事本</h1>
         <TodoTextInput
           newTodo
           placeholder="添加要去做的事"

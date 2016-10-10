@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
+import { Button } from 'antd-mobile'
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../../actions/actionsTypes'
 
 import styles from './index.scss'
@@ -26,13 +27,27 @@ export default class Footer extends Component {
 
   renderTodoCount() {
     const { uncompletedCount } = this.props
-    const itemword = uncompletedCount > 0 ? uncompletedCount + '个任务未完成' : '目前没有任务'
+    const itemword = uncompletedCount > 0 ? uncompletedCount + ' 个任务未完成' : '目前没有任务'
 
     return (
       <span>
         {itemword}
       </span>
     )
+  }
+
+  renderClearButton() {
+    const { completedCount, onClearCompleted } = this.props
+    if (completedCount>0) {
+      return (
+        <Button
+          className={styles.clearBtn}
+          onClick={onClearCompleted}
+        >
+          清除已完成
+        </Button>
+      )
+    }
   }
 
   render() {
@@ -46,6 +61,7 @@ export default class Footer extends Component {
             </li>
           )}
         </ul>
+        {this.renderClearButton()}
       </footer>
     )
   }

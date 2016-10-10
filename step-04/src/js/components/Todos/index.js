@@ -5,7 +5,15 @@ import styles from './index.scss'
 
 export default class Todos extends Component {
   render() {
-    const { addTodo, todos, completeTodo, deleteTodo, editTodo } = this.props
+    const {
+      addTodo,
+      todos,
+      completeTodo,
+      deleteTodo,
+      editTodo,
+      clearCompleted,
+      completeAll } = this.props
+
     return (
       <div className={styles.root}>
         <Header addTodo={addTodo}/>
@@ -14,6 +22,8 @@ export default class Todos extends Component {
           completeTodo={completeTodo}
           deleteTodo={deleteTodo}
           editTodo={editTodo}
+          clearCompleted={clearCompleted}
+          completeAll={completeAll}
         />
       </div>
     );

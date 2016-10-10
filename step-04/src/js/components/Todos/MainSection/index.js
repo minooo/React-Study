@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import TodoItem from '../TodoItem'
 import Footer from '../Footer'
+import { Switch } from 'antd-mobile'
+import { createForm } from 'rc-form'
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../../actions/actionsTypes'
 
 import styles from './index.scss'
@@ -11,7 +13,7 @@ const TODO_FILTERS = {
   [SHOW_ACTIVE]: item => !item.completed
 }
 
-export default class MainSection extends Component {
+class MainSection extends Component {
   state = {
     filter: SHOW_ALL
   }
@@ -20,12 +22,26 @@ export default class MainSection extends Component {
     this.setState({filter})
   }
 
-  renderFooter() {
+  renderToggleAll(completedCount) {
+    const { todos, completeAll } = this.props
+    const { getFieldProps } = this.props.form
+    if (todos.length > 0) {
+      return (
+        <Switch
+          {...getFieldProps('Switch1', {
+            initialValue: completedCount === todos.length,
+            valuePropName: 'checked',
+          })}
+          className={styles.switch}
+          onChange={completeAll}
+        />
+      )
+    }
+  }
+
+  renderFooter(completedCount) {
     const { todos } = this.props
     const { filter } = this.state
-    const completedCount = todos.reduce((count, todo) =>
-      todo.completed ? count + 1 : count, 0
-    )
     const activeCount = todos.length - completedCount
 
     if(todos.length) {
@@ -34,6 +50,8 @@ export default class MainSection extends Component {
           selectedFilter={filter}
           onShow={this.handleShow}
           uncompletedCount={activeCount}
+          completedCount={completedCount}
+          onClearCompleted={this.props.clearCompleted}
         />
       )
     }
@@ -44,9 +62,11 @@ export default class MainSection extends Component {
     const { filter } = this.state
 
     const filteredTodos = todos.filter(TODO_FILTERS[filter])
+    const completedCount = todos.filter(item => item.completed === true).length
 
     return (
       <section className={styles.root}>
+        {this.renderToggleAll(completedCount)}
         <ul className={styles.wrap}>
           {filteredTodos.map(item =>
             <TodoItem
@@ -58,8 +78,12 @@ export default class MainSection extends Component {
             />
           )}
         </ul>
-        {this.renderFooter()}
+        {this.renderFooter(completedCount)}
       </section>
     )
   }
 }
+
+MainSection = createForm()(MainSection)
+
+export default MainSection
