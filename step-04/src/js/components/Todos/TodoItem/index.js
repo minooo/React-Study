@@ -5,10 +5,6 @@ import classnames from 'classnames'
 import touchFunc from './touchFunc'
 import styles from './index.scss'
 
-
-
-
-
 export default class TodoItem extends Component {
   state = {
     btnsShow: false,

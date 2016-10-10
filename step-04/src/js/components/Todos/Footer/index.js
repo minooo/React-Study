@@ -24,9 +24,21 @@ export default class Footer extends Component {
     )
   }
 
+  renderTodoCount() {
+    const { uncompletedCount } = this.props
+    const itemword = uncompletedCount > 0 ? uncompletedCount + '个任务未完成' : '目前没有任务'
+
+    return (
+      <span>
+        {itemword}
+      </span>
+    )
+  }
+
   render() {
     return (
       <footer className={styles.footer}>
+        {this.renderTodoCount()}
         <ul className={"space-between " + styles.filters}>
           {[SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE].map(item =>
             <li key={item}>

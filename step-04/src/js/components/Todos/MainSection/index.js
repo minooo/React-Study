@@ -23,12 +23,17 @@ export default class MainSection extends Component {
   renderFooter() {
     const { todos } = this.props
     const { filter } = this.state
+    const completedCount = todos.reduce((count, todo) =>
+      todo.completed ? count + 1 : count, 0
+    )
+    const activeCount = todos.length - completedCount
 
     if(todos.length) {
       return (
         <Footer
           selectedFilter={filter}
           onShow={this.handleShow}
+          uncompletedCount={activeCount}
         />
       )
     }
