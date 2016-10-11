@@ -10,7 +10,7 @@ const Tour = ({todos, actions}) => (
   <div>
     <div
       style={{
-        background: "#1abc9c",
+        background: "rgb(86, 86, 86)",
         padding: '0 0.4rem 1rem',
         position:'absolute',
         width: '100%',

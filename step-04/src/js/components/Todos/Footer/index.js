@@ -38,16 +38,16 @@ export default class Footer extends Component {
 
   renderClearButton() {
     const { completedCount, onClearCompleted } = this.props
-    if (completedCount>0) {
-      return (
-        <Button
-          className={styles.clearBtn}
-          onClick={onClearCompleted}
-        >
-          清除已完成
-        </Button>
-      )
-    }
+    return (
+      <Button
+        type="primary"
+        className={styles.clearBtn}
+        onClick={onClearCompleted}
+        disabled={completedCount<1}
+      >
+        清除已完成
+      </Button>
+    )
   }
 
   render() {

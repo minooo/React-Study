@@ -39,7 +39,9 @@
 .am-radio-inner {
   right: 3px;
 }
-
-.am-switch input[type="checkbox"]:checked + .checkbox {
+.am-button-primary:after {
+  border-color: #1abc9c;
+}
+.am-switch input[type="checkbox"]:checked + .checkbox, .am-button-primary {
   background: #1abc9c;
 }
