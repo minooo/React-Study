@@ -9,6 +9,7 @@ const configureStore = preloadedState => {
     preloadedState,
     compose(
       applyMiddleware(thunk, createLogger())
+      // applyMiddleware 是redux的原生方法，它将所有中间件组成一个数组，依次执行。
     )
   )
 

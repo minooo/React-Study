@@ -41,3 +41,20 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
   安装：`npm install react-fastclick --save`
   
 ---
+#### [humps](https://github.com/domchristie/humps) [推荐]
+> 一个用来在字符串和对象键的驼峰写法的转换器。  
+  安装：`npm install humps --save-dev`
+  
+---
+
+#### [lodash](https://github.com/lodash/lodash) [推荐]
+> js模块化工具  
+  安装：`npm install lodash --save-dev`
+  
+---
+
+#### [normalizr](https://github.com/paularmstrong/normalizr) [推荐]
+> 按照一个规范化模式来嵌套JSON  
+  安装：`npm install normalizr --save-dev`
+  
+---

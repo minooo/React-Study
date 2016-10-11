@@ -42,6 +42,9 @@
 .am-button-primary:after {
   border-color: #1abc9c;
 }
+.am-button-primary.am-button-touchFeedback {
+  background-color: #18ac8f;
+}
 .am-switch input[type="checkbox"]:checked + .checkbox, .am-button-primary {
   background: #1abc9c;
 }
