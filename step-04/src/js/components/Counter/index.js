@@ -22,8 +22,14 @@ export default class Counter extends React.Component {
     this.interval = setInterval(this.tick, 1000)
   }
 
+  incrementIfOdd = () => {
+    if(this.props.counter %2 ===0) {
+      this.props.increment()
+    }
+  }
+
   render() {
-    const {counter, increment, decrement, incrementIfOdd} = this.props
+    const {counter, increment, decrement} = this.props
     const { isDisabled, countDown } = this.state
     return (
       <div className={styles.root}>
@@ -45,7 +51,7 @@ export default class Counter extends React.Component {
             </button>
 
             <button
-              onClick={incrementIfOdd}
+              onClick={this.incrementIfOdd}
               className={styles.ifOdd}
             >
               如果是偶数+1
