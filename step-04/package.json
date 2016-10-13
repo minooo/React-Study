@@ -24,6 +24,7 @@
   "dependencies": {
     "antd-mobile": "^0.9.2",
     "babel-polyfill": "^6.13.0",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-fastclick": "^2.1.2",

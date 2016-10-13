@@ -4,4 +4,3 @@
 npm-debug*
 node_modules
 dist
-yarn.lock

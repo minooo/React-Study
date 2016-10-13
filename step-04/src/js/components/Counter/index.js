@@ -18,8 +18,12 @@ export default class Counter extends React.Component {
 
   asyncClick = () => {
     this.setState({isDisabled: true})
-    setTimeout(this.props.increment, this.state.countDown)
+    this.props.onIncrementAsync()
     this.interval = setInterval(this.tick, 1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
   }
 
   incrementIfOdd = () => {
@@ -29,7 +33,7 @@ export default class Counter extends React.Component {
   }
 
   render() {
-    const {counter, increment, decrement} = this.props
+    const {counter, increment, decrement } = this.props
     const { isDisabled, countDown } = this.state
     return (
       <div className={styles.root}>

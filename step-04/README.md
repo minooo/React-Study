@@ -50,7 +50,7 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
 ---
 
 #### [lodash](https://github.com/lodash/lodash) [推荐]
-> js模块化工具  
+> 一个具有一致接口、模块化、高性能等特性的 JavaScript 工具库  
   安装：`npm install lodash --save-dev`
   
 ---
