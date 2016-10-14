@@ -24,11 +24,16 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
 
 #### [redux-saga](https://github.com/yelouafi/redux-saga/) [强烈推荐]
 > 一个替代[redux-thunk](https://github.com/gaearon/redux-thunk)更优雅的用于管理Redux异步操作的中间件  
-[redux-sage中文文档](http://leonshi.com/redux-saga-in-chinese/index.html)  
+  [redux-sage中文文档(繁体，同步)](https://neighborhood999.github.io/redux-saga/)  
   安装：`npm install redux-saga --save`
   
+---
+
+#### [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) [强烈推荐]
+> Isomorphic WHATWG Fetch API, for Node & Browserify  
+  安装：`npm install isomorphic-fetch --save`
   
---------------------
+---
 
 
 #### [redux-logger](https://github.com/evgenyrodionov/redux-logger) [开发需要]
