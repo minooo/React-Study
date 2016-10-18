@@ -12,6 +12,7 @@ export default class Todos extends Component {
       deleteTodo,
       editTodo,
       clearCompleted,
+      showCongratulation,
       completeAll } = this.props
 
     return (
@@ -24,6 +25,7 @@ export default class Todos extends Component {
           editTodo={editTodo}
           clearCompleted={clearCompleted}
           completeAll={completeAll}
+          showCongratulation={showCongratulation}
         />
       </div>
     );

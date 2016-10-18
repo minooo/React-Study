@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TodoItem from '../TodoItem'
 import Footer from '../Footer'
-import { Switch } from 'antd-mobile'
+import { Switch, NoticeBar } from 'antd-mobile'
 import { createForm } from 'rc-form'
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../../actions/actionsTypes'
 
@@ -58,7 +58,7 @@ class MainSection extends Component {
   }
 
   render() {
-    const { todos, completeTodo, deleteTodo, editTodo } = this.props
+    const { todos, completeTodo, deleteTodo, editTodo, showCongratulation } = this.props
     const { filter } = this.state
 
     const filteredTodos = todos.filter(TODO_FILTERS[filter])
@@ -78,6 +78,12 @@ class MainSection extends Component {
             />
           )}
         </ul>
+        { showCongratulation &&
+          <NoticeBar mode="closable">
+            恭喜成功添加三个任务！
+          </NoticeBar>
+        }
+
         {this.renderFooter(completedCount)}
       </section>
     )

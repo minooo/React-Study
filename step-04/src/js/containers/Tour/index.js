@@ -6,7 +6,7 @@ import { Nav, Todos } from '../../components'
 
 import * as TodoActions from '../../actions/TodoActions'
 
-const Tour = ({todos, actions}) => (
+const Tour = ({todos, showCongratulation, actions}) => (
   <div>
     <div
       style={{
@@ -19,14 +19,15 @@ const Tour = ({todos, actions}) => (
       }}
       className="center-center"
     >
-      <Todos todos={todos} {...actions}/>
+      <Todos todos={todos} showCongratulation={showCongratulation} {...actions}/>
     </div>
     <Nav/>
   </div>
 )
 
 const mapStateToProps = state => ({
-  todos: state.todos
+  todos: state.todos,
+  showCongratulation: state.showCongratulation
 })
 
 const mapDispatchToProps = dispatch => ({

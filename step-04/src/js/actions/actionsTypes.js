@@ -19,3 +19,6 @@ export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
 export const SHOW_ALL = 'show_all'
 export const SHOW_COMPLETED = 'show_completed'
 export const SHOW_ACTIVE = 'show_active'
+
+// SHOW_CONGRATULATION
+export const SHOW_CONGRATULATION = 'show_congratulation'
