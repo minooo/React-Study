@@ -9,6 +9,12 @@
   可以看下[React es5---es6 写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)  
   同时也建议你花[30分钟，快速了解ES6语法](https://segmentfault.com/a/1190000004365693)
   当然，本项目所有组件示例也可以当作你学习es6写法的参考。
+- 如果你有使用webstorm作为你的IDE，初次运行本项目，软件可能会提示你 `Add watcher` ，  
+  由于本项目已配置好了一整套的编译流程，所以不要此类协助，直接忽略取消即可；另外由于  
+  项目代码用的都是JSX语法，webstorm 可能默认的解析js语法是es5，  
+  所以此时你会看到文件都是“一片红”错误标注，如下改下解析设置就行了：  
+  `File` -> `Settings` -> `Languages & Frameworks` -> `JavaScript`   
+  选择右侧面板中的下拉框，将选项 `JavaScript languaga version` 的值改为 `React JSX` 即可
 - 如果你在学习本项目遇到问题，请加群交流： [419922267](http://jq.qq.com/?_wv=1027&k=2FnzuGM)
 
 ## 认识React生态圈

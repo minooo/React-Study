@@ -9,11 +9,13 @@ import * as CounterActions from '../../actions/CounterActions'
 
 class Coupon extends Component {
   render() {
-    const { counter, dispatch } = this.props
+    const { counter, dispatch, asyncBool, asyncCountDown } = this.props
     return (
       <div>
         <Counter
           counter={counter}
+          asyncBool={asyncBool}
+          asyncCountDown={asyncCountDown}
           {...bindActionCreators(CounterActions, dispatch)}
         />
         <Nav />
@@ -24,7 +26,9 @@ class Coupon extends Component {
 
 function select(state) {
   return {
-    counter: state.counter
+    counter: state.counter,
+    asyncBool: state.counterAsync.asyncBool,
+    asyncCountDown: state.counterAsync.asyncCountDown
   }
 }
 

@@ -4,14 +4,20 @@ import { put, call, take, fork, select } from 'redux-saga/effects'
 import {
   INCREMENT_COUNTER,
   INCREMENT_ASYNC,
+  COUNT_DOWN,
+  ASYNC_OVER,
   ADD_TODO,
   SHOW_CONGRATULATION
 } from '../actions/actionsTypes'
 
 // 我们的干活的 Saga: 将执行 异步加一 。
 function* incrementAsync() {
-  yield call(delay, 3000)
+  for(let i = 0; i < 3; i++) {
+    yield call(delay, 1000)
+    yield put({type: COUNT_DOWN})
+  }
   yield put({type: INCREMENT_COUNTER})
+  yield put({type: ASYNC_OVER})
 }
 
 // 我们监视的 Saga: 每个调用 INCREMENT_ASYNC 的动作将触发 异步加一 的5毛特效。
