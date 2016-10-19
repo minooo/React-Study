@@ -1,22 +1,5 @@
 > [react.js](https://github.com/facebook/react) 本是一个构建用户界面的javascript库，它因单向数据绑定和虚拟DOM两大特点在前端界大放异彩，因为它解决了当下网页性能陷入的瓶颈（因为直接操作DOM导致页面性能损失很大，而虚拟DOM避免了直接操作DOM），再加上单向数据绑定使得业务逻辑更加清晰可控，另外，`react.js` 是大名鼎鼎的Facebook一手打造维护，基于此，react社区也异常活跃，从而良性的推动了react的发展和流行,而React现在已经发展为一个生态圈。
 
-
-## 针对小伙伴针的一些反复常见问题，在此做下说明。（2016/10/19）
-- 请保证电脑安装的 [node](http://nodejs.cn/) 版本在 **6.0以上** ，如果你“不幸”安装了4.0版本，  
-  请先将其卸载，再安装6.0+版本
-- 很多新手朋友可能事先跟着react官网实例做了一些练习，用的都是 es5 的语法。  
-  而本项目代码采用的都是 es6 的语法，这也是react官网推荐的。如果你对es6语法不太熟悉  
-  可以看下[React es5---es6 写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)  
-  同时也建议你花[30分钟，快速了解ES6语法](https://segmentfault.com/a/1190000004365693)
-  当然，本项目所有组件示例也可以当作你学习es6写法的参考。
-- 如果你有使用webstorm作为你的IDE，初次运行本项目，软件可能会提示你 `Add watcher` ，  
-  由于本项目已配置好了一整套的编译流程，所以不要此类协助，直接忽略取消即可；另外由于  
-  项目代码用的都是JSX语法，webstorm 可能默认的解析js语法是es5，  
-  所以此时你会看到文件都是“一片红”错误标注，如下改下解析设置就行了：  
-  `File` -> `Settings` -> `Languages & Frameworks` -> `JavaScript`   
-  选择右侧面板中的下拉框，将选项 `JavaScript languaga version` 的值改为 `React JSX` 即可
-- 如果你在学习本项目遇到问题，请加群交流： [419922267](http://jq.qq.com/?_wv=1027&k=2FnzuGM)
-
 ## 认识React生态圈
 
 用阮一峰老师的话说就是：**React已不是一个库，也不是一个框架，而是一个庞大的体系。想要发挥它的威力，整个技术栈都要配合它改造。你要学习一整套解决方案，从后端到前端，都是全新的做法。**时至今日，围绕以React为核心的技术栈也日益成型，它主要包含：
@@ -44,7 +27,7 @@ step-03 是在 step-02 的基础上开发的 step-03 主要围绕添加 react-ro
 同理，step-04 是在 step-03 的基础上添加额外配置完成，目前仍处于开发中，这部分主要添加 [redux](https://github.com/reactjs/redux)。推荐教程 [redux-tutorial 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) [redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
 
 ## 启动React生态圈
-本项目启动前默认你已经安装[node](http://nodejs.cn/)（建议安装6.0+版本）
+
 #### 克隆项目
     git clone https://github.com/minooo/React-Study.git
     
@@ -58,6 +41,22 @@ step-03 是在 step-02 的基础上开发的 step-03 主要围绕添加 react-ro
     npm start
     
 #### 启动就绪后，打开浏览器，输入 http://localhost:3000/ ，看到惊喜了吗？
+
+## 常见问题说明。（2016/10/19）
+- 请保证电脑安装的 [node](http://nodejs.cn/) 版本在 **6.0以上** ，如果你“不幸”安装了4.0版本，  
+  请先将其卸载，再安装6.0+版本
+- 很多新手朋友可能事先跟着react官网实例做了一些练习，用的都是 es5 的语法。  
+  而本项目代码采用的都是 es6 的语法，这也是react官网推荐的。如果你对es6语法不太熟悉  
+  可以看下[React es5---es6 写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)  
+  同时也建议你花[30分钟，快速了解ES6语法](https://segmentfault.com/a/1190000004365693)
+  当然，本项目所有组件示例也可以当作你学习es6写法的参考。
+- 如果你有使用webstorm作为你的IDE，初次运行本项目，软件可能会提示你 `Add watcher` ，  
+  由于本项目已配置好了一整套的编译流程，所以不要此类协助，直接忽略取消即可；另外由于  
+  项目代码用的都是JSX语法，webstorm 可能默认的解析js语法是es5，  
+  所以此时你会看到文件都是“一片红”错误标注，如下改下解析设置就行了：  
+  `File` -> `Settings` -> `Languages & Frameworks` -> `JavaScript`   
+  选择右侧面板中的下拉框，将选项 `JavaScript languaga version` 的值改为 `React JSX` 即可
+- 如果你在学习本项目遇到问题，请加群交流： [419922267](http://jq.qq.com/?_wv=1027&k=2FnzuGM)
 
 # License
 MIT
