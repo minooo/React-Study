@@ -7,7 +7,7 @@
 - 很多新手朋友可能事先跟着react官网实例做了一些练习，用的都是 es5 的语法。  
   而本项目代码采用的都是 es6 的语法，这也是react官网推荐的。如果你对es6语法不太熟悉  
   可以看下[React es5---es6 写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)  
-  同时也建议你[30分钟，快速了解ES6语法](https://segmentfault.com/a/1190000004365693)
+  同时也建议你花[30分钟，快速了解ES6语法](https://segmentfault.com/a/1190000004365693)
   当然，本项目所有组件示例也可以当作你学习es6写法的参考。
 - 如果你在学习本项目遇到问题，请加群交流： [419922267](http://jq.qq.com/?_wv=1027&k=2FnzuGM)
 
