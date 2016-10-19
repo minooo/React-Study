@@ -43,7 +43,6 @@ function* watchFirstThreeTodosCreation() {
   for(let i = 0; i < 3; i++) {
     const action = yield take(ADD_TODO)
   }
-
   yield put({type: SHOW_CONGRATULATION})
 }
 
