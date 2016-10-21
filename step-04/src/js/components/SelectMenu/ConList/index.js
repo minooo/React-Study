@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
 import styles from './index.scss'
 
-const Item = ({label, selectHandle, activeBool, SonBool}) => {
-  return (
-    <a
-      href="javascript:void(0)"
-      onClick={selectHandle}
-      className={`ver-center ${styles.list} ${activeBool ? styles.active:null} ${SonBool ? styles.sonActive :null}`}
-    >
-      {label}
-    </a>
-  )
+class Item extends Component {
+  onSelectHandle = () => {
+    this.props.selectHandle(this.props.label, this.props.flag)
+  }
+  render() {
+    const { label, activeBool, SonBool } = this.props
+    return (
+      <a
+        href="javascript:void(0)"
+        onClick={this.onSelectHandle}
+        className={`ver-center ${styles.list} ${activeBool ? styles.active:null} ${SonBool ? styles.sonActive :null}`}
+      >
+        {label}
+      </a>
+    )
+  }
 }
 
 export default class ConList extends Component {
   state = {
     focus: -1
   }
-  onClickFocus = (i) => {
-    this.setState({focus: i})
+  onClickFocus = (label,flag) => {
+    this.setState({focus: flag})
   }
 
   render() {
@@ -32,9 +38,10 @@ export default class ConList extends Component {
               <Item
                 {...item}
                 key={index}
-                SonBool={!(item.items&&index===focus)}
-                activeBool={item.items&&index===focus}
-                selectHandle={item.items ? this.onClickFocus.bind(null, index, item) : () => selectHandle(item.label)}
+                flag={index}
+                SonBool={!(item.items && index===focus)}
+                activeBool={item.items && index===focus}
+                selectHandle={item.items ? this.onClickFocus : selectHandle}
               />
             )}
           </div>
@@ -47,7 +54,7 @@ export default class ConList extends Component {
                   {...item}
                   key={item.label}
                   SonBool
-                  selectHandle={() => selectHandle(item.label)}
+                  selectHandle={selectHandle}
                 />
               )}
             </div>
