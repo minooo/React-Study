@@ -24,3 +24,9 @@ export const SHOW_ACTIVE = 'show_active'
 
 // SHOW_CONGRATULATION
 export const SHOW_CONGRATULATION = 'show_congratulation'
+
+// Timer
+export const START = 'START'
+export const STOP = 'STOP'
+export const RESET = 'RESET'
+export const TIMER = 'TIMER'

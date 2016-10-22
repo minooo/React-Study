@@ -7,6 +7,8 @@ import '../../styles/app.scss'
 import '../../styles/antdStyleReset.scss'
 import '../../styles/font.scss'
 import '../../styles/animations.scss'
+import 'moment/locale/zh-cn'
+
 
 const Root = ({ store, history }) => (
   <Provider store={store}>

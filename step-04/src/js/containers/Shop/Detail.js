@@ -3,7 +3,7 @@ import { Timer } from '../../components'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { NavBar, Icon } from 'antd-mobile'
+import { NavBar } from 'antd-mobile'
 class Detail extends Component {
   render() {
     return (
