@@ -83,7 +83,7 @@ function* watchFetchData() {
 
 
 // 如何定义 Redux Store 的外部事件
-function countdown(secs) {
+/*function countdown(secs) {
   return eventChannel(emitter => {
       const iv = setInterval(() => {
         secs -= 1
@@ -101,9 +101,9 @@ function countdown(secs) {
       }
     }
   )
-}
+}*/
 
-function* myEventChannel () {
+/*function* myEventChannel () {
   const chan = yield call(countdown, 15)
   try {
     while (true) {
@@ -118,14 +118,13 @@ function* myEventChannel () {
     }
     console.log('countdown terminated')
   }
-}
+}*/
 
 // 单一进入点，一次启动所有 Saga
 export default function* rootSaga() {
   yield [
     watchIncrementAsync(),
     watchFetchData(),
-    watchFirstThreeTodosCreation(),
-    myEventChannel()
+    watchFirstThreeTodosCreation()
   ]
 }
