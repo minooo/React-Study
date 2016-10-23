@@ -58,9 +58,9 @@ flex(100, 1);</script>
   
 ---
 
-#### [babel-plugin-antd](https://npm.taobao.org/package/babel-plugin-antd) [搭配antd-mobile必需]
-> Modular antd build plugin for babel.  
-  安装：`npm install babel-plugin-antd --save-dev`
+#### [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) [搭配antd-mobile必需]
+> Modular antd build plugin for babel，让antd-mobile 中模块组件的引入实现**按需加载**  
+  安装：`npm install babel-plugin-import --save-dev`
   
 ---
 

@@ -53,9 +53,9 @@ ansi-styles@^2.1.0, ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-antd-mobile@0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-0.8.2.tgz#f8bd0df3689ad7eef36a7541bbc59801f4a1503c"
+antd-mobile@^0.9.3:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-0.9.4.tgz#332795357f7535c8735220bf137ceb0038cf8925"
   dependencies:
     array-tree-filter "~1.0.0"
     babel-runtime "6.x"
@@ -63,16 +63,17 @@ antd-mobile@0.8.2:
     css-vendor "~0.3.4"
     moment "^2.14.1"
     normalize.css "~4.2.0"
+    nuka-carousel "~2.0.3"
     object-assign "~4.1.0"
     object-omit "^1.0.0"
     rc-checkbox "~1.4.1"
     rc-collapse "~1.6.6"
-    rc-dialog "~6.3.0"
+    rc-dialog "~6.4.0"
     rc-drawer "~0.4.8"
-    rc-input-number "~2.6.3"
+    rc-input-number "~2.7.0"
     rc-notification "~1.3.5"
     rc-slider "~4.0.1"
-    rc-steps "~2.1.5"
+    rc-steps "~2.2.0"
     rc-swipeout "~1.1.5"
     rc-table "~4.6.0"
     rc-tabs "7.0.x"
@@ -81,14 +82,14 @@ antd-mobile@0.8.2:
     react-native-camera-roll-picker "~1.1.6"
     react-native-drawer-layout "~1.0.0"
     react-native-menu "~0.20.1"
-    react-native-scrollable-tab-view "^0.5.3"
-    react-slick "~0.13.3"
+    react-native-scrollable-tab-view "^0.6.0"
     react-timer-mixin "~0.13.3"
-    rmc-cascader "~2.2.6"
-    rmc-date-picker "~4.0.3"
-    rmc-list-view "~0.6.1"
-    rmc-pull-to-refresh "~0.3.2"
+    rmc-cascader "3.0.x"
+    rmc-date-picker "5.0.x"
+    rmc-list-view "~0.7.0-beta.4"
+    rmc-picker "3.4.x"
     rn-topview "^0.1.0"
+    zscroller "~0.2.2"
 
 any-promise@~0.1.0:
   version "0.1.0"
@@ -478,15 +479,15 @@ babel-messages@^6.8.0:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-antd@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-antd/-/babel-plugin-antd-0.5.1.tgz#1bae198ac972238db5727bd5eeee561a8b17be2c"
-
 babel-plugin-check-es2015-constants@^6.3.13:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.8.0.tgz#dbf024c32ed37bfda8dee1e76da02386a8d26fe7"
   dependencies:
     babel-runtime "^6.0.0"
+
+babel-plugin-import@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-import/-/babel-plugin-import-1.0.1.tgz#7fe2421e7882ee3940450feb225ecfa09ea8d855"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -1220,10 +1221,6 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
-can-use-dom@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
-
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000540:
   version "1.0.30000554"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000554.tgz#cd1dbe423d00b6203ba93f05973a476428dec919"
@@ -1778,10 +1775,6 @@ domhandler@2.1:
   dependencies:
     domelementtype "1"
 
-domkit@~0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/domkit/-/domkit-0.0.1.tgz#88399d586794efc1154fec6c22cfe50f19bd4dbb"
-
 domutils@1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.1.6.tgz#bddc3de099b9a2efacc51c623f28f416ecc57485"
@@ -1891,10 +1884,6 @@ enhanced-resolve@~0.9.0:
     memory-fs "^0.2.0"
     tapable "^0.1.8"
 
-enquire.js@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/enquire.js/-/enquire.js-2.1.1.tgz#56ba08cb7c896839eda0c00e9fb0d40339e91c3f"
-
 entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
@@ -1973,6 +1962,10 @@ eventemitter3@1.x.x:
 events@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
+
+exenv@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.1.tgz#75de1c8dee02e952b102aa17f8875973e0df14f9"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -2753,10 +2746,6 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery@>=1.7.2:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
-
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -2799,12 +2788,6 @@ json-schema@0.2.3:
 json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
-
-json2mq@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/json2mq/-/json2mq-0.2.0.tgz#b637bd3ba9eabe122c83e9720483aeb10d2c904a"
-  dependencies:
-    string-convert "^0.2.0"
 
 json3@3.2.6:
   version "3.2.6"
@@ -2853,6 +2836,13 @@ kind-of@^3.0.2:
 klaw@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/klaw/-/klaw-1.3.0.tgz#8857bfbc1d824badf13d3d0241d8bbe46fb12f73"
+
+kw-react-tween-state@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/kw-react-tween-state/-/kw-react-tween-state-0.1.5.tgz#744088988d35f14ccc2ca36af96bc09ece7ab78b"
+  dependencies:
+    raf "^3.1.0"
+    tween-functions "^1.0.1"
 
 laggard@^0.1.0:
   version "0.1.0"
@@ -3334,6 +3324,14 @@ nth-check@~1.0.1:
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.1.tgz#9929acdf628fc2c41098deab82ac580cf149aae4"
   dependencies:
     boolbase "~1.0.0"
+
+nuka-carousel@~2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-2.0.3.tgz#857d9350e24a62f123bdd200fe71944ebd7e7dc4"
+  dependencies:
+    exenv "^1.2.0"
+    kw-react-tween-state "^0.1.5"
+    object-assign "^4.1.0"
 
 num2fraction@^1.2.2:
   version "1.2.2"
@@ -4232,11 +4230,12 @@ rc-dialog@^6.4.0:
     rc-animate "2.x"
     rc-util "^3.4.1"
 
-rc-dialog@~6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/rc-dialog/-/rc-dialog-6.3.0.tgz#05b3dcea24ea80ca52463566e4451fe56356873c"
+rc-dialog@~6.4.0:
+  version "6.4.5"
+  resolved "https://registry.yarnpkg.com/rc-dialog/-/rc-dialog-6.4.5.tgz#82f00b0b21eaf082614c2bf9ba59eb4e4e687116"
   dependencies:
     babel-runtime "6.x"
+    object-assign "~4.1.0"
     rc-animate "2.x"
     rc-util "^3.4.1"
 
@@ -4256,9 +4255,9 @@ rc-form@^0.17.2:
     dom-scroll-into-view "1.x"
     hoist-non-react-statics "1.x"
 
-rc-input-number@~2.6.3:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/rc-input-number/-/rc-input-number-2.6.3.tgz#81a9811a60fb90b07221f64c06ab62580f0a102e"
+rc-input-number@~2.7.0:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/rc-input-number/-/rc-input-number-2.7.3.tgz#4e141fa58d177b51680a0a343bf4819a49407539"
   dependencies:
     babel-runtime "6.x"
     classnames "^2.2.0"
@@ -4281,9 +4280,9 @@ rc-slider@~4.0.1:
     rc-util "^3.2.1"
     warning "^3.0.0"
 
-rc-steps@~2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/rc-steps/-/rc-steps-2.1.5.tgz#72d50c46c4e37a7beecba939fa6ce86ded9829fe"
+rc-steps@~2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/rc-steps/-/rc-steps-2.2.0.tgz#fa8ae6c05e9b63da4c060f2bd05333bc16adbf98"
   dependencies:
     classnames "^2.2.3"
 
@@ -4360,7 +4359,7 @@ react-deep-force-update@^2.0.1:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.2.tgz#c46b0aa5380d7b838e7a59c4a7beff2ed315531f"
 
-react-hammerjs@^0.5.0, react-hammerjs@~0.5.0, react-hammerjs@0.5.x:
+react-hammerjs@^0.5.0, react-hammerjs@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/react-hammerjs/-/react-hammerjs-0.5.0.tgz#aa20e5c5f44d660f3e8e87ed11282f12173e77ae"
   dependencies:
@@ -4409,9 +4408,9 @@ react-native-picker-android@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-native-picker-android/-/react-native-picker-android-1.0.3.tgz#1607843bce510d35a28522511994d3cfced344dd"
 
-react-native-scrollable-tab-view@^0.5.3:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.5.5.tgz#851f47c3db03737fa6fa7766ed31c7d09557898d"
+react-native-scrollable-tab-view@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.6.0.tgz#36050cf72dae0dc00b6b8d7f9a570955d99a213b"
   dependencies:
     react-static-container "^1.0.1"
     react-timer-mixin "^0.13.3"
@@ -4428,14 +4427,6 @@ react-proxy@^3.0.0-alpha.0:
   dependencies:
     lodash "^4.6.1"
 
-react-responsive-mixin@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/react-responsive-mixin/-/react-responsive-mixin-0.4.0.tgz#9504218a17d49346d9a09a1f5945f629afdb624b"
-  dependencies:
-    can-use-dom "^0.1.0"
-    enquire.js "^2.1.1"
-    json2mq "^0.2.0"
-
 react-router@^2.6.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-2.8.1.tgz#73e9491f6ceb316d0f779829081863e378ee4ed7"
@@ -4445,16 +4436,6 @@ react-router@^2.6.1:
     invariant "^2.2.1"
     loose-envify "^1.2.0"
     warning "^3.0.0"
-
-react-slick@~0.13.3:
-  version "0.13.6"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.13.6.tgz#5cbbbdceeded7642174ce0b151539b630d228f01"
-  dependencies:
-    classnames "^2.2.5"
-    json2mq "^0.2.0"
-    object-assign "^4.1.0"
-    react-responsive-mixin "^0.4.0"
-    slick-carousel "^1.6.0"
 
 react-static-container@^1.0.1:
   version "1.0.1"
@@ -4755,37 +4736,48 @@ ripemd160@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-0.2.0.tgz#2bf198bde167cacfa51c0a928e84b68bbe171fce"
 
-rmc-cascader@~2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/rmc-cascader/-/rmc-cascader-2.2.6.tgz#3c375d7db52203803d7e66515b6a03fb3668d311"
+rmc-cascader@3.0.x:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/rmc-cascader/-/rmc-cascader-3.0.5.tgz#e73cc84ccdc3109407e65062b0f04d69243a19d1"
   dependencies:
     array-tree-filter "1.0.x"
     babel-runtime "6.x"
     classnames "2.x"
     rmc-picker "3.x"
 
-rmc-date-picker@~4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/rmc-date-picker/-/rmc-date-picker-4.0.3.tgz#0579d90f69dc9d1486ba975377cbef3996755498"
+rmc-date-picker@5.0.x:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/rmc-date-picker/-/rmc-date-picker-5.0.3.tgz#4736debae68203d5fd4557c9148ca39f54806942"
   dependencies:
     babel-runtime "6.x"
     classnames "2.x"
     moment "2.x"
     rmc-picker "3.x"
 
-rmc-list-view@~0.6.1:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/rmc-list-view/-/rmc-list-view-0.6.2.tgz#76e4a5fefc83b7ae2928e6b93477ae6d8f2e5ebc"
+rmc-list-view@~0.7.0-beta.4:
+  version "0.7.0-beta.7"
+  resolved "https://registry.yarnpkg.com/rmc-list-view/-/rmc-list-view-0.7.0-beta.7.tgz#a58cc553bc82ba9b60cd5b480a61038d7510dd32"
   dependencies:
     autobind-decorator "^1.3.3"
     babel-runtime "6.x"
     classnames "^2.2.5"
-    domkit "~0.0.1"
     fbjs "^0.8.3"
     object-assign "^4.1.0"
     react-mixin "^3.0.5"
     react-sticky "^5.0.2"
     react-timer-mixin "^0.13.3"
+    zscroller "~0.2.2"
+
+rmc-picker@3.4.x:
+  version "3.4.8"
+  resolved "https://registry.yarnpkg.com/rmc-picker/-/rmc-picker-3.4.8.tgz#8082429434c34bab011496d47720c99f9962a11d"
+  dependencies:
+    babel-runtime "6.x"
+    classnames "2.x"
+    object-assign "4.x"
+    rc-dialog "^6.4.0"
+    react-native-picker-android "~1.0.2"
+    zscroller "~0.2.0"
 
 rmc-picker@3.x:
   version "3.4.6"
@@ -4797,13 +4789,6 @@ rmc-picker@3.x:
     rc-dialog "^6.4.0"
     react-native-picker-android "~1.0.2"
     zscroller "~0.2.0"
-
-rmc-pull-to-refresh@~0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/rmc-pull-to-refresh/-/rmc-pull-to-refresh-0.3.2.tgz#ebbae874096b6085da295e51d58e96c4515df80a"
-  dependencies:
-    babel-runtime "6.x"
-    react-hammerjs "0.5.x"
 
 rn-topview@^0.1.0:
   version "0.1.0"
@@ -4952,12 +4937,6 @@ signal-exit@^3.0.0:
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
-
-slick-carousel@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.6.0.tgz#780f378e470f4e6f6bec1aa2bae0475f4f9eb085"
-  dependencies:
-    jquery ">=1.7.2"
 
 smart-mixin@^2.0.0:
   version "2.0.0"
@@ -5129,10 +5108,6 @@ strict-uri-encode@^1.0.0:
 string_decoder@~0.10.25, string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
-
-string-convert@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/string-convert/-/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
 
 string-hash@^1.1.0:
   version "1.1.0"
@@ -5655,7 +5630,7 @@ yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
-zscroller@~0.2.0:
+zscroller@~0.2.0, zscroller@~0.2.2:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/zscroller/-/zscroller-0.2.3.tgz#b4262336c07d0c88d146ec2a60b414df7d3aefc4"
 

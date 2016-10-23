@@ -67,7 +67,7 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
 ---
 
 #### [moment](https://github.com/moment/moment) [强烈推荐]
-> 一个专门针对日期进行解析，操作，验证，显示的非常强大好用的JS库  
+> 一个专门针对日期进行解析，操作，验证，展示的非常强大好用的JS库  
   安装：`npm install moment --save`
   
 ---

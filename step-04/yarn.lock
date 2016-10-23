@@ -53,9 +53,9 @@ ansi-styles@^2.1.0, ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-antd-mobile@^0.9.2:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-0.9.2.tgz#63c0eba9b7ef08fc9fe90115a21d5d7041b4c100"
+antd-mobile@^0.9.3:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-0.9.4.tgz#332795357f7535c8735220bf137ceb0038cf8925"
   dependencies:
     array-tree-filter "~1.0.0"
     babel-runtime "6.x"
@@ -479,15 +479,15 @@ babel-messages@^6.8.0:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-antd@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-antd/-/babel-plugin-antd-0.5.1.tgz#1bae198ac972238db5727bd5eeee561a8b17be2c"
-
 babel-plugin-check-es2015-constants@^6.3.13:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.8.0.tgz#dbf024c32ed37bfda8dee1e76da02386a8d26fe7"
   dependencies:
     babel-runtime "^6.0.0"
+
+babel-plugin-import@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-import/-/babel-plugin-import-1.0.1.tgz#7fe2421e7882ee3940450feb225ecfa09ea8d855"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -3184,7 +3184,7 @@ modify-babel-preset@^3.1.0:
   dependencies:
     require-relative "^0.8.7"
 
-moment@^2.14.1, moment@2.x:
+moment@^2.14.1, moment@^2.15.1, moment@2.x:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.15.1.tgz#e979c2a29e22888e60f396f2220a6118f85cd94c"
 
@@ -4375,9 +4375,9 @@ react-hammerjs@^0.5.0, react-hammerjs@~0.5.0:
   dependencies:
     hammerjs "^2.0.8"
 
-react-hot-loader@^3.0.0-beta.5:
-  version "3.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.0.0-beta.5.tgz#d7f97d15ef50a5433f17ba5d19c6ee1a7242170e"
+react-hot-loader@^3.0.0-beta.6:
+  version "3.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.0.0-beta.6.tgz#463fac0bfc8b63a8385258af20c91636abce75f4"
   dependencies:
     babel-template "^6.7.0"
     global "^4.3.0"
