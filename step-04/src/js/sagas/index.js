@@ -41,15 +41,6 @@ function* watchIncrementAsync() {
   yield* takeEvery(INCREMENT_ASYNC, incrementAsync)
 }
 
-/*function* watchAndLog() {
-  yield takeEvery('*', function* logger(action){
-    const state = yield select()
-
-    console.log('action-minooo', action)
-    console.log('state after-minooo', state)
-  })
-}*/
-
 // 用 Saga 的方式写logger
 /*function* watchAndLog() {
   while (true) {

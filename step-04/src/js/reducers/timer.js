@@ -1,7 +1,7 @@
 import { START, STOP, RESET, TIMER} from '../actions/actionsTypes'
 
 const init = {
-  seconds: 0,
+  seconds: 4,
   status: 'Stopped'
 }
 
