@@ -40,7 +40,7 @@ export default class Counter extends React.Component {
             <button
               onClick={onIncrementAsync}
               className={styles.async}
-              {...asyncBool && {disabled:true}}
+              disabled={asyncBool}
             >
               {asyncCountDown}秒后+1
             </button>

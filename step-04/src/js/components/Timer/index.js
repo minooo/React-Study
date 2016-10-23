@@ -13,6 +13,7 @@ const Timer = props => {
       <button
         className={styles.btn}
         onClick={props.onReset}
+        disabled={props.status === 'Running'}
       >
         重置
       </button>
@@ -20,7 +21,7 @@ const Timer = props => {
       <button
         className={styles.btn}
         onClick={props.onStart}
-        disabled={props==='Running'}
+        disabled={props.status === 'Running'}
       >
         开始
       </button>
@@ -28,6 +29,7 @@ const Timer = props => {
       <button
         className={styles.btn}
         onClick={props.onStop}
+        disabled={props.status === 'Stopped'}
       >
         停止
       </button>

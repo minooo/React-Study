@@ -1,5 +1,5 @@
 import { takeEvery, delay, takeLatest, buffers, channel, eventChannel, END } from 'redux-saga'
-import { put, call, take, fork, select, actionChannel, cancelled } from 'redux-saga/effects'
+import { put, call, take, fork, select, actionChannel,cancel, cancelled } from 'redux-saga/effects'
 
 // delay 延迟执行
 // takeEvery 监控某个动作，如果该动作被触发，则执行传入的 saga，如果动作被多次触发，则依次执行
@@ -23,7 +23,10 @@ import {
   COUNT_DOWN,
   ASYNC_OVER,
   ADD_TODO,
-  SHOW_CONGRATULATION
+  SHOW_CONGRATULATION,
+  TIMER,
+  START,
+  STOP
 } from '../actions/actionsTypes'
 
 // 我们的干活的 Saga: 将执行 异步加一 。
@@ -39,6 +42,29 @@ function* incrementAsync() {
 // 我们监视的 Saga: 每个调用 INCREMENT_ASYNC 的动作将触发 异步加一 的5毛特效。
 function* watchIncrementAsync() {
   yield* takeEvery(INCREMENT_ASYNC, incrementAsync)
+}
+
+// Timer 逻辑
+function* timer() {
+  try {
+    while(true) {
+      yield call(delay, 1000)
+      yield put({type: TIMER})
+    }
+  } finally {
+    if (yield cancelled()) {
+      console.log('噢，竟然取消了。。。。')
+    }
+  }
+
+}
+
+function* watchTimer() {
+  while ( yield take(START) ) {
+    const bgTask = yield fork(timer)
+    yield take(STOP)
+    yield cancel(bgTask)
+  }
 }
 
 // 用 Saga 的方式写logger
@@ -116,6 +142,7 @@ export default function* rootSaga() {
   yield [
     watchIncrementAsync(),
     watchFetchData(),
-    watchFirstThreeTodosCreation()
+    watchFirstThreeTodosCreation(),
+    watchTimer()
   ]
 }
