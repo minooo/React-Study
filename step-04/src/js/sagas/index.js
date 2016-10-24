@@ -1,5 +1,20 @@
-import { takeEvery, delay, takeLatest, buffers, channel, eventChannel, END } from 'redux-saga'
-import { put, call, take, fork, select, actionChannel,cancel, cancelled } from 'redux-saga/effects'
+import {
+  takeEvery,
+  delay,
+  takeLatest,
+  buffers,
+  channel,
+  eventChannel,
+  END } from 'redux-saga'
+import {
+  put,
+  call,
+  take,
+  fork,
+  select,
+  actionChannel,
+  cancel,
+  cancelled } from 'redux-saga/effects'
 
 // delay 延迟执行
 // takeEvery 监控某个动作，如果该动作被触发，则执行传入的 saga，如果动作被多次触发，则依次执行
@@ -56,7 +71,6 @@ function* timer() {
       console.log('噢，竟然取消了。。。。')
     }
   }
-
 }
 
 function* watchTimer() {

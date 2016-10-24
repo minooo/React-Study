@@ -130,13 +130,6 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 
 ---
 
-
-####[open](https://npm.taobao.org/package/open) [开发需要]
-> 开发编译完成后，自动打开浏览器，懒癌福音  
-安装：`npm install open --save-dev`
-
----
-
 ####[browser-sync](https://npm.taobao.org/package/browser-sync) [开发需要]
 > 使你可以在电脑上开发，手机上同步测试  
 安装：`npm install browser-sync --save-dev`

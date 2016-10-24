@@ -53,7 +53,7 @@ ansi-styles@^2.1.0, ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-antd-mobile@^0.9.3:
+antd-mobile:
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-0.9.4.tgz#332795357f7535c8735220bf137ceb0038cf8925"
   dependencies:
