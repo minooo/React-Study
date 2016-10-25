@@ -59,7 +59,6 @@
     "lodash": "^4.16.4",
     "normalizr": "^2.2.1",
     "npm-run-all": "^3.1.0",
-    "open": "0.0.5",
     "postcss-loader": "^0.13.0",
     "postcss-pxtorem": "^3.3.1",
     "postcss-scss": "^0.3.0",
