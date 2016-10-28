@@ -31,7 +31,7 @@ import {
 // actionChannel 依次处理每个被监控的动作
 // select
 // cancelled
-
+import fetch from 'isomorphic-fetch'
 import {
   INCREMENT_COUNTER,
   INCREMENT_ASYNC,
@@ -46,7 +46,7 @@ import {
   RECEIVE_POSTS
 } from '../actions/actionsTypes'
 
-
+import * as actions from '../actions/PostActions'
 
 // 我们的干活的 Saga: 将执行 异步加一 。
 function* incrementAsync() {
@@ -155,26 +155,33 @@ function* watchFetchData() {
   }
 }*/
 
+
 // 异步获取数据，开始！
-
-import * as actions from '../actions/PostActions'
-
 function fetchPostsApi() {
-  return fetch(`http://www.reddit.com/r/reactjs.json`)
-    .then(response => response.json())
-    .then(json => json.data.children.map(child => child.data))
+  return fetch(`http://www.reddit.com/r/reactjs.json` )
+    .then(response => response.json() )
+    .then(json => json.data.children.map(child => child.data) )
 }
 
-function* fetchPosts() {
-  yield put(actions.onRequestPosts())
+/*function* fetchPosts() {
+ const posts = yield call(fetchPostsApi)
+ yield put({type: RECEIVE_POSTS, posts})
+ }*/
+
+/*为什么会出错误？？*/
+/*function* fetchPosts() {
   const posts = yield call(fetchPostsApi)
   yield put(actions.onReceivePosts(posts))
+}*/
+
+function* fetchPosts() {
+  const posts = yield call(fetchPostsApi)
+  yield put({type: RECEIVE_POSTS, posts})
 }
 
 function* watchPost() {
-  while( yield take(REQUEST_POSTS) ) {
-    yield fork(fetchPosts)
-  }
+  yield take(REQUEST_POSTS)
+  yield fork(fetchPosts)
 }
 
 // 单一进入点，一次启动所有 Saga

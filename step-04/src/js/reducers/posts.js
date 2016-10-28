@@ -8,7 +8,7 @@ const init = {
   items: []
 }
 
-export default function post(state=init, action) {
+export default function posts(state=init, action) {
   switch (action.type) {
     case REQUEST_POSTS:
       return {
@@ -19,7 +19,7 @@ export default function post(state=init, action) {
       return {
         ...state,
         isFetching: false,
-        items: action.post,
+        items: action.posts,
       }
     default:
       return state

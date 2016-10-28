@@ -4,7 +4,7 @@ import todos from './todos'
 import showCongratulation from './showCongratulation'
 import counterAsync from './counterAsync'
 import timer from './timer'
-import post from './post'
+import posts from './posts'
 
 const rootReducer = combineReducers({
   counter,
@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
   todos,
   showCongratulation,
   timer,
-  post
+  posts
 });
 
 export default rootReducer;
