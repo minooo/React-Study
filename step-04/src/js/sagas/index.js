@@ -180,8 +180,9 @@ function* fetchPosts() {
 }
 
 function* watchPost() {
-  yield take(REQUEST_POSTS)
-  yield fork(fetchPosts)
+  while( yield take(REQUEST_POSTS) ){
+    yield fork(fetchPosts)
+  }
 }
 
 // 单一进入点，一次启动所有 Saga
