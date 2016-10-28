@@ -2,7 +2,7 @@ import {
   INCREMENT_COUNTER,
   DECREMENT_COUNTER,
   INCREMENT_ASYNC
-} from './actionsTypes';
+} from './actionsTypes'
 
 export const increment = () => ({ type: INCREMENT_COUNTER })
 

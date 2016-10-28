@@ -30,3 +30,9 @@ export const START = 'START'
 export const STOP = 'STOP'
 export const RESET = 'RESET'
 export const TIMER = 'TIMER'
+
+// Post
+export const REQUEST_POSTS = 'REQUEST_POSTS'
+export const RECEIVE_POSTS = 'RECEIVE_POSTS'
+export const SELECT_REDDIT = 'SELECT_REDDIT'
+export const INVALIDATA_REDDIT = 'INVALIDATA_REDDIT'

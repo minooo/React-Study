@@ -41,8 +41,12 @@ import {
   SHOW_CONGRATULATION,
   TIMER,
   START,
-  STOP
+  STOP,
+  REQUEST_POSTS,
+  RECEIVE_POSTS
 } from '../actions/actionsTypes'
+
+
 
 // 我们的干活的 Saga: 将执行 异步加一 。
 function* incrementAsync() {
@@ -151,12 +155,35 @@ function* watchFetchData() {
   }
 }*/
 
+// 异步获取数据，开始！
+
+import * as actions from '../actions/PostActions'
+
+function fetchPostsApi() {
+  return fetch(`http://www.reddit.com/r/reactjs.json`)
+    .then(response => response.json())
+    .then(json => json.data.children.map(child => child.data))
+}
+
+function* fetchPosts() {
+  yield put(actions.onRequestPosts())
+  const posts = yield call(fetchPostsApi)
+  yield put(actions.onReceivePosts(posts))
+}
+
+function* watchPost() {
+  while( yield take(REQUEST_POSTS) ) {
+    yield fork(fetchPosts)
+  }
+}
+
 // 单一进入点，一次启动所有 Saga
 export default function* rootSaga() {
   yield [
-    watchIncrementAsync(),
-    watchFetchData(),
-    watchFirstThreeTodosCreation(),
-    watchTimer()
+    fork(watchIncrementAsync),
+    fork(watchFetchData),
+    fork(watchFirstThreeTodosCreation),
+    fork(watchTimer),
+    fork(watchPost)
   ]
 }
