@@ -26,9 +26,9 @@ import {
 
 // 异步获取数据，开始！
 function fetchPostsApi() {
-  return fetch(`http://www.reddit.com/r/reactjs.json` )
+  return fetch(`https://api.github.com/users` )
     .then(response => response.json() )
-    .then(json => json.data.children.map(child => child.data) )
+    .then(json => json.map(child => child.login) )
 }
 
 /*function* fetchPosts() {
