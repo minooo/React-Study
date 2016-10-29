@@ -3,11 +3,13 @@ import { Nav, Post } from '../../components'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as PostActions from '../../actions/PostActions'
+
 class User extends Component {
 
   componentDidMount(){
 
   }
+
   render() {
     const { state, actions } = this.props
     return (

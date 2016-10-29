@@ -85,7 +85,7 @@ export default class SelectMenu extends Component {
   handleClick = (key) => {
     let filters = this.state.filters
     filters.map(item => {
-      if (key === item.key) {
+      if (key === item.label) {
         item.activeBool = !item.activeBool
       } else {
         item.activeBool = false
@@ -115,7 +115,7 @@ export default class SelectMenu extends Component {
           {filters.map(item =>
             <TopList
               {...item}
-              onClick={this.handleClick.bind(null, item.key)}
+              onClick={this.handleClick}
             />)
           }
         </div>
