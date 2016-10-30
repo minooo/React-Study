@@ -28,7 +28,7 @@ import {
 function fetchPostsApi() {
   return fetch(`https://api.github.com/users` )
     .then(response => response.json() )
-    .then(json => json.map(child => child.login) )
+    .then(json => json )
 }
 
 /*function* fetchPosts() {

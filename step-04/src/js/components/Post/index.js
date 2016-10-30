@@ -18,7 +18,7 @@ const Post = props => {
       <List>
         {
           props.items && props.items.map((item, index) =>
-            <List.Item key={index} data-seed="logId">{item}</List.Item>
+            <List.Item key={index} data-seed="logId">{item.login}</List.Item>
           )
         }
       </List>
