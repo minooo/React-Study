@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './index.scss'
-import { ActivityIndicator, WingBlank, WhiteSpace, Button, Badge } from 'antd-mobile'
+import { ActivityIndicator, WingBlank, WhiteSpace, Button } from 'antd-mobile'
 const Post = props => {
   return (
     <div>
@@ -12,7 +12,7 @@ const Post = props => {
             disabled={props.isFetching}
             onClick={props.onRequestPosts}
           >
-            {!props.isFetching ? '异步加载 Github 用户' : 'Loading...'}
+            {!props.isFetching ? '异步加载 Github ' : 'Loading...'}
           </Button>
         </WingBlank>
       <WhiteSpace />
