@@ -25,10 +25,12 @@ import {
 } from '../actions/actionsTypes'
 
 // 异步获取数据，开始！
-function fetchPostsApi() {
-  return fetch(`https://api.github.com/users` )
+function fetchPostsApi(url) {
+  return fetch(`https://api.github.com/users`)
     .then(response => response.json() )
-    .then(json => json )
+    .then(json => json.map(item => item.url))
+    .then(url => url.map(item => fetch(item).then(response => response.json())))
+    .then(pro => Promise.all(pro))
 }
 
 /*function* fetchPosts() {

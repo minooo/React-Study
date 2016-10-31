@@ -1,3 +1,5 @@
+// 如果是开发模式，store 采用此配置
+
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware, { END } from 'redux-saga'
 import createLogger from 'redux-logger'
