@@ -1,39 +1,13 @@
 import 'babel-polyfill'
-import {AppContainer} from 'react-hot-loader'
 import React from 'react'
-import {render} from 'react-dom'
+import { render } from 'react-dom'
 import App from './App'
 
-const rootEl = document.getElementById('app');
 render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  rootEl
+  <App />,
+  document.getElementById('app')
 );
 
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    // If you use Webpack 2 in ES modules mode, you can
-    // use <App /> here rather than require() a <NextApp />.
-    const NextApp = require('./App').default;
-    const RedBox = require('redbox-react').default;
-    try {
-      render(
-        <AppContainer>
-          <NextApp />
-        </AppContainer>,
-        rootEl
-      )
-    } catch (e) {
-      render(
-        <RedBox error={e}>
-          <AppContainer>
-            <NextApp />
-          </AppContainer>
-        </RedBox>,
-        rootEl
-      )
-    }
-  });
-}
+// 为了降低入门难度，以上配置精简了下，可以实现基本的 实时热更新
+// 如果想实现更为高级的 无刷新局部替换 ，可以参考 step-02 以及之后的版本
+// 当然你可以根据实际需要，选择合适的热替换方案
