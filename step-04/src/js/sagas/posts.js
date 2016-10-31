@@ -18,6 +18,8 @@ import {
   cancelled
 } from 'redux-saga/effects'
 
+import moment from 'moment'
+
 import fetch from 'isomorphic-fetch'
 import {
   REQUEST_POSTS,
@@ -46,7 +48,7 @@ function fetchPostsApi(url) {
 
 function* fetchPosts() {
   const posts = yield call(fetchPostsApi)
-  yield put({type: RECEIVE_POSTS, posts})
+  yield put({type: RECEIVE_POSTS, posts, receivedAt: moment().format("HH:mm:ss")})
 }
 
 export function* watchPost() {

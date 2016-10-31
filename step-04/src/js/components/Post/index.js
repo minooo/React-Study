@@ -17,6 +17,14 @@ const Post = props => {
         </WingBlank>
       <WhiteSpace />
       {
+        props.lastUpdated &&
+        <div
+          className="text-center ptb30"
+        >
+          上次更新：{props.lastUpdated}
+        </div>
+      }
+      {
         props.items.length>0 && <div className={styles.root}>
           {
             props.items.map((item, index) =>

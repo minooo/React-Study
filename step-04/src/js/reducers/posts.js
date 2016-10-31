@@ -20,6 +20,7 @@ export default function posts(state=init, action) {
         ...state,
         isFetching: false,
         items: action.posts,
+        lastUpdated: action.receivedAt
       }
     default:
       return state
