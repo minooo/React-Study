@@ -71,3 +71,17 @@ step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系�
   安装：`npm install moment --save`
   
 ---
+
+#### [iscroll](https://github.com/cubiq/iscroll/) [示例需要]
+> 一个高性能，小体积，无依赖，跨平台的使页面平滑滚动的JS库  
+  安装：`npm install iscroll --save-dev`
+  
+---
+
+#### [react-iscroll](https://github.com/schovi/react-iscroll) [示例需要]
+> 一个对 iscroll 进行封装的 React 组件  
+  安装：`npm install react-iscroll --save-dev`
+  
+---
+
+
