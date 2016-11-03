@@ -54,7 +54,18 @@ export default {
   ],
   resolve: {
     modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
-    extensions: ['', '.web.js', '.js', '.json']
+    extensions: ['', '.web.js', '.js', '.json'],
+
+    // 路径别名, 懒癌福音
+    alias:{
+      app:path.resolve(__dirname,'src/js'),
+      // 以前你可能这样引用 import { Nav } from '../../components'
+      // 现在你可以这样引用 import { Nav } from 'app/components'
+
+      style:path.resolve(__dirname,'src/styles')
+      // 以前你可能这样引用 @import "../../../styles/mixins.scss"
+      // 现在你可以这样引用 @import "style/mixins.scss"
+    }
   },
   module: {
     loaders: [
