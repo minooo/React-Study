@@ -5,7 +5,7 @@ class Home extends Component {
   state = {
     fastNav: [
       {
-        link: "https://www.github.com",
+        link: "/coupon/detail",
         thumb: "http://temp.im/94x94",
         title: "大牌抢购"
       },

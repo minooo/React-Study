@@ -115,6 +115,7 @@ a {
 
 // 背景颜色
 .bg-white { background-color: #fff }
+.bg-main  { background-color: $main-color}
 
 // 间隔
 .pt20 {
@@ -137,6 +138,11 @@ a {
 .plr20 {
   padding-left: 0.2rem;
   padding-right: 0.2rem;
+}
+
+.ptb20 {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .ptb30 {
@@ -270,7 +276,7 @@ img {
   height: auto;
 }
 
-.img-circle {
+.circle {
   border-radius: 50%;
 }
 
@@ -373,6 +379,13 @@ img {
 }
 .overflow-h {
   overflow: hidden;
+}
+
+.scroll-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
 // 元素绝对定位的垂直水平居中
