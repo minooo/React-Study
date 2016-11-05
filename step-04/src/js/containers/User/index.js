@@ -1,20 +1,37 @@
 import React, { Component } from 'react'
-import { Nav, Post } from '../../components'
+import { Nav, Post, ScrollBox } from 'app/components'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as PostActions from '../../actions/PostActions'
+import * as PostActions from 'app/actions/PostActions'
+
+const options = {
+  click:true,
+  scrollY: true
+}
 
 class User extends Component {
 
   componentDidMount(){
-
+    this.props.actions.onRequestPosts()
   }
 
   render() {
     const { state, actions } = this.props
     return (
       <div>
-        <Post {...state} {...actions}/>
+        <ScrollBox
+          options={options}
+          style={{
+            position: 'absolute',
+            width:'100%',
+            top: 0,
+            bottom: '1rem',
+            background:'red',
+            overflow: 'hidden'
+          }}
+        >
+          <Post {...state} {...actions}/>
+        </ScrollBox>
         <Nav />
       </div>
     )

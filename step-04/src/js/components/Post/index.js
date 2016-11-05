@@ -4,7 +4,7 @@ import { ActivityIndicator, WingBlank, WhiteSpace, Button } from 'antd-mobile'
 const Post = props => {
   return (
     <div>
-      <WhiteSpace />
+      {/*<WhiteSpace />
         <WingBlank>
           <Button
             type="ghost"
@@ -15,15 +15,16 @@ const Post = props => {
             {!props.isFetching ? '异步加载 Github ' : 'Loading...'}
           </Button>
         </WingBlank>
-      <WhiteSpace />
-      {
+      <WhiteSpace />*/}
+      {/*{
         props.lastUpdated &&
         <div
           className="text-center ptb30"
         >
           上次更新：{props.lastUpdated}
         </div>
-      }
+      }*/}
+      <div>{props.isFetching && '刷新中...'}</div>
       {
         props.items.length>0 && <div className={styles.root}>
           {

@@ -40,7 +40,7 @@ export default class Detail extends Component {
             overflow: 'hidden'
           }}
         >
-          <div className="ver-center ptb20 bg-white scroll-wrap">
+          <div className="ver-center ptb20 bg-white">
             {
               date.map((item, index) =>
                 <div key={index}  className="center-center-column plr20">
