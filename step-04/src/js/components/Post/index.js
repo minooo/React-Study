@@ -24,7 +24,7 @@ const Post = props => {
           上次更新：{props.lastUpdated}
         </div>
       }*/}
-      <div>{props.isFetching && '刷新中...'}</div>
+      <div>{'下拉刷新'}</div>
       {
         props.items.length>0 && <div className={styles.root}>
           {
@@ -35,7 +35,6 @@ const Post = props => {
                   className={styles.img}
                   alt=""
                 />
-
                 <div className={styles.con}>
                   <p className="font-28">昵称：{item.login}</p>
                   <p className="font-28">
@@ -49,7 +48,6 @@ const Post = props => {
           }
         </div>
       }
-
     </div>
   )
 }
