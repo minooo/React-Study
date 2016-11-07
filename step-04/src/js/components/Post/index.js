@@ -16,6 +16,7 @@ const Post = props => {
           </Button>
         </WingBlank>
       <WhiteSpace />*/}
+
       {/*{
         props.lastUpdated &&
         <div
@@ -26,7 +27,7 @@ const Post = props => {
       }*/}
 
       {
-        !props.isRefresh &&
+        !props.isFetching &&
         <div
           className={`center-center ${styles.refresh} ${props.isRefreshDown && styles.refresh2}`}
         >
@@ -42,6 +43,14 @@ const Post = props => {
         props.isRefreshDown && <div style={{height: '0.6rem'}}></div>
       }
 
+      {
+        props.isFetching &&
+        <div
+          className="center-center"
+          style={{height:'0.6rem'}}
+        >
+          <Icon type="loading" className="font-26" />&nbsp;&nbsp;拼命加载中...</div>
+      }
 
       {
         props.items.length>0 && <div className={styles.root}>

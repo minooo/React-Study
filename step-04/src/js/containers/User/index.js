@@ -31,24 +31,28 @@ class User extends Component {
   onScroll = (e) => {
     let Y = e.y
 
-    !this.state.isRefreshDown && Y >= 60 && this.setState({
+    !this.props.state.isFetching && !this.state.isRefreshDown && Y >= 60 && this.setState({
       isReload: true,
       isRefreshDown: true,
       isCancelRefresh: false
     })
 
-    this.state.isRefreshDown && Y < 0 && this.setState({
+    !this.props.state.isFetching && this.state.isRefreshDown && Y < 0 && this.setState({
       isReload: false,
       isCancelRefresh: true
     })
 
-    console.log(Y)
-
   }
   onTouchEnd = () => {
     this.state.isReload && console.log('放手！！实现了！！！')
-    !this.state.isCancelRefresh && this.state.isRefreshDown && setTimeout(() => this.setState({isRefreshDown:false}), 600)
-    this.state.isCancelRefresh && this.setState({isRefreshDown:false})
+
+    !this.props.state.isFetching && !this.state.isCancelRefresh && this.state.isRefreshDown &&
+    setTimeout(() => {
+      this.setState({isRefreshDown:false});
+      this.props.actions.onRequestPosts()
+    }, 600)
+
+    !this.props.state.isFetching && this.state.isCancelRefresh && this.setState({isRefreshDown:false})
   }
 
   render() {
