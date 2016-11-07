@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './index.scss'
-import { ActivityIndicator, WingBlank, WhiteSpace, Button } from 'antd-mobile'
+import { Icon } from 'antd-mobile'
 const Post = props => {
   return (
     <div>
@@ -24,7 +24,25 @@ const Post = props => {
           上次更新：{props.lastUpdated}
         </div>
       }*/}
-      <div>{'下拉刷新'}</div>
+
+      {
+        !props.isRefresh &&
+        <div
+          className={`center-center ${styles.refresh} ${props.isRefreshDown && styles.refresh2}`}
+        >
+          {
+            !props.isRefreshDown ?
+            <div><Icon type="arrow-down" />下拉刷新</div> :
+            <div><Icon type="arrow-up" />放手刷新</div>
+          }
+        </div>
+      }
+
+      {
+        props.isRefreshDown && <div style={{height: '0.6rem'}}></div>
+      }
+
+
       {
         props.items.length>0 && <div className={styles.root}>
           {

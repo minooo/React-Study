@@ -20,3 +20,21 @@
   color: #1abc9c;
   text-decoration: underline!important;
 }
+
+.rCommon {
+  position: absolute;
+  z-index: 10;
+  height: 0.6rem;
+  width: 100%;
+  background: #f2f2f2;
+}
+
+
+.refresh {
+  composes: rCommon;
+  top: -0.6rem;
+}
+.refresh2 {
+  composes: rCommon;
+  top: 0;
+}
