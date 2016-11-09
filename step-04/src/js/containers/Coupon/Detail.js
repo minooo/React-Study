@@ -37,8 +37,8 @@ export default class Detail extends Component {
   onClick = (i) => {
     this.setState({focus: i})
     /*this.refs.iScroll.scrollToElement(document.querySelector('#list8'))*/
-    this.refs.iScroll.withIScroll(function(iScroll) {
-      iScroll.scrollToElement(document.querySelector(`#list${i}`))
+    this.refs.iScroll.withIScroll((iScroll) => {
+      iScroll.scrollToElement(this.refs[`list${i}`])
     })
   }
   render() {
@@ -47,7 +47,7 @@ export default class Detail extends Component {
     let i = 0, len = 50, listOfLi = []
 
     for(i; i < len; i++) {
-      listOfLi.push(<li id={"list" + i} key={i} className="ptb20 center-center border-bottom">Row {i+1}</li>)
+      listOfLi.push(<li ref={"list" + i} key={i} className="ptb20 center-center border-bottom">Row {i+1}</li>)
     }
 
     return (
@@ -100,6 +100,9 @@ export default class Detail extends Component {
           }}
         >
           <ul>
+            {/*{date.map((item,i) =>
+              <li ref={"list" + i} key={i} className="ptb20 center-center border-bottom">Row {i+1}</li>
+            )}*/}
             {listOfLi}
           </ul>
         </ReactIScroll>
