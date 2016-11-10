@@ -3,7 +3,7 @@ import { Nav } from '../../components'
 export default class Tour extends Component {
   render() {
     return (
-      <div>
+      <div className="box">
         Tour
         <Nav />
       </div>

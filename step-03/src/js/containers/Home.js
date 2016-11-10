@@ -1,9 +1,13 @@
 import React,{ Component } from 'react'
-import {WhiteSpace, WingBlank, Carousel } from 'antd-mobile'
-import { Header, Nav, FastNav, Title, ShopList, Message } from '../components'
+import { Header, Nav, Swipe, FastNav, Title, ShopList, Message } from '../components'
 
 class Home extends Component {
   state = {
+    swipeList: [
+      {link: 'https://www.github.com', thumb: 'http://temp.im/960x390/444/fff'},
+      {link: 'https://www.github.com', thumb: 'http://temp.im/960x390/444/fff'},
+      {link: 'https://www.github.com', thumb: 'http://temp.im/960x390/444/fff'},
+    ],
     fastNav: [
       {
         link: "https://www.github.com",
@@ -72,7 +76,6 @@ class Home extends Component {
         link: 'https://github.com/minooo',
         desc: 'React-Study step-3 开发完成, 如果很长很长如果很长很长如果很长很长如果很长很长'
       }
-
     ]
   }
 
@@ -80,31 +83,18 @@ class Home extends Component {
     const settings = {
       dots: true,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 1000,
       infinite: true,
       mode: 'banner',
-      initialSlide: this.state.current,
-      afterChange: this.slideTo
+      initialSlideHeight: '460px'
     }
-    const { fastNav, shopLists, messages } = this.state
+
+    const { swipeList, fastNav, shopLists, messages } = this.state
 
     return (
-      <div>
+      <div className="box">
         <Header />
-        <Carousel {...settings}>
-          <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
-          </div>
-          <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
-          </div>
-          <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
-          </div>
-          <div className="HomeItem">
-            <img src="http://temp.im/960x390/444/fff" className="homeImg" alt=""/>
-          </div>
-        </Carousel>
+        {swipeList && <Swipe data={swipeList} {...settings}/>}
         <div className="bg-white hor pt30">
           {fastNav.map((item, index) =>
             <FastNav key={index} data={item}/>

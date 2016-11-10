@@ -7,7 +7,7 @@ import { Nav, Todos } from '../../components'
 import * as TodoActions from '../../actions/TodoActions'
 
 const Tour = ({todos, showCongratulation, actions}) => (
-  <div>
+  <div className="box">
     <div
       style={{
         background: "rgb(86, 86, 86)",

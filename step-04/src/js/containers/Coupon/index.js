@@ -11,7 +11,7 @@ class Coupon extends Component {
   render() {
     const { counter, dispatch, asyncBool, asyncCountDown } = this.props
     return (
-      <div>
+      <div className="box">
         <Counter
           counter={counter}
           asyncBool={asyncBool}

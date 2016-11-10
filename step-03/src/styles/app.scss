@@ -170,10 +170,9 @@ a {
 
 // 最外层页面设置
 .box {
-  width: 100%;
+  max-width: 10rem;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
 }
 
 // 半透明弹层

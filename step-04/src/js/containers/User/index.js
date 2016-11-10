@@ -59,7 +59,7 @@ class User extends Component {
     const { state, actions } = this.props
     const { isRefreshDown } = this.state
     return (
-      <div>
+      <div className="box">
         <ScrollBox
           options={options}
           style={{

@@ -97,7 +97,7 @@ class Home extends Component {
     const { fastNav, shopLists, messages, data } = this.state
 
     return (
-      <div>
+      <div className="box">
         <Header />
         {data && <Swipe data={data} {...settings}/>}
         <div className="bg-white hor pt30">
