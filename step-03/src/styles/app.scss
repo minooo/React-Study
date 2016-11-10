@@ -263,14 +263,17 @@ img {
   max-width: 100%;
 }
 
+
 .img-responsive {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 
-.img-circle {
-  border-radius: 50%;
+
+// 这里主要应付 antd-mobile 的组件carousel 不能等比缩放的蛋疼问题
+.home-swipe {
+  height: 40.625vw;
+  max-height: 406.25px;
 }
 
 // 文本控制类

@@ -3,20 +3,26 @@ import { Carousel } from 'antd-mobile'
 
 export default class Swipe extends Component {
   render() {
-    const { data, ...rest } = this.props
+    const { data, hackHeight, ...rest } = this.props
 
     let list
     if (data.length === 1) {
       list =
         <a href={data[0].link} className="block">
-          <img src={data[0].thumb} className="img-responsive"/>
+          <img
+            src={data[0].thumb}
+            className={"img-responsive " + hackHeight}
+          />
         </a>
 
     } else {
       list =
         data.map((item,index) =>
-          <a href={item.link} className="block">
-            <img src={item.thumb} className="img-responsive"/>
+          <a key={index} href={item.link} className="block">
+            <img
+              src={item.thumb}
+              className={"img-responsive " + hackHeight}
+            />
           </a>
         )
     }

@@ -2,11 +2,14 @@ import React,{ Component } from 'react'
 import { Header, Nav, Swipe, FastNav, Title, ShopList, Message } from '../components'
 
 class Home extends Component {
-  state = {
+  state =
+  {
+    swipeImgHeight:0,
     swipeList: [
-      {link: 'https://www.github.com', thumb: 'http://temp.im/960x390/444/fff'},
-      {link: 'https://www.github.com', thumb: 'http://temp.im/960x390/444/fff'},
-      {link: 'https://www.github.com', thumb: 'http://temp.im/960x390/444/fff'},
+      {link: 'https://www.github.com', thumb: 'http://temp.im/640x260/444/fff'},
+      {link: 'https://www.github.com', thumb: 'http://temp.im/640x260/444/fff'},
+      {link: 'https://www.github.com', thumb: 'http://temp.im/640x260/444/fff'},
+      {link: 'https://www.github.com', thumb: 'http://temp.im/640x260/444/fff'},
     ],
     fastNav: [
       {
@@ -79,22 +82,28 @@ class Home extends Component {
     ]
   }
 
+  componentDidMount() {
+
+  }
+
   render() {
     const settings = {
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 1000,
+      autoplay: false,
+      autoplayInterval: 2000,
       infinite: true,
-      mode: 'banner',
-      initialSlideHeight: '460px'
+      cellSpacing: 30,
+      dots: true
     }
 
     const { swipeList, fastNav, shopLists, messages } = this.state
 
     return (
-      <div className="box">
+      <div ref="box" className="box">
         <Header />
-        {swipeList && <Swipe data={swipeList} {...settings}/>}
+        {
+          swipeList &&
+          <Swipe data={swipeList} hackHeight="home-swipe" {...settings}/>
+        }
         <div className="bg-white hor pt30">
           {fastNav.map((item, index) =>
             <FastNav key={index} data={item}/>

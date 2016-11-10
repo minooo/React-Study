@@ -89,9 +89,11 @@ class Home extends Component {
 
   render() {
     const settings = {
-      infinite: true,
+      autoplay: false,
       autoplayInterval: 2000,
-      cellSpacing: 30
+      infinite: true,
+      cellSpacing: 30,
+      dots: true
     }
 
     const { fastNav, shopLists, messages, data } = this.state
@@ -99,7 +101,7 @@ class Home extends Component {
     return (
       <div className="box">
         <Header />
-        {data && <Swipe data={data} {...settings}/>}
+        {data && <Swipe data={data} hackHeight="home-swipe" {...settings}/>}
         <div className="bg-white hor pt30">
           {fastNav.map((item, index) =>
             <FastNav key={index} data={item}/>

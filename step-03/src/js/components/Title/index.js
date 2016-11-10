@@ -4,10 +4,10 @@ import styles from './index.scss'
 
 export default class Title extends Component {
   componentDidMount() {
-    window.addEventListener('resize', this.handleClick.bind(this))
+    window.addEventListener('resize', this.whenResize)
   }
-  handleClick = () => {
-    console.log('1112')
+  whenResize = () => {
+    console.log('Title组件悄悄告诉你：窗口变化了')
   }
   render() {
     const { text, linkName, path } = this.props;
