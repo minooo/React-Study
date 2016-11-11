@@ -36,7 +36,6 @@ export default class Detail extends Component {
 
   onClick = (i) => {
     this.setState({focus: i})
-    /*this.refs.iScroll.scrollToElement(document.querySelector('#list8'))*/
     this.refs.iScroll.withIScroll((iScroll) => {
       iScroll.scrollToElement(this.refs[`list${i}`])
     })
@@ -93,49 +92,16 @@ export default class Detail extends Component {
             zIndex:15,
             top: '2.2rem',
             bottom: 0,
-            left: 0,
             width:'100%',
+            maxWidth: '10rem',
             background:'#fff',
             overflow: 'hidden'
           }}
         >
           <ul>
-            {/*{date.map((item,i) =>
-              <li ref={"list" + i} key={i} className="ptb20 center-center border-bottom">Row {i+1}</li>
-            )}*/}
             {listOfLi}
           </ul>
         </ReactIScroll>
-
-        {/*<ScrollBox
-          ref="iScroll"
-          options={optionsList}
-          style={{
-            position: 'absolute',
-            zIndex:15,
-            top: '2.2rem',
-            bottom: 0,
-            left: 0,
-            width:'100%',
-            background:'#fff',
-            overflow: 'hidden'
-          }}
-        >
-          <div>
-            {
-              date.map((item, index) =>
-                <div
-                  key={index}
-                  id={"list" + item.date}
-                  className="mb20 color-white center-center font-36"
-                  style={{height:'2rem', background:'tomato',}}
-                >
-                  {item.week+item.date}
-                </div>
-              )
-            }
-          </div>
-        </ScrollBox>*/}
       </div>
     )
   }

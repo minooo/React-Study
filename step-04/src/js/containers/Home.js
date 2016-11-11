@@ -89,10 +89,9 @@ class Home extends Component {
 
   render() {
     const settings = {
-      autoplay: false,
-      autoplayInterval: 2000,
+      autoplay: true,
+      autoplayInterval: 3000,
       infinite: true,
-      cellSpacing: 30,
       dots: true
     }
 

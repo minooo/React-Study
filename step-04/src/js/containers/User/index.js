@@ -65,6 +65,7 @@ class User extends Component {
           style={{
             position: 'absolute',
             width:'100%',
+            maxWidth: '10rem',
             top: 0,
             bottom: '1rem',
             background:'#f2f2f2',
