@@ -47,6 +47,7 @@ function fetchPostsApi(url) {
  }*/
 
 function* fetchPosts() {
+  yield call(delay, 3000)
   const posts = yield call(fetchPostsApi)
   yield put({type: RECEIVE_POSTS, posts, receivedAt: moment().format("HH:mm:ss")})
 }
