@@ -4,6 +4,7 @@ import { Icon } from 'antd-mobile'
 import ReactIScroll from 'react-iscroll'
 import iScroll from 'iscroll/build/iscroll-probe'
 import { bindActionCreators } from 'redux'
+import classnames from 'classnames'
 import { connect } from 'react-redux'
 import * as PostActions from 'app/actions/PostActions'
 
@@ -15,7 +16,7 @@ class User extends Component {
     scrollOptions: {
       click:true,
       scrollY: true,
-      probeType:3
+      probeType:2
     }
   }
 
@@ -79,11 +80,11 @@ class User extends Component {
           onTouchEnd={this.onTouchEnd}
         >
           <div
-            className="relative"
-            style={{
-              height:state.isFetching?'100%':'auto',
-              minHeight:state.isFetching?'auto':'110%'
-            }}
+            className={classnames({
+              'relative':true,
+              'height100':state.isFetching,
+              'minheight110':!state.isFetching
+            })}
           >
             <div
               style={{
