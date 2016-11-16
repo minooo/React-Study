@@ -119,7 +119,8 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 ---
 
 ####[file-loader](https://github.com/webpack/file-loader) [必需]
-> 修改文件名，放在输出目录下，并返其对应的 url .默认修改后的文件名，是文件内容的MD5哈希串。你也可以自定义文件名。  
+> 修改文件名，放在输出目录下，并返其对应的 url .默认修改后的文件名，是文件内容的MD5哈希串。  
+你也可以自定义文件名。  
 安装：`npm install file-loader --save-dev`
 
 ---
