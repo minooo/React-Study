@@ -35,19 +35,19 @@ step-03 是在 step-02 的基础上开发的 step-03 主要围绕添加 react-ro
 
 ## 启动React生态圈
 
-###### 克隆项目
+##### 克隆项目
     git clone https://github.com/minooo/React-Study.git
     
-###### 进入目录（比如step-01)
+##### 进入目录（比如step-01)
     cd step-01
     
-###### 安装依赖
+##### 安装依赖
     npm install
     
-###### 启动开发模式（运行 npm run build，即可将项目打包）
+##### 启动开发模式（运行 npm run build，即可将项目打包）
     npm start
     
-###### 启动就绪后，打开浏览器，输入 http://localhost:3000/ ，看到惊喜了吗？
+##### 启动就绪后，打开浏览器，输入 http://localhost:3000/ ，看到惊喜了吗？
 
 ## 常见问题说明。（2016/10/19）
 
