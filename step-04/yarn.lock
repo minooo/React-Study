@@ -1683,7 +1683,7 @@ deep-diff@0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.4.tgz#aac5c39952236abe5f037a2349060ba01b00ae48"
 
-deep-equal@^1.0.0:
+deep-equal@^1.0.0, deep-equal@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
 
@@ -2716,6 +2716,10 @@ isarray@^1.0.0, isarray@~1.0.0, isarray@1.0.0:
 isarray@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+
+iscroll@^5.2.0:
+  version "5.2.0"
+  resolved "http://registry.npm.taobao.org/iscroll/download/iscroll-5.2.0.tgz#d513307088b5b25a4f893af474804468481829c8"
 
 isexe@^1.1.1:
   version "1.1.2"
@@ -4381,6 +4385,12 @@ react-hot-loader@^3.0.0-beta.6:
     react-proxy "^3.0.0-alpha.0"
     redbox-react "^1.2.5"
     source-map "^0.4.4"
+
+react-iscroll@^1.1.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/react-iscroll/download/react-iscroll-1.1.1.tgz#48151af6301be43ab4697b9f5357878a77e47d55"
+  dependencies:
+    deep-equal "1.0.1"
 
 react-mixin@^3.0.5:
   version "3.0.5"
