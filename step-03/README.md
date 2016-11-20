@@ -41,8 +41,8 @@ flex(100, 1);</script>
 
 #### [react-router](https://github.com/reactjs/react-router) [必需]
 > `React Router` 一个针对 `React` 而设计的路由解决方案、可以友好的帮你解决 `React components` 到 `URl` 之间的同步映射关系。  
-推荐教程 [React Router 使用教程](http://www.ruanyifeng.com/blog/2016/05/react_router.html) 
-  安装：`npm install react-router --save`
+推荐教程 [React Router 使用教程](http://www.ruanyifeng.com/blog/2016/05/react_router.html)  
+安装：`npm install react-router --save`
   
 ---
 
