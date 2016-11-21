@@ -62,7 +62,7 @@ module.exports = {
     // 一般依赖库放到前面，所以vendor放第一个
 
     new HtmlWebpackPlugin({
-      template:'src/index.ejs',
+      template:'src/index.html',
       // html模板的路径
       
       title: '产品模式',

@@ -139,19 +139,19 @@ a {
 
 //设置间距
 .mt20 {
-  margin-top: 0.2rem;
+  margin-top: 20px;
 }
 
 .mt10 {
-  margin-top: 0.1rem;
+  margin-top: 10px;
 }
 
 .mb20 {
-  margin-bottom: 0.2rem;
+  margin-bottom: 20px;
 }
 
 .mb10 {
-  margin-bottom: 0.1rem;
+  margin-bottom: 10px;
 }
 
 .mb5 {
@@ -159,7 +159,7 @@ a {
 }
 
 .ml20 {
-  margin-left: 0.2rem;
+  margin-left: 20px;
 }
 
 .ml5 {
@@ -167,11 +167,11 @@ a {
 }
 
 .mr20 {
-  margin-right: 0.2rem;
+  margin-right: 20px;
 }
 
 .mr10 {
-  margin-right: 0.1rem;
+  margin-right: 10px;
 }
 
 .mr5 {
@@ -179,31 +179,31 @@ a {
 }
 
 .p20 {
-  padding: 0.2rem;
+  padding: 20px;
 }
 
 .plr20 {
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .plr30 {
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .ptb20 {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .ptb10 {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pt20 {
-  padding-top: 0.2rem;
+  padding-top: 20px;
 }
 
 .pl10 {
@@ -541,193 +541,3 @@ img {
 // align-self 允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。
 // 默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch
 // 该属性可能取6个值，除了 auto ,其他都与 align-items 属性完全一致。
-
-// ------------------------------------------------------------
-
-// radio 样式重写
-input[type="radio"] {
-  position: relative;
-  vertical-align: middle;
-  width: 0.36rem;
-  height: 0.36rem;
-  -webkit-appearance: none !important;
-  -moz-appearance: none;
-  border: none;
-  background: none;
-  outline: none;
-}
-
-input[type="radio"]:before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 0.36rem;
-  height: 0.36rem;
-  border: 2px solid #999;
-  background: #fff;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  border-radius: 50%;
-  outline: 0;
-}
-
-input[type="radio"]:checked:after {
-  position: absolute;
-  z-index: 50;
-  content: '';
-  display: block;
-  width: 0.36rem;
-  height: 0.36rem;
-  border: 2px solid #999;
-  background: #fff;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  outline: 0;
-}
-
-input[type="radio"]:checked:before {
-  position: absolute;
-  z-index: 100;
-  content: '';
-  display: block;
-  width: 0.18rem;
-  height: 0.18rem;
-  left: 0.09rem;
-  top: 0.09rem;
-  background: #1abc9c;
-  border-radius: 50%;
-  border: none;
-}
-
-// 1px边框解决方案
-.ui-border-t {
-  border-top: 1px solid #dcdcdc;
-}
-
-.ui-border-b {
-  border-bottom: 1px solid $border-color;
-}
-
-.ui-border-tb {
-  border-top: $border-color 1px solid;
-  border-bottom: $border-color 1px solid;
-  background-image: none;
-}
-
-.ui-border-l {
-  border-left: 1px solid $border-color;
-}
-
-.ui-border-r {
-  border-right: 1px solid $border-color;
-}
-
-.ui-border {
-  border: 1px solid $border-color;
-}
-
-.ui-border-radius-2 {
-  border: 1px solid $border-color;
-  border-radius: 2px;
-}
-
-.ui-border-radius-4 {
-  border: 1px solid $border-color;
-  border-radius: 4px;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
-  .ui-border-radius-2, .ui-border-radius-4 {
-    position: relative;
-    border: 0;
-  }
-
-  .ui-border-radius-2:before, .ui-border-radius-4:before {
-    content: "";
-    width: 200%;
-    height: 200%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid $border-color;
-    -webkit-transform: scale(0.5);
-    -webkit-transform-origin: 0 0;
-    padding: 1px;
-    -webkit-box-sizing: border-box;
-    pointer-events: none;
-  }
-  .ui-border-radius-2:before {
-    border-radius: 4px;
-  }
-  .ui-border-radius-4:before {
-    border-radius: 8px;
-  }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
-  .ui-border {
-    position: relative;
-    border: 0;
-  }
-
-  .ui-border-t, .ui-border-b, .ui-border-l, .ui-border-r, .ui-border-tb {
-    border: 0;
-  }
-
-  .ui-border-t {
-    background-position: left top;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color));
-  }
-
-  .ui-border-b {
-    background-position: left bottom;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color));
-  }
-
-  .ui-border-t, .ui-border-b, .ui-border-tb {
-    background-repeat: repeat-x;
-    -webkit-background-size: 100% 1px;
-  }
-
-  .ui-border-tb {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color)), -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color));
-    background-position: top, bottom;
-  }
-
-  .ui-border-l {
-    background-position: left top;
-    background-image: -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color));
-  }
-
-  .ui-border-r {
-    background-position: right top;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color));
-  }
-
-  .ui-border-l, .ui-border-r {
-    background-repeat: repeat-y;
-    -webkit-background-size: 1px 100%;
-  }
-
-  .ui-border:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color)), -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color)), -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color)), -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, $border-color), to($border-color));
-    -webkit-background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-    -webkit-background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-    background-repeat: no-repeat;
-    background-position: top, right, bottom, left;
-    padding: 1px;
-    -webkit-box-sizing: border-box;
-    z-index: 10;
-    pointer-events: none;
-  }
-}

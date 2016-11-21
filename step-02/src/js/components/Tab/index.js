@@ -27,7 +27,7 @@ class Tab extends Component {
             </li>
           )}
         </ul>
-        <p className="pt20">当前选择是：{items[this.state.focused]}</p>
+        <p className="pt20 mb2s0">当前选择是：{items[this.state.focused]}</p>
       </div>
     )
   }
