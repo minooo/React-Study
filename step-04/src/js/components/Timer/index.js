@@ -4,7 +4,7 @@ import styles from './index.scss'
 
 const Timer = props => {
   return (
-    <div className="pall">
+    <div className="plr20 ptb30">
       <p className="font-40">
         {moment(props.seconds*1000).format("mm:ss")}
         ({props.status})

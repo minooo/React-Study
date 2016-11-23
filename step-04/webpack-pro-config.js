@@ -3,10 +3,10 @@
  *
  * 注意。两种模式的配置有较大差异！！
  */
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pxtorem = require('postcss-pxtorem');
 // webpack中生成HTML的插件，
 

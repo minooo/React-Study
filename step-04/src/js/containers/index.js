@@ -1,20 +1,16 @@
 export {default as App} from './App'
 
-// 首页
+// 简单
 export { default as Home } from './Home'
 
-// 优惠
+// 一般
 export { default as Coupon } from './Coupon'
 export { default as CouponDetail } from './Coupon/Detail'
 
-// 好店
-export { default as Shop } from './Shop'
-export { default as ShopDetail } from './Shop/Detail'
-
-// 周边
+// 复杂
 export { default as Tour } from './Tour'
 
-// 我的
+// 异步
 export { default as User } from './User'
 
 // 404

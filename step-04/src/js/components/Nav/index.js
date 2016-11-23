@@ -12,20 +12,14 @@ export default class Nav extends Component {
             pathUrl="/"
             icoName={"i-zhuye42un"}
             active={styles.navOne}
-            linkName="首页"
+            linkName="简单"
             onlyActiveOnIndex
-          />
-          <NavLink
-            pathUrl="/shop"
-            icoName="i-haodian42un"
-            active={styles.navTwo}
-            linkName="好店"
           />
           <NavLink
             pathUrl="/coupon"
             icoName="i-youhui42un"
             active={styles.navThree}
-            linkName="简单"
+            linkName="一般"
           />
           <NavLink
             pathUrl="/tour"

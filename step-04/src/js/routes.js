@@ -6,8 +6,6 @@ import {
   Home,
   Coupon,
   CouponDetail,
-  Shop,
-  ShopDetail,
   Tour,
   User,
   NotFoundPage,
@@ -19,10 +17,6 @@ export default (
     <Route path="coupon">
       <IndexRoute component={Coupon}/>
       <Route path=":id" component={CouponDetail}/>
-    </Route>
-    <Route path="shop">
-      <IndexRoute component={Shop}/>
-      <Route path=":id" component={ShopDetail}/>
     </Route>
     <Route path="tour" component={Tour}/>
     <Route path="user" component={User}/>
