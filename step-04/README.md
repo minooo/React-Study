@@ -43,6 +43,7 @@ step-04 主要围绕redux, 进行构建，做了四个基于redux的基础示例
 
 #### [redux-logger](https://github.com/evgenyrodionov/redux-logger) [开发需要]
 > 实时监控Redux的状态树的Store  
+  打开浏览器调试F12，在 console 面板中可查看。  
   安装：`npm install redux-logger --save-dev`
   
 ---
