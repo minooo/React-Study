@@ -1,6 +1,11 @@
-# step-04 目前开发中...
+# step-04 目前已完成，你可以完整运行
 step-04 是在 step-03 的基础上开发的  
-step-04 主要围绕redux,进行构建，这也是 react-study 最后一个系列，请拭目以待！
+step-04 主要围绕redux, 进行构建，做了四个基于redux的基础示例（简单，一般，复杂，异步）。  
+展示了在应用了redux的react项目中，组件之间的数据是如何获取，传递，并渲染到页面的。
+（该模板为React-Study最后一个系列，欢迎朋友们沟通交流，让前端开发变的更美好。）
+
+## [DEMO](https://raw.githubusercontent.com/minooo/test/master/step-04-demo.gif)
+点击上方DEMO预览
 
 ## 本模板包含step-03用到的所有包，下面将介绍 **额外** 添加的包
 

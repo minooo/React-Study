@@ -22,7 +22,7 @@
   "author": "minooo",
   "license": "MIT",
   "dependencies": {
-    "antd-mobile": "^0.9.5",
+    "antd-mobile": "^0.9.9",
     "babel-polyfill": "^6.13.0",
     "isomorphic-fetch": "^2.2.1",
     "moment": "^2.15.1",

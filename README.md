@@ -28,10 +28,14 @@ React-Study 系列模板主要包含以下四部分
 step-02 是在 step-01的基础上添加额外配置完成的，这一部分添加了 样式，字形，图片，等加载器配置。并初步展示了在项目实践中，React技术栈的一个合理的目录结构应该是怎样的。由于应用了CSSModules以及相关的辅助插件，CSS的语法更加便利简洁，这些在项目的组件样式中都有体现。同时，也展示了在ES6下，React组件相关写法，以及标准语法的规范的推荐。总之，React带你走进组件化的美好
 
 - [step-03](https://github.com/minooo/React-Study/tree/master/step-03)（已完成）
-step-03 是在 step-02 的基础上开发的 step-03 主要围绕添加 react-router 进行配置，以及在react移动端开发中，强烈推荐使用antd-mobile 这个特别符合我国国情的react组件库。本模板延续组件化的思想，以及样式的模块化（cssModules), 并以真实项目实践写了几个简单的组件，包括底部导航，好店列表，以及下拉菜单等。 目的就是展示下，在真实项目中，组件化的思想是如何实践的。
+step-03 是在 step-02 的基础上开发的，step-03 主要围绕添加 react-router 进行配置，以及在react移动端开发中，强烈推荐使用antd-mobile 这个特别符合我国国情的react组件库。本模板延续组件化的思想，以及样式的模块化（cssModules), 并以真实项目实践写了几个简单的组件，包括底部导航，好店列表，以及下拉菜单等。 目的就是展示下，在真实项目中，组件化的思想是如何实践的。
 
-- step-04（开发中）
-同理，step-04 是在 step-03 的基础上添加额外配置完成，目前仍处于开发中，这部分主要添加 [redux](https://github.com/reactjs/redux)。推荐教程 [redux-tutorial 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) [redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
+- [step-04](https://github.com/minooo/React-Study/tree/master/step-04) (已完成）
+step-04 是在 step-03 的基础上添加额外配置完成，为了更好的解决react中组件之间的数据传递，  
+此模板引入了[redux](https://github.com/reactjs/redux)，redux 的三大核心法宝就是 `action`, `reducer`, `store`，  
+redux入门推荐教程 [redux-tutorial 使用教程](https://github.com/react-guide/redux-tutorial-cn/blob/master/00_introduction.js) [redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)；  
+同时为了更优雅的管理redux的异步操作，经过再三对比和考虑，本模板使用了[redux-saga](https://github.com/yelouafi/redux-saga/),用来替代[redux-thunk](https://github.com/gaearon/redux-thunk)。  
+[redux-sage中文文档(繁体，同步)](https://neighborhood999.github.io/redux-saga/)  
 
 ## 启动React生态圈
 
@@ -52,7 +56,7 @@ step-03 是在 step-02 的基础上开发的 step-03 主要围绕添加 react-ro
 ## 常见问题说明。（2016/10/19）
 
 - 请保证电脑安装的 [node](http://nodejs.cn/) 版本在 **6.0以上** ，如果你“不幸”安装了4.0版本，  
-  请先将其卸载，再安装6.0+版本
+  请先将其卸载，再安装6.0+版本（目前node官网已有7.2版本[英文官网](https://nodejs.org/en/)，请尽量安装最新版）
   
 - 很多新手朋友可能事先跟着react官网实例做了一些练习，用的都是 es5 的语法。  
   而本项目代码采用的都是 es6 的语法，这也是react官网推荐的。如果你对es6语法不太熟悉  
