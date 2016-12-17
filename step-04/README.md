@@ -21,12 +21,6 @@ step-04 主要围绕redux, 进行构建，做了四个基于redux的基础示例
   
 ---
 
-#### [react-router-redux](https://github.com/reactjs/react-router-redux) [强烈推荐]
-> 一个简单的绑定，使 react-router 和 redux 保持同步。  
-  安装：`npm install react-router-redux --save`
-  
----
-
 #### [redux-saga](https://github.com/yelouafi/redux-saga/) [强烈推荐]
 > 一个替代[redux-thunk](https://github.com/gaearon/redux-thunk)更优雅的用于管理Redux异步操作的中间件  
   [redux-sage中文文档(繁体，同步)](https://neighborhood999.github.io/redux-saga/)  

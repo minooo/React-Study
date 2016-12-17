@@ -109,18 +109,22 @@ express的中间件取得资料， 而方法就是通过webpack-dev-middleware�
 
 ---
 
-#### [babel-polyfill](https://github.com/babel/babel) [必需]
+#### [babel-runtime](http://babeljs.io/docs/plugins/transform-runtime/#why) [强烈推荐]
 > Babel默认只转换新的JavaScript语法，而不是转换新的API，  
 比如Iterator、Generator、Set、Maps、Proxy、Reflect，Symbol、Promise等全局对象，  
 以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。  
 举例来说，ES6在Array对象上新增了Array.from方法。  
-Babel就不会转码这个方法，如果想让这个方法运行，必须使用babel-polyfill  
-安装：`npm install --save babel-polyfill`
+[延伸阅读,强烈推荐](https://segmentfault.com/a/1190000006930013?utm_source=tuicool&utm_medium=referral)  
+安装：`npm install --save babel-runtime`
 
-####[babel-preset-es2015](https://github.com/babel/babel) [必需]  
-> es2015转码规则。为所有es6插件所设置的babel预设，  
+#### [babel-plugin-transform-runtime](http://babeljs.io/docs/plugins/transform-runtime/#why) [开发需要]
+> 和上面的 `babel-runtime` 搭配使用
+安装：`npm install --save-dev babel-plugin-transform-runtime`
+
+####[babel-preset-latest](http://babeljs.io/docs/plugins/preset-latest/) [必需]  
+> es2015,es2016,es2017转码规则。为所有es6插件所设置的babel预设，  
 有了它，诸如，es6的箭头函数，类，等等语法特性才能向es5转换。  
-安装：`npm install --save-dev babel-preset-es2015`
+安装：`npm install --save-dev babel-preset-latest`
 
 ---
 
