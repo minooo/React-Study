@@ -12,7 +12,7 @@
     "react-hot-loader/babel",
     ["transform-runtime", {
       "helpers": false,
-      "polyfill": true,
+      "polyfill": false,
       "regenerator": true,
       "moduleName": "babel-runtime"
     }]
