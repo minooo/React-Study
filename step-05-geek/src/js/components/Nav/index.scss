@@ -1,0 +1,37 @@
+.root {
+  background-color: #f5f5f5;
+  height: 1rem;
+  position: fixed;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.navOne, .navTwo, .navThree, .navFour, .navFive {
+  color: #1abc9c;
+  &:hover, &:active {
+    color: #1abc9c;
+  }
+}
+.navOne i:before {
+  content: "\e93d";
+}
+
+.navTwo i:before {
+  content: "\e917";
+}
+
+.navThree i:before {
+  content: "\e936";
+}
+
+.navFour i:before {
+  content: "\e939";
+}
+
+.navFive i:before {
+  content: "\e913";
+}

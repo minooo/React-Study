@@ -1,0 +1,106 @@
+// ReactTransitionGroup 动画
+.example-enter {
+  opacity: 0;
+  transform:   translate(-250px,0);
+  transform: translate3d(-250px,0,0);
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.example-leave {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.example-leave.example-leave-active {
+  opacity: 0;
+  transform:   translate(250px,0);
+  transform: translate3d(250px,0,0);
+}
+
+// 首页导航过场动画
+.swap-enter {
+  opacity: 0.01;
+  transform: translateX(5em);
+  transition: all .5s ease-out;
+}
+
+.swap-enter.swap-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.swap-leave {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .5s ease-in;
+}
+
+.swap-leave.swap-leave-active {
+  opacity: 0;
+  transform: translateX(-5em);
+}
+
+// message 组件动画
+.message-enter {
+  opacity: 0;
+  transform:   translate(0,-25px);
+  transform: translate3d(0,-25px,0);
+}
+.message-enter.message-enter-active {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.message-leave {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.message-leave.message-leave-active {
+  opacity: 0;
+  transform:   translate(0,25px);
+  transform: translate3d(0,25px,0);
+}
+
+// btns 动画
+.btns-enter {
+  opacity: 0;
+  transform:   translate(250px,0);
+  transform: translate3d(250px,0,0);
+}
+.btns-enter.btns-enter-active {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.btns-leave {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.btns-leave.btns-leave-active {
+  opacity: 0;
+  transform:   translate(250px,0);
+  transform: translate3d(250px,0,0);
+}
