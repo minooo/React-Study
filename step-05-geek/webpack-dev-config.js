@@ -17,21 +17,111 @@ const px2remOpts = {
 };
 
 export default {
-  debug: true,
-  devtool: 'cheap-module-eval-source-map', // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and https://webpack.github.io/docs/configuration.html#devtool
-  noInfo: true, // set to false to see a list of every file being bundled.
+  // devtool: 'cheap-module-eval-source-map', // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and https://webpack.github.io/docs/configuration.html#devtool
+  // noInfo: true, // set to false to see a list of every file being bundled.
   entry: [
     './src/webpack-public-path',  // 服务器静态资源路径配置，保证首先载入
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'src/js/index.js')
   ],
-  target: 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
-	context: path.resolve(__dirname, 'src'),
+  //target: 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
+	//context: path.resolve(__dirname, 'src'),
   output: {
-    path: `${__dirname}/src`, // Note: Physical files are only output by the production build task `npm run build`.
+    path: `${__dirname}/src`, // 产出位置
     publicPath: '/',
     filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/js'),
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              parser: 'postcss-scss'
+            }
+          }
+        ]
+      },
+      // 组件样式，需要私有化，单独配置
+
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/styles'),
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              parser: 'postcss-scss'
+            }
+          }
+        ]
+      },
+      // 公有样式，不需要私有化，单独配置
+
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'node_modules'),
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+
+      {
+        test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
+        use: 'url-loader'
+      },
+      {
+        test: /\.(gif|jpe?g|png|ico)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'node_modules'),
+      path.join(__dirname, './src')
+    ],
+    extensions: ['', '.web.js', '.js', '.json'],
+
+    // 路径别名, 懒癌福音
+    alias:{
+      app: path.resolve(__dirname,'src/js'),
+      // 以前你可能这样引用 import { Nav } from '../../components'
+      // 现在你可以这样引用 import { Nav } from 'app/components'
+
+      style: path.resolve(__dirname,'src/styles')
+      // 以前你可能这样引用 @import "../../../styles/mixins.scss"
+      // 现在你可以这样引用 @import "style/mixins.scss"
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -54,61 +144,5 @@ export default {
       inject: 'body'
     })
   ],
-  resolve: {
-    modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
-    extensions: ['', '.web.js', '.js', '.json'],
-
-    // 路径别名, 懒癌福音
-    alias:{
-      app:path.resolve(__dirname,'src/js'),
-      // 以前你可能这样引用 import { Nav } from '../../components'
-      // 现在你可以这样引用 import { Nav } from 'app/components'
-
-      style:path.resolve(__dirname,'src/styles')
-      // 以前你可能这样引用 @import "../../../styles/mixins.scss"
-      // 现在你可以这样引用 @import "style/mixins.scss"
-    }
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loaders: ['babel'],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/js'),
-        loaders: [
-          'style',
-          'css?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
-          'postcss?parser=postcss-scss'
-        ]
-      },
-      // 组件样式，需要私有化，单独配置
-      
-      {
-        test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/styles'),
-        loader: 'style!css!postcss?parser=postcss-scss'
-      },
-      // 公有样式，不需要私有化，单独配置
-
-      {
-        test: /\.css$/,
-        include: path.resolve(__dirname, 'node_modules'),
-        loader: 'style!css!postcss'
-      },
-      
-      {
-        test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
-        loader: 'url?limit=10000'
-      },
-      {
-        test: /\.(gif|jpe?g|png|ico)$/,
-        loader: 'url?limit=10000'
-      }
-    ]
-  },
   postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
 };
