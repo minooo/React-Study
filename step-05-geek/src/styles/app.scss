@@ -1,0 +1,557 @@
+// 使用建议
+// --------------------------------------------------
+// CSS Modules 是对现有的 CSS 做减法。为了追求简单可控，建议遵循如下原则：
+// ·不使用选择器（id,伪类，标签等)，只使用class名来定义样式
+// ·不层叠多个class，只使用一个class把所有样式定义好
+// ·所有样式通过 composes 组合来实现复用
+// ·不嵌套
+// --------------------------------------------------
+
+// 公有样式引入mixins的目的是为了方便默认设置若干常用的样式
+// 公有样式不可以使用composes
+@import "./mixins.scss";
+
+// 颜色设置
+$border-color: #e9e9e9; //边框颜色
+$body-color: #333; //设置通用的字体颜色
+$body-bg: #f2f2f2; //设置通用的 body 背景色
+$link-color: #333; //设置通用的链接颜色
+$link-visited: #333; //设置链接访问后的颜色
+$main-color: #1BBC9B; //主体颜色
+
+// 字体
+$font-family-zh: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$font-family-en: Arial, sans-serif !default;
+
+// 盒子模型
+$box-model: border-box !default;
+
+// z-index
+$z-50: 50;
+$z-100: 100;
+$z-150: 150;
+$z-200: 200;
+$z-250: 250;
+$z-max: 999999; //为了应付某些插件z-index 值过高的问题
+
+// 全局设置
+// --------------------------------------------------
+
+//
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0 none;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+em, strong {
+  font-style: normal;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+// 全局盒子模型设置
+* {
+  box-sizing: $box-model;
+}
+
+*:before,
+*:after {
+  box-sizing: $box-model;
+}
+
+// -webkit-tap-highlight-color 是一个 不规范的属性，它没有出现在 CSS 规范草案中。
+// 当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+html, body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: $font-family-zh;
+  line-height: 1.5;
+  color: $body-color;
+  background-color: $body-bg;
+  font-size: 0.24rem;
+}
+
+// Links
+a {
+  text-decoration: none;
+  outline: none;
+  &:hover,
+  &:link,
+  &:focus {
+    text-decoration: none;
+  }
+  &:visited {
+  }
+}
+
+// 字体颜色
+.main-color {
+  color: $main-color;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color333 {
+  color: #333
+}
+
+.color666 {
+  color: #666
+}
+
+.color999 {
+  color: #999
+}
+
+// 背景颜色
+.bg-white { background-color: #fff }
+.bg-main  { background-color: $main-color}
+
+// 间隔
+.pt20 {
+  padding-top: 20px;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.pt40 {
+  padding-top: 40px;
+}
+.pt50 {
+  padding-top: 50px;
+}
+.pt60 {
+  padding-top: 60px;
+}
+
+.mb10 {
+  margin-bottom: 0.1rem;
+}
+
+.mb20 {
+  margin-bottom: 0.2rem;
+}
+
+.mb30 {
+  margin-bottom: 0.3rem;
+}
+
+// 实践证明以上间隔并无大用，还是设置最常用的几个间隔，组合用挺不错
+.plr20 {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.ptb20 {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.ptb30 {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+// 请保证你的设计稿为750px宽，如果有其余字体大小，请在私有样式中设置
+.font-20 {font-size: 0.2rem;}
+.font-24 {font-size: 0.24rem;}
+.font-26 {font-size: 0.26rem;}
+.font-28 {font-size: 0.28rem;}
+.font-30 {font-size: 0.3rem;}
+.font-32 {font-size: 0.32rem;}
+.font-34 {font-size: 0.34rem;}
+.font-36 {font-size: 0.36rem;}
+.font-38 {font-size: 0.38rem;}
+.font-40 {font-size: 0.4rem;}
+
+// 设置block
+.block {
+  display: block;
+}
+
+.show {
+  display: inherit;
+}
+
+.hide {
+  display: none;
+}
+
+// 最外层页面设置
+.box {
+  max-width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 半透明弹层
+.alert-bg {
+  position: fixed;
+  z-index: $z-50;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+  display: none; //注意：默认隐藏！！
+}
+
+.alpha-bg {
+  position: fixed;
+  z-index: 100;
+  background: rgba(0, 0, 0, .7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+// 布局相关
+// 水平
+.hor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+// 水平居中
+.hor-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+// 垂直居中
+.ver-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+// 子元素内联垂直居中
+.center-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+// 子元素块联水平垂直居中
+.center-center-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+// 两边对齐
+.space-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// last-no-border
+.last-no-border:last-child {
+  border: none;
+}
+
+// 图片设置
+img {
+  max-width: 100%;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// 这里主要应付 antd-mobile 的组件carousel 不能等比缩放的蛋疼问题
+.home-swipe {
+  height: 40.625vw;
+  max-height: 406.25px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+// 文本控制类
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// 字符溢出隐藏
+.text-overflow-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 字符超出一行溢出隐藏
+.text-overflow-one {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+// 字符超出两行溢出隐藏
+.text-overflow-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// 字符超出三行溢出隐藏
+.text-overflow-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+// 浮动控制
+.cf {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.z-50 {
+  z-index: 50;
+}
+.z-100 {
+  z-index: 100;
+}
+.z-150 {
+  z-index: 150;
+}
+.z-200 {
+  z-index: 200;
+}
+.z-250 {
+  z-index: 250;
+}
+.z-max {
+  z-index: 999999;
+}
+.overflow-h {
+  overflow: hidden;
+}
+
+.scroll-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// 元素绝对定位的垂直水平居中
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.height100 {
+  height: 100%
+}
+
+.minheight110 {
+  min-height: 110%;
+}
+
+// flex 参考指南。http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+// 任何一个容器都可以指定 flex 布局
+// .box-example { display: flex }
+// 行内元素也可以使用 flex 布局
+// .box-example { display: inline-flex; }
+
+// 以下6个属性设置在容器上
+
+// 1. flex-direction --> 子项目排列的方向
+// row 默认，水平从左到右
+// row-reverse 水平从右到左
+// column 从上到下
+// column-reverse 从下到上
+
+// 2. flex-wrap 默认情况下，子项目都排在一条线上，而此属性解决的是，如果一条线排不下，子项目如何换行
+// nowrap 默认，不换行
+// wrap 换行，第一行在上方
+// wrap-reverse 换行，第一行在下方
+
+// 3. flex-flow 是 flex-direction 和 flex-wrap 的简写形式，默认值为 row nowrap
+
+// 4. justify-content 定义了子项目在主轴上的对齐方式
+// flex-start 默认值，左对齐
+// flex-end 右对齐
+// center 居中
+// space-between 两端对齐，子项目之间的间隔相等
+// space-around 每个子项目两侧的间隔相等。所以，子项目之间的间隔比子项目与父容器边界的间隔大一倍
+
+// 5. align-items 定义子项目在交叉轴上如何对齐。
+// flex-start 交叉轴的起点对齐
+// flex-end 交叉轴的终点对齐
+// center 交叉轴的中点对齐
+// baseline 子项目的第一行文字的基线对齐
+// stretch 默认值，如果子项目未设置高度或设为auto,将占满整个容器的高度
+
+// 6. align-content 定义了多根轴线的对齐方式，如果子项目只有一根轴线，则该属性无效。
+// flex-start 与交叉轴的起点对齐。
+// flex-end 与交叉轴的终点对齐
+// center 与交叉轴的中点对齐
+// space-between 与交叉轴两端对齐，轴线之间的间隔平均分布。
+// space-around 每根轴线两侧的间隔都相等，所以轴线之间的间隔比轴线与边框的间隔大一倍
+// stretch 默认值，轴线占满整个交叉轴
+
+// 以下6个属性设置在子项目上。
+
+// 1. order 定义子项目的排列顺序，数值越小，排位越靠前。默认值为0.
+
+// 2. flex-grow 定义子项目放大比例，默认为0，即如果存在剩余空间，也不放大。
+// 如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。
+// 如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍
+
+// 3. flex-shrink 定义了子项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+// 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。
+// 如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+
+// 4. flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。
+// 浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+// 它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
+
+// 5. flex 该属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+// 该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)
+// 建议优先使用这个 flex 属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+
+// align-self 允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。
+// 默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch
+// 该属性可能取6个值，除了 auto ,其他都与 align-items 属性完全一致。
+
+// ------------------------------------------------------------
+
+// radio 样式重写
+/*input[type="radio"] {
+  position: relative;
+  vertical-align: middle;
+  width: 0.36rem;
+  height: 0.36rem;
+  -webkit-appearance: none !important;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input[type="radio"]:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0.36rem;
+  height: 0.36rem;
+  border: 2px solid #999;
+  background: #fff;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-radius: 50%;
+  outline: 0;
+}
+
+input[type="radio"]:checked:after {
+  position: absolute;
+  z-index: 50;
+  content: '';
+  display: block;
+  width: 0.36rem;
+  height: 0.36rem;
+  border: 2px solid #999;
+  background: #fff;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  outline: 0;
+}
+
+input[type="radio"]:checked:before {
+  position: absolute;
+  z-index: 100;
+  content: '';
+  display: block;
+  width: 0.18rem;
+  height: 0.18rem;
+  left: 0.09rem;
+  top: 0.09rem;
+  background: #1abc9c;
+  border-radius: 50%;
+  border: none;
+}*/

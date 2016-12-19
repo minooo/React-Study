@@ -1,0 +1,54 @@
+.root {
+  padding-left: 130px;
+}
+
+.edit {
+  font-size: 0.3rem;
+  display: block;
+  width: 100%;
+  line-height: 1.2;
+  padding: 0.25rem 0.6rem 0.25rem 0.25rem;
+  border: 1px solid #1abc9c;
+  border-radius: 0.06rem;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07),0 0 8px rgba(26, 188, 156, 0.6);
+}
+
+.newTodo {
+  display: block;
+  width: 100%;
+  border-radius: 0.06rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.3rem;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  border: 1px solid #ccc;
+  margin-bottom: 0.2rem;
+}
+
+.newTodo:focus {
+  border: 1px solid #1abc9c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07),0 0 8px rgba(26, 188, 156, 0.8);
+
+}
+
+.newTodo:focus + .btn{
+  opacity: 1;
+  transform: translate(50%, -50%) scale(1) rotate(0deg);
+}
+
+
+.btn {
+  color: #fafafa;
+  line-height: 1;
+  position: absolute;
+  font-size: 150%;
+  right: 0rem;
+  top: 0.4rem;
+  border-radius: 50%;
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  background: #1abc9c;
+  opacity: 0;
+  transform: translate(0, -50%) scale(0) rotate(180deg);
+  transition: transform, opacity, .5s cubic-bezier(.87,-.41,.19,1.44);
+}

@@ -1,0 +1,13 @@
+.btn {
+  color: #fff;
+  border: 1px solid #1abc9c;
+  border-radius: 3px;
+  padding: 15px 28px;
+  margin: 15px 25px 0 0;
+  background: #1abc9c;
+}
+.btn[disabled] {
+  color: #ccc;
+  border-color: #ccc;
+  background: #fff;
+}
