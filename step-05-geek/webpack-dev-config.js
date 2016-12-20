@@ -3,6 +3,7 @@
  * 在整个项目开发过程中，几乎99%的时间都是在这个模式下进行的
  * 注意。两种模式的配置有较大差异！！
  */
+// webpack 2.0 配置文档 https://webpack.js.org/configuration/
 
 const path = require('path');
 import webpack from 'webpack';
@@ -17,31 +18,33 @@ const px2remOpts = {
 };
 
 export default {
-  // devtool: 'cheap-module-eval-source-map', // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and https://webpack.github.io/docs/configuration.html#devtool
-  // noInfo: true, // set to false to see a list of every file being bundled.
   entry: [
     './src/webpack-public-path',  // 服务器静态资源路径配置，保证首先载入
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'src/js/index.js')
   ],
-  //target: 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
-	//context: path.resolve(__dirname, 'src'),
+
   output: {
     path: `${__dirname}/src`, // 产出位置
-    publicPath: '/',
-    filename: 'bundle.js'
+		filename: 'bundle.js',
+    publicPath: '/'
   },
+
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+				exclude: [
+					path.resolve(__dirname, "node_modules")
+				],
         use: 'babel-loader'
       },
       {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/js'),
+        include: [
+					path.resolve(__dirname, 'src/js')
+        ],
         use: [
           'style-loader',
           {
@@ -64,7 +67,9 @@ export default {
 
       {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/styles'),
+        include: [
+					path.resolve(__dirname, 'src/styles')
+        ],
         use: [
           'style-loader',
           'css-loader',
@@ -80,14 +85,15 @@ export default {
 
       {
         test: /\.css$/,
-        include: path.resolve(__dirname, 'node_modules'),
+        include: [
+					path.resolve(__dirname, 'node_modules')
+        ],
         use: [
           'style-loader',
           'css-loader',
           'postcss-loader'
         ]
       },
-
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
         use: 'url-loader'
@@ -105,6 +111,7 @@ export default {
       }
     ]
   },
+
   resolve: {
     modules: [
       path.resolve(__dirname, 'node_modules'),
@@ -123,13 +130,31 @@ export default {
       // 现在你可以这样引用 @import "style/mixins.scss"
     }
   },
+
+	devtool: 'cheap-eval-source-map',
+  // 开发选项 eval eval-source-map cheap-eval-source-map cheap-module-eval-source-map
+  // 生产选项 source-map cheap-source-map cheap-module-source-map
+  // 相关链接 https://webpack.js.org/configuration/devtool/
+
+	context: path.resolve(__dirname, 'src'),
+  // webpack 的主目录
+
+  target: 'web',
+  // 指明打包运行在何种环境下
+
+  stats: 'normal',
+  // 输出打包相关信息日志
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
       __DEV__: true
     }),
     new webpack.HotModuleReplacementPlugin(),
+    // 激活 HMR
+
     new webpack.NoErrorsPlugin(),
+
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
       template: 'src/index.html',
       title: '开发模式',
