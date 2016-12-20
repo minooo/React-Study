@@ -1,11 +1,6 @@
 {
   "presets": [
-    ["latest", {
-      "es2015": {
-        "loose": true,
-        "modules": false
-      }
-    }],
+    "latest",
     "react",
     "stage-0"
   ],

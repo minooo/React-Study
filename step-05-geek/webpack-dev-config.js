@@ -142,7 +142,7 @@ export default {
   target: 'web',
   // 指明打包运行在何种环境下
 
-  stats: 'normal',
+  stats: 'minimal',
   // 输出打包相关信息日志
 
   plugins: [
@@ -169,5 +169,6 @@ export default {
       inject: 'body'
     })
   ],
+
   postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
 };
