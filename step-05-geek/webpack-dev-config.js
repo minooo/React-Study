@@ -6,22 +6,22 @@
 // webpack 2.0 配置文档 https://webpack.js.org/configuration/
 
 const path = require('path');
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import precss from 'precss'
-import autoprefixer from 'autoprefixer'
-import rucksackCss from 'rucksack-css'
-import px2rem from 'postcss-pxtorem';
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
+const rucksackCss = require('rucksack-css');
+const px2rem = require('postcss-pxtorem');
 const px2remOpts = {
   rootValue: 100,
   propWhiteList: [],
 };
 
-export default {
+module.exports = {
   entry: [
     './src/webpack-public-path',  // 服务器静态资源路径配置，保证首先载入
-    'react-hot-loader/patch',
-    'webpack-hot-middleware/client?reload=true',
+		'webpack-dev-server/client',
+		'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'src/js/index.js')
   ],
 
@@ -136,7 +136,7 @@ export default {
   // 生产选项 source-map cheap-source-map cheap-module-source-map
   // 相关链接 https://webpack.js.org/configuration/devtool/
 
-	context: path.resolve(__dirname, 'src'),
+	//context: path.resolve(__dirname, 'src'),
   // webpack 的主目录
 
   target: 'web',
@@ -153,6 +153,9 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     // 激活 HMR
 
+		new webpack.NamedModulesPlugin(),
+    // 在浏览器控制台打印更具可读性模块名称HMR更新
+
     new webpack.NoErrorsPlugin(),
 
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
@@ -167,8 +170,21 @@ export default {
       // 这样每次客户端页面就会根据这个hash来判断页面是否有必要刷新
       // 在项目后续过程中，经常需要做些改动更新什么的，一但有改动，客户端页面就会自动更新！
       inject: 'body'
-    })
-  ],
+    }),
 
-  postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
+		new webpack.LoaderOptionsPlugin({
+			options: {
+				postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
+			}
+		})
+
+	],
+
+	devServer: {
+		hot: true,
+		host: '0.0.0.0',
+		contentBase: path.resolve(__dirname, 'src'),
+		publicPath: '/',
+		historyApiFallback: true,
+	},
 };
