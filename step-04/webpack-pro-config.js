@@ -19,7 +19,7 @@ module.exports = {
       'react-dom',
       'react-router',
       'react-redux',
-      'react-router-redux'
+      'redux'
     ]
     // 为了优化，切割代码，提取第三方库（实际上，我们将会引入很多第三方库）
   },
