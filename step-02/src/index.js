@@ -7,26 +7,15 @@ import {AppContainer} from 'react-hot-loader'
 import React from 'react'
 import {render} from 'react-dom'
 import App from './js/containers/App'
-const RedBox = require('redbox-react').default;
+import Redbox from 'redbox-react'
 const rootEl = document.getElementById('app');
 
-try {
-  render(
-    <AppContainer>
-      <App />
-    </AppContainer>,
-    rootEl
-  )
-} catch (e) {
-  render(
-    <RedBox error={e}>
-      <AppContainer>
-        <App />
-      </AppContainer>
-    </RedBox>,
-    rootEl
-  )
-}
+render(
+  <AppContainer errorReporter={Redbox}>
+    <App />
+  </AppContainer>,
+  rootEl
+)
 
 
 if (module.hot) {
@@ -34,22 +23,11 @@ if (module.hot) {
     // If you use Webpack 2 in ES modules mode, you can
     // use <App /> here rather than require() a <NextApp />.
     const NextApp = require('./js/containers/App').default;
-    try {
-      render(
-        <AppContainer>
-          <NextApp />
-        </AppContainer>,
-        rootEl
-      )
-    } catch (e) {
-      render(
-        <RedBox error={e}>
-          <AppContainer>
-            <NextApp />
-          </AppContainer>
-        </RedBox>,
-        rootEl
-      )
-    }
+    render(
+      <AppContainer errorReporter={Redbox}>
+        <NextApp />
+      </AppContainer>,
+      rootEl
+    )
   });
 }

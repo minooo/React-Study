@@ -30,11 +30,6 @@
 
 }
 
-.newTodo:focus + .btn{
-  opacity: 1;
-  transform: translate(50%, -50%) scale(1) rotate(0deg);
-}
-
 
 .btn {
   color: #fafafa;
@@ -48,7 +43,7 @@
   width: 1rem;
   height: 1rem;
   background: #1abc9c;
-  opacity: 0;
-  transform: translate(0, -50%) scale(0) rotate(180deg);
+  opacity: 1;
+  transform: translate(50%, -50%) scale(1) rotate(0deg);
   transition: transform, opacity, .5s cubic-bezier(.87,-.41,.19,1.44);
 }

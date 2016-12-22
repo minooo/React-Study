@@ -7,28 +7,17 @@ import Root from './containers/Root'
 import configureStore from './store/configureStore'
 import rootSage from './sagas'
 
-const RedBox = require('redbox-react').default;
+import Redbox from 'redbox-react'
 const rootEl = document.getElementById('app');
 const store = configureStore(window.__INITIAL_STATE__)
 store.runSaga(rootSage)
 
-try {
-  render(
-    <AppContainer>
-      <Root store={store} history={browserHistory} />
-    </AppContainer>,
-    rootEl
-  )
-} catch (e) {
-  render(
-    <RedBox error={e}>
-      <AppContainer>
-        <Root store={store} history={browserHistory} />
-      </AppContainer>
-    </RedBox>,
-    rootEl
-  )
-}
+render(
+  <AppContainer errorReporter={Redbox}>
+    <Root store={store} history={browserHistory} />
+  </AppContainer>,
+  rootEl
+)
 
 if (module.hot) {
   /**
@@ -44,26 +33,16 @@ if (module.hot) {
       orgError.apply(console, [message]);
     }
   };
+
   module.hot.accept('./containers/Root', () => {
     // If you use Webpack 2 in ES modules mode, you can
     // use <App /> here rather than require() a <NextApp />.
     const NextApp = require('./containers/Root').default;
-    try {
-      render(
-        <AppContainer>
-          <NextApp store={store} history={browserHistory} />
-        </AppContainer>,
-        rootEl
-      )
-    } catch (e) {
-      render(
-        <RedBox error={e}>
-          <AppContainer>
-            <NextApp store={store} history={browserHistory} />
-          </AppContainer>
-        </RedBox>,
-        rootEl
-      )
-    }
+    render(
+      <AppContainer errorReporter={Redbox}>
+        <NextApp store={store} history={browserHistory} />
+      </AppContainer>,
+      rootEl
+    )
   });
 }

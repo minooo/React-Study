@@ -109,8 +109,10 @@ module.exports = {
       // 现在你可以这样引用 import { Nav } from 'app/components'
 
       style:path.resolve(__dirname,'src/styles')
-      // 以前你可能这样引用 @import "../../../styles/mixins.scss"
-      // 现在你可以这样引用 @import "style/mixins.scss"
+      // 以前你可能这样引用 import "../../../styles/mixins.scss"
+      // 现在你可以这样引用 import "style/mixins.scss"
+
+      // 注意：别名只能在.js文件中使用。
     }
   },
 

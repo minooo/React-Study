@@ -18,7 +18,7 @@ export default class TodoTextInput extends Component {
     this.setState({text: e.target.value})
   }
 
-  handleSubmit = (val) => {
+  handleSubmit = val => {
     const text = val.trim()
     this.props.onSave(text)
     if (this.props.newTodo) {
@@ -26,9 +26,11 @@ export default class TodoTextInput extends Component {
     }
   }
 
-  render() {
-    let input
+  componentDidMount() {
+    this.textInput.focus()
+  }
 
+  render() {
     return (
       <div
         className={classnames({
@@ -41,10 +43,9 @@ export default class TodoTextInput extends Component {
             [styles.edit]: this.props.editing,
             [styles.newTodo]: this.props.newTodo
           })}
-          ref={node => {input = node}}
+          ref={node => {this.textInput = node}}
           type="text"
           placeholder={this.props.placeholder}
-          autoFocus="true"
           value={this.state.text}
           onBlur={this.handleBlur}
           onChange={this.handleChange}
@@ -52,7 +53,7 @@ export default class TodoTextInput extends Component {
         {
           this.props.newTodo &&
           <button
-            onClick={() => this.handleSubmit(input.value)}
+            onClick={() => this.handleSubmit(this.textInput.value)}
             className={styles.btn}
           >
             <Icon type="plus" />
