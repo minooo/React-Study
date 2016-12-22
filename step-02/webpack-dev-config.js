@@ -53,13 +53,15 @@ export default {
 
     // 路径别名, 懒癌福音
     alias:{
-      app:path.resolve(__dirname,'src/js'),
-      // 以前你可能这样引用 import { Nav } from '../../components'
-      // 现在你可以这样引用 import { Nav } from 'app/components'
+			app:path.resolve(__dirname,'src/js'),
+			// 以前你可能这样引用 import { Nav } from '../../components'
+			// 现在你可以这样引用 import { Nav } from 'app/components'
 
-      style:path.resolve(__dirname,'src/styles')
-      // 以前你可能这样引用 @import "../../../styles/mixins.scss"
-      // 现在你可以这样引用 @import "style/mixins.scss"
+			style:path.resolve(__dirname,'src/styles')
+			// 以前你可能这样引用 import "../../../styles/mixins.scss"
+			// 现在你可以这样引用 import "style/mixins.scss"
+
+			// 注意：别名只能在.js文件中使用。
     }
   },
   module: {

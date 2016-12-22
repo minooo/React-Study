@@ -174,17 +174,18 @@ module.exports = {
 
 		new webpack.LoaderOptionsPlugin({
 			options: {
-				postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
+				postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)],
+				devServer: {
+					hot: true,
+					host: '0.0.0.0',
+					contentBase: path.resolve(__dirname, 'src'),
+					publicPath: '/',
+					historyApiFallback: true,
+				},
 			}
 		})
 
 	],
 
-	devServer: {
-		hot: true,
-		host: '0.0.0.0',
-		contentBase: path.resolve(__dirname, 'src'),
-		publicPath: '/',
-		historyApiFallback: true,
-	},
+
 };
