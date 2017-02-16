@@ -3,15 +3,17 @@
  *
  * 注意。两种模式的配置有较大差异！！
  */
+const path = require('path');
 
-var path = require('path');
+const webpack = require('webpack');
 
-var webpack = require('webpack');
-
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // webpack中生成HTML的插件，
 
 module.exports = {
+  devtool: 'cheap-module-source-map',
+  // 关于选项的选择，http://cheng.logdown.com/posts/2016/03/25/679045
+
   entry: {
     // 文件入口配置
     index: './src/index',

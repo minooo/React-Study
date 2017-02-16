@@ -8,11 +8,12 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-
   devtool: 'cheap-module-eval-source-map',
-  // devtool 指明了sourcemap的生成方式，它有七个选项，具体请参考 https://segmentfault.com/a/1190000004280859
+  // devtool 指明了sourcemap的生成方式，它有七个选项，
+  // 具体请参考 https://webpack.js.org/configuration/devtool/#components/sidebar/sidebar.jsx
+  // 关于选项的选择，http://cheng.logdown.com/posts/2016/03/25/679045
   // sourcemap 的作用就是为调试代码提供便利
-  // cheap-module-eval-source-map 绝大多数情况下都会是最好的选择，这也是下版本 webpack 的默认选项。
+  // 这个选项是开发的最佳选择，因为它是显示正确行号的最小选项
 
   entry: [
     'react-hot-loader/patch',
