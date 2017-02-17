@@ -51,12 +51,11 @@ $ npm run build
 
 ---
 
-####[webpack](https://npm.taobao.org/package/react-dom) [必需]
-> 于人而言，尤其是当开发大型项目时，每个包每个模块每个静态资源都应尽可能的条理清晰的罗列出来，  
-这样方便我们开发；于机器而言，就不需要这么“条理清晰”了，此时应最大限度的压缩优化这些资源，  
-如何把这些资源模块“杂糅”在一起，这就是webpack要做的。  
+####[webpack](https://webpack.js.org/) [必需]
+> Webpack 是一个针对 JavaScript 的打包工具. 然而,   
+随着 Webpack 日渐流行, 它逐渐演变成了前端代码的管理工具。
 安装：`npm install --save-dev webpack`  
-备注：webpack 2.0 即将发布  
+备注：系列教程全面采用 webpack 2.2.1 +
 webpack 最基本的启动webpack命令  
 webpack -w 提供watch方法，实时进行打包更新  
 webpack -p 压缩混淆脚本，这个非常非常重要！  
@@ -67,7 +66,7 @@ webpack --colors 输出结果带彩色，比如：会用红色显示耗时较长
 webpack --profile 输出性能数据，可以看到每一步的耗时  
 webpack  --display-error-details 方便出错时能查阅更详尽的信息（比如 webpack 寻找模块的过程），从而更好定位到问题。  
 webpack --display-modules 默认情况下 node_modules 下的模块会被隐藏，加上这个参数可以显示这些被隐藏的模块  
-[webpack入门配置](https://segmentfault.com/a/1190000005089993)
+[Webpack2 升级指南和特性摘要](https://segmentfault.com/a/1190000008181955)
 
 ---
 
@@ -153,8 +152,13 @@ npm install --save-dev babel-preset-stage-3
 ---
 
 ####[redbox-react](https://github.com/KeywordBrain/redbox-react) [开发需要]  
-> 这个插件将会以一个非常优雅的方式（看demo演示）将你的错误呈现在页面上，这样就省去了查看console.log的麻烦；
+> 这个插件将会以一个非常优雅的方式（看demo演示）将你的错误呈现在页面上，这样就省去了查看console.log的麻烦；  
+安装：`npm install --save-dev redbox-react`  
+---
 
+####[webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) [开发需要]  
+> webpack-dashboard是用于改善开发人员使用webpack时控制台用户体验的一款工具。
+安装：`npm install --save-dev webpack-dashboard`  
 ---
 
 ####[html-webpack-plugin](https://npm.taobao.org/package/html-webpack-plugin) [小工具]  
