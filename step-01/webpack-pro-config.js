@@ -6,8 +6,9 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-var DashboardPlugin = require('webpack-dashboard/plugin');
+
 
 module.exports = {
   entry: {
@@ -23,17 +24,14 @@ module.exports = {
     publicPath: '',
     // 模板、样式、脚本、图片等资源对应的server上的路径
 
-    filename: 'bundle.js'
+    filename: "[name].[chunkhash].js",
     // 命名生成的JS
   },
   // https://webpack.js.org/configuration/output/
 	
 	module: {
 		rules: [
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-			}
+      {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'},
 		]
 	},
 	
@@ -56,6 +54,9 @@ module.exports = {
 	context: path.resolve(__dirname, "src"),
 	// 指定资源读取的根目录
 	// https://webpack.js.org/configuration/entry-context/#components/sidebar/sidebar.jsx
+
+  target: 'web',
+  // https://webpack.js.org/configuration/target/
 	
 	
 	plugins: [
@@ -65,6 +66,9 @@ module.exports = {
     // 而这个插件会让webpack在id分配上优化并保持一致性。
     // 具体是的优化是：webpack就能够比对id的使用频率和分布来得出最短的id分配给使用频率高的模块
 
+    new WebpackMd5Hash(),
+    // Hash the files using MD5 so that their names change when the content changes.
+
     new webpack.optimize.UglifyJsPlugin({
       // 压缩代码
       compressor: {
@@ -73,13 +77,17 @@ module.exports = {
       }
     }),
 
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      noInfo: true, // set to false to see a list of every file being bundled.
+    }),
+
     new webpack.DefinePlugin({
 			'process.env.NODE_ENV': '"production"',
     }),
     // 很多库的内部，有process.NODE_ENV的判断语句，
     // 改为production。最直观的就是没有所有的debug相关的东西，体积会减少很多
-
-		new DashboardPlugin(),
 
 		new webpack.optimize.CommonsChunkPlugin({
 			name: "vendor",
@@ -97,6 +105,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: '产品模式',
+
       filename:'index.html',
       // 文件名以及文件将要存放的位置
 
@@ -109,21 +118,25 @@ module.exports = {
       inject:'body',
       // js插入的位置，true/'head'  false/'body'
 
-      chunks: ['vendor', 'app' ],
+      chunks: ['vendor', 'app'],
       // 指定引入的chunk，根据entry的key配置，不配置就会引入所有页面的资源
 
-      hash:true,
-      // 这样每次客户端页面就会根据这个hash来判断页面是否有必要刷新
-      // 在项目后续过程中，经常需要做些改动更新什么的，一但有改动，客户端页面就会自动更新！
-
-      minify:{
-        // 压缩HTML文件
-        removeComments:true,
+      minify: {
+        removeComments: true,
         // 移除HTML中的注释
 
-        collapseWhitespace:false
+        collapseWhitespace: true,
         // 删除空白符与换行符
-      }
+
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      },
     })
   ],
 };
