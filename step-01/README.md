@@ -117,12 +117,10 @@ $ npm run build
 ---
 
 ####[babel-preset-stage-X](https://npm.taobao.org/package/babel-preset-stage-0) [必需]  
-> ES7不同阶段语法提案的转码规则（共有4个阶段），**选装一个**  
+> ES7不同阶段语法提案的转码规则（共有4个阶段），
 在进行实际开发时，可以根据需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。  
-npm install --save-dev babel-preset-stage-0  
-npm install --save-dev babel-preset-stage-1  
-npm install --save-dev babel-preset-stage-2  
-npm install --save-dev babel-preset-stage-3  
+`npm install --save-dev babel-preset-stage-0`  
+[官方 stage 相关文档](http://babeljs.io/docs/plugins/#presets-stage-x-experimental-presets-)  
 [stage-X详解](http://www.cnblogs.com/flyingzl/p/5501247.html)
 
 ---
