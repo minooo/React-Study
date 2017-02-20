@@ -100,24 +100,24 @@ $ npm run build
 ---
 
 #### [babel-plugin-transform-runtime](http://babeljs.io/docs/plugins/transform-runtime/#why) [开发需要]
-> 和上面的 `babel-runtime` 搭配使用
+> 和上面的 `babel-runtime` 搭配使用  
 安装：`npm install --save-dev babel-plugin-transform-runtime`
 
 ####[babel-preset-env](https://babeljs.io/docs/plugins/preset-env/#options) [必需]  
-> 一个基于你现有环境(默认支持 es2015 es2016 es2017)自动选择你需要的babel插件的babel预设方案。
+> 一个基于你现有环境(默认支持 es2015 es2016 es2017)自动选择你需要的babel插件的babel预设方案。  
 安装：`npm install --save-dev babel-preset-env`
 
 ---
 
 ####[babel-preset-react](https://github.com/babel/babel) [必需]  
 > react转码规则。为所有react插件所设置的babel预设。有了它，才能识别转译jsx语法等。  
-  并且附带“flow”类型检查。
+并且附带“flow”类型检查。  
 安装：`npm install --save-dev babel-preset-react`
 
 ---
 
 ####[babel-preset-stage-X](https://npm.taobao.org/package/babel-preset-stage-0) [必需]  
-> ES7不同阶段语法提案的转码规则（共有4个阶段），选装**一个**  
+> ES7不同阶段语法提案的转码规则（共有4个阶段），**选装一个**  
 在进行实际开发时，可以根据需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。  
 npm install --save-dev babel-preset-stage-0  
 npm install --save-dev babel-preset-stage-1  
@@ -129,13 +129,14 @@ npm install --save-dev babel-preset-stage-3
 
 ####[html-webpack-plugin](https://npm.taobao.org/package/html-webpack-plugin) [小工具]  
 > 一个服务于webpack打包资源的简易的HTML文件生成器,它可以动态生成HTML  
-之所以要动态生成，主要是希望webpack在完成前端资源打包以后，自动将打包后的资源路径和版本号写入HTML中，达到自动化的效果
+之所以要动态生成，主要是希望webpack在完成前端资源打包以后，自动将打包  
+后的资源路径和版本号写入HTML中，达到自动化的效果  
 安装：`npm install --save-dev html-webpack-plugin`  
 
 ---
 
 ####[rimraf](https://npm.taobao.org/package/rimraf) [小工具]
-> 一个基于node的深层删除工具（楼主曾经用window自带的删除命令删node_modules花了十分钟，用这个删十秒搞定！）  
+> 一个基于node的深层删除工具（楼主曾经用window自带的删除命令删 `node_modules` 花了十分钟，用这个删十秒搞定！）    
 安装：`npm install --save-dev rimraf`
 
 ---
