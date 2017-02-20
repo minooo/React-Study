@@ -1,6 +1,6 @@
 # step-01 目前已完成，你可以完整运行
 
-本模板综合运用了react+webpack+es2015。  
+本模板综合运用了 `react.js 15.4.2+` ，`webpack 2.2+` ，`es2015/2016/2017`。  
 本模板是以实际应用为目的，由基础配置向高级配置逐步递进。  
 这是React-Study的第一个版本，React版本为15.4.2，该版本完全满足你**单纯**学习React的需求  
 本模板有两种模式：  
@@ -10,7 +10,7 @@
 
 ## 核心摘要
 
-- [x] [Webpack](https://webpack.github.io)
+- [x] [Webpack](https://webpack.js.org/)
 - [x] [React](https://facebook.github.io/react/)
 - [x] [Babel](https://babeljs.io/)
 
