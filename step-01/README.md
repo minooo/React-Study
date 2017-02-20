@@ -64,7 +64,6 @@ $ npm run build
 ####[webpack-dev-server](https://github.com/webpack/webpack-dev-server) [开发需要]
 > 开启一个 webpack 服务器，并在文件修改后可自动刷新页面。  
 安装：`npm install --save-dev webpack-dev-server`  
-[Webpack2 升级指南和特性摘要](https://segmentfault.com/a/1190000008181955)
 
 ---
 
