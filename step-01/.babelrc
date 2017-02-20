@@ -5,7 +5,6 @@
     "stage-0"
   ],
   "plugins": [
-    "react-hot-loader/babel",
     ["transform-runtime", {
       "helpers": false,
       "polyfill": false,
