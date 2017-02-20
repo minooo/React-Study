@@ -53,11 +53,11 @@ $ npm run build
 
 ####[webpack 2.2+](https://webpack.js.org/) [必需]
 > Webpack 是一个针对 JavaScript 的打包工具. 然而,   
-随着 Webpack 日渐流行, 它逐渐演变成了前端代码的管理工具。  
-安装：`npm install --save-dev webpack`  
+随着 Webpack 日渐流行, 它逐渐演变成了前端代码的管理工具。   
 备注：系列教程全面采用 webpack 2.2.1 +  
 [Webpack2 升级指南和特性摘要](https://segmentfault.com/a/1190000008181955)  
-[webpack2 命令大全](https://webpack.js.org/api/cli/)
+[webpack2 命令大全](https://webpack.js.org/api/cli/)  
+安装：`npm install --save-dev webpack`
 
 ---
 
@@ -119,9 +119,9 @@ $ npm run build
 ####[babel-preset-stage-X](https://npm.taobao.org/package/babel-preset-stage-0) [必需]  
 > ES7不同阶段语法提案的转码规则（共有4个阶段），
 在进行实际开发时，可以根据需要来设置对应的stage。如果省事懒得折腾，一般设置为stage-0即可。  
-安装：`npm install --save-dev babel-preset-stage-0`  
 [官方 stage 相关文档](http://babeljs.io/docs/plugins/#presets-stage-x-experimental-presets-)  
-[stage-X详解](http://www.cnblogs.com/flyingzl/p/5501247.html)
+[stage-X详解](http://www.cnblogs.com/flyingzl/p/5501247.html)  
+安装：`npm install --save-dev babel-preset-stage-0`
 
 ---
 
@@ -134,7 +134,8 @@ $ npm run build
 ---
 
 ####[rimraf](https://npm.taobao.org/package/rimraf) [小工具]
-> 一个基于node的深层删除工具（楼主曾经用window自带的删除命令删 `node_modules` 花了十分钟，用这个删十秒搞定！）    
+> 一个基于node的深层删除工具（楼主曾经用window自带的删除命令删 `node_modules` 花了十分钟，  
+用这个删十秒搞定！）    
 安装：`npm install --save-dev rimraf`
 
 ---
