@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "start2": "webpack-dev-server --config webpack-dev-config.js --open",
     "clean": "rimraf dist",
-    "build:webpack": "webpack --config webpack-pro-config.js --progress --colors",
+    "build:webpack": "webpack --config webpack-pro-config.js --progress",
     "build": "npm run clean && npm run build:webpack"
   },
   "keywords": [
@@ -36,6 +37,7 @@
     "webpack": "^2.2.1",
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "^1.10.0",
+    "webpack-dev-server": "^2.4.1",
     "webpack-hot-middleware": "^2.17.0",
     "webpack-md5-hash": "^0.0.5"
   }

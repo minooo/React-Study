@@ -54,7 +54,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>hello, word</h1>
+        <h1>hello, word!!!</h1>
         <Lists />
         <Counter increment={100} myColor="red" />
       </div>
