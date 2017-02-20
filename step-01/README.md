@@ -65,6 +65,7 @@ $ npm run build
 > 开启一个 webpack 服务器，并在文件修改后可自动刷新页面。  
 安装：`npm install --save-dev webpack-dev-server`  
 [Webpack2 升级指南和特性摘要](https://segmentfault.com/a/1190000008181955)
+
 ---
 
 ####[babel-core](https://npm.taobao.org/package/babel-core) [必需]  
@@ -96,6 +97,8 @@ $ npm run build
 举例来说，ES6在Array对象上新增了Array.from方法。  
 [延伸阅读,强烈推荐](https://segmentfault.com/a/1190000006930013?utm_source=tuicool&utm_medium=referral)  
 安装：`npm install --save babel-runtime`
+
+---
 
 #### [babel-plugin-transform-runtime](http://babeljs.io/docs/plugins/transform-runtime/#why) [开发需要]
 > 和上面的 `babel-runtime` 搭配使用
