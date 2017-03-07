@@ -64,50 +64,9 @@ step-02 添加了 样式，字形，图片，等加载器配置。
 
 ---
 
-####[precss](https://npm.taobao.org/package/precss) [强烈推荐]
-> 这是PostCSS插件，允许你在CSS文件中使用sass那样的语法，比如变量啦，混合啦，条件语句啦  
-安装：`npm install precss --save-dev`
-
----
-
-####[postcss-scss](https://npm.taobao.org/package/postcss-scss) [推荐]
-> 这是PostCSS插件，允许你使用scss的语法写样式，其实这个在precss中已经实现，但是捏，在  
-css中写这些东西webstorm并不会报各种错误（虽然运行没问题），为了不看到那密密麻麻的红色标注错误  
-所以用了这个模式，你可以把你的样式文件后缀改为 `.scss` 了，当然你也可以不用，不影响的，就是难看。
-安装：`npm install postcss-scss --save-dev`
-
----
-
-####[rucksack-css](https://simplaio.github.io/rucksack/) [强烈推荐]
-> Rucksack 是一款有趣的CSS工具，让CSS的开发过程更加有趣了。  
-Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起来飞快。  
-由于它是基于PostCSS来构建的，所以它同其他的CSS处理工具都能很好的兼容  
-安装：`npm install rucksack-css --save-dev`  
-备注：安装到此，我们的css的已经可以进行各种风骚的写法了，具体写法请参考  
-[rucksack语法](https://simplaio.github.io/rucksack/)，[precss语法，类似于scss](https://github.com/jonathantneal/precss),[cssModules语法](https://css-modules.github.io/webpack-demo/)语法很简单，不难，别被吓倒了。  
-然而技术是激进的，很多IDE并没有缓过神儿来支持这些新兴的css语法，比如我的用webstorm（目前版本 2016.2）就不支持，  
-对这些新兴语法直接红色错误标注，但是插件运行良好，仅仅是有错误提示而已，希望后续版本能够支持这些语法，  
-如果你实在讨厌看到这些红色错误标注，我是说在webstorm中，你可以按 `Ctrl + Alt + Shift + H`,在弹出  
-的窗口中，在 Highlighting Level 选项中，将游标拉到最左侧，然后那些烦人的红色标注就消失了（其实就是忽略所有的错误。。）  
-这是我自己的方式，简单粗暴。当然也有国外网友的方法，你[可以看下](https://youtrack.jetbrains.com/issue/WEB-16601)
-
----
-
 ####[autoprefixer](https://npm.taobao.org/package/autoprefixer) [强烈推荐]
 > 解析CSS并添加浏览器前缀，添加规则遵循[Can I Use](http://caniuse.com/)  
 安装：`npm install autoprefixer --save-dev`
-
----
-
-####[classnames](https://github.com/JedWatson/classnames) [强烈推荐]
-> classnames 是一个简单的 JavaScript 工具包用来有条件的将不同的 classNames 联合在一起。  
-安装：`npm install react-css-modules --save-dev`
-
----
-
-####[json-loader](https://github.com/webpack/json-loader) [必需]
-> webpack用来解析json文件的加载器。  
-安装：`npm install json-loader --save-dev`
 
 ---
 
@@ -142,20 +101,14 @@ Rucksack 是基于PostCSS构建的，模块化设计，没有冗余，运行起�
 
 ---
 
-####[cross-env](https://npm.taobao.org/package/cross-env) [开发需要]
-> 即设置跨平台的环境变量运行命令  
-安装：`npm install cross-env --save-dev`
-
----
-
-####[babel-cli](http://www.ruanyifeng.com/blog/2016/01/babel.html) [开发需要]
-> 命令行转码  
+####[babel-cli](http://babeljs.io/docs/usage/cli/) [开发需要]
+> babel comes with a second CLI which works exactly the same as Node.js’s CLI, only it will compile ES6 code before running it.
 安装：`npm install babel-cli --save-dev`
 
 ---
 
 ####[npm-run-all](https://npm.taobao.org/package/npm-run-all) [开发需要]
-> 一个命令工具，可以并行运行多个 npm-scripts  
+> 一个命令工具，可以并行或者继发运行多个 npm-scripts  
 
 ```
 # 继发执行
