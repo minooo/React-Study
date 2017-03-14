@@ -13,14 +13,18 @@ module.exports = {
   // 关于选项的选择，http://cheng.logdown.com/posts/2016/03/25/679045
   // 具体请参考 https://webpack.js.org/configuration/devtool/#components/sidebar/sidebar.jsx
 
+  context: path.resolve(__dirname, "src"),
+  // 指定资源读取的根目录
+  // https://webpack.js.org/configuration/entry-context/#components/sidebar/sidebar.jsx
+
   target: 'web',
   // https://webpack.js.org/configuration/target/
 
   entry: [
-    './src/webpack-public-path',
+    'webpack-public-path',
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, 'src/index.js')
+    'index.js'
   ],
   // https://webpack.js.org/configuration/entry-context/
 
@@ -125,10 +129,10 @@ module.exports = {
       filename: 'index.html',
       // 文件名以及文件将要存放的位置
 
-      favicon: './src/favicon.ico',
+      favicon: 'favicon.ico',
       // favicon路径
 
-      template: './src/index.html',
+      template: 'index.html',
       // html模板的路径
 
       inject: 'body',
