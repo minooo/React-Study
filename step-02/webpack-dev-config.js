@@ -4,18 +4,14 @@
  * 注意。两种模式的配置有较大差异！！
  */
 
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
-export default {
+module.exports = {
   devtool: "cheap-module-eval-source-map",
   // 关于选项的选择，http://cheng.logdown.com/posts/2016/03/25/679045
   // 具体请参考 https://webpack.js.org/configuration/devtool/#components/sidebar/sidebar.jsx
-
-  context: path.resolve(__dirname, "src"),
-  // 指定资源读取的根目录
-  // https://webpack.js.org/configuration/entry-context/#components/sidebar/sidebar.jsx
 
   target: 'web',
   // https://webpack.js.org/configuration/target/
@@ -24,7 +20,7 @@ export default {
     './src/webpack-public-path',
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
-    "index.js"
+    path.resolve(__dirname, 'src/index.js')
   ],
   // https://webpack.js.org/configuration/entry-context/
 
@@ -61,11 +57,11 @@ export default {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true,
-              includePaths: path.resolve(__dirname,'src/styles')
+              sourceMap: true
             }
           }
-        ]
+        ],
+        include: path.resolve(__dirname, 'src/styles')
       },
 
       /*私有样式，模块化处理*/
@@ -85,11 +81,11 @@ export default {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true,
-              includePaths: path.resolve(__dirname,'src/js')
+              sourceMap: true
             }
           }
-        ]
+        ],
+        include: path.resolve(__dirname, 'src/js')
       }
     ]
   },
@@ -129,10 +125,10 @@ export default {
       filename: 'index.html',
       // 文件名以及文件将要存放的位置
 
-      favicon: 'favicon.ico',
+      favicon: './src/favicon.ico',
       // favicon路径
 
-      template: 'index.html',
+      template: './src/index.html',
       // html模板的路径
 
       inject: 'body',

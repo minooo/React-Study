@@ -2,12 +2,12 @@
 @import "../../../styles/app.scss";
 
 .addBtn {
-  @mixin btn 200px, 10px;
+  @include btn (200px, 10px);
   i {
     color: $main-color;
   }
   &:hover {
-    @mixin btn 200px, 10px, $white, $main-color, 14px, 4px, 1px solid $main-color;
+    @include btn (200px, 10px, $white, $main-color, 14px, 4px, 1px solid $main-color);
     i {
       color: $white;
     }
@@ -15,6 +15,6 @@
 }
 
 .item {
-  @mixin btn 400px, 15px, #fff, #9b9b9b, 14px, 0px, 1px solid #9b9b9b;
+  @include btn (400px, 15px, #fff, #9b9b9b, 14px, 0px, 1px solid #9b9b9b);
   margin-bottom: 5px;
 }
