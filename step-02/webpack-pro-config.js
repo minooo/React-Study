@@ -34,7 +34,7 @@ module.exports = {
     publicPath: '',
     // 模板、样式、脚本、图片等资源对应的server上的路径
 
-    filename: "[name].[chunkhash].js",
+    filename: "[name].[chunkhash:5].js",
     // 命名生成的JS
   },
   // https://webpack.js.org/configuration/output/
@@ -130,7 +130,7 @@ module.exports = {
       name: "vendor",
       // 指定入口文件(entry)哪个key需要提取，提取公用的，更新率低的部分。
 
-      filename: "vendor.js",
+      filename: "vendor.[chunkhash:8].js",
       // (Give the chunk a different name) 此项如果省略默认生成 vendor.js
 
       minChunks: Infinity,
