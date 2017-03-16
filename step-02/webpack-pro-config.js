@@ -34,7 +34,7 @@ module.exports = {
     publicPath: '',
     // 模板、样式、脚本、图片等资源对应的server上的路径
 
-    filename: "[name].[chunkhash:5].js",
+    filename: "bundle.js",
     // 命名生成的JS
   },
   // https://webpack.js.org/configuration/output/
@@ -130,7 +130,7 @@ module.exports = {
       name: "vendor",
       // 指定入口文件(entry)哪个key需要提取，提取公用的，更新率低的部分。
 
-      filename: "vendor.[chunkhash:8].js",
+      filename: "vendor.js",
       // (Give the chunk a different name) 此项如果省略默认生成 vendor.js
 
       minChunks: Infinity,
@@ -154,6 +154,10 @@ module.exports = {
 
       inject: 'body',
       // js插入的位置，true/'head'  false/'body'
+
+      hash:true,
+      // 这样每次客户端页面就会根据这个hash来判断页面是否有必要刷新
+      // 在项目后续过程中，经常需要做些改动更新什么的，一但有改动，客户端页面就会自动更新！
 
       minify: {
         removeComments: true,
