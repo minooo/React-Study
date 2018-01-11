@@ -3,7 +3,7 @@
 另外，`react.js` 是大名鼎鼎的 Facebook 一手打造维护，目前其在 github 上已有超过5万的 Star 量。  
 同时，react 社区也异常活跃，各种基于 React 的非常优秀的库和框架层出不穷，进而推动了 react 的流行和壮大，围绕 React 为核心的生态圈已悄然成型。
 ## 最新通知（2018/1/11）
-该项目旨在展示如何一步步搭建可以实战的脚手架，现在笔者推出2018最新版，可直接用于实际项目的移动端脚手架[React16 + next.js 4 + antd-mobile2 + redux 服务端渲染架构](https://github.com/minooo/react-ssr)，欢迎交流探讨。
+hello，everybody，自React-Study项目推出以来，多多少少帮助了不少入坑React的新人同学，自其上次更新已一年有余，然而并没有一个实际开发的项目演示，故今天推出一个 React16 + next.js 4 + antd-mobile2 + redux 的服务端渲染架构，其已经成功运用于公司的一个项目。[项目地址](https://github.com/minooo/react-ssr) ，欢迎与各位交流学习，2018，让我们进步更多！
 ## 版本维护日志
 - 精简了热重载[HMR]配置；
   修复了step-04 导航"复杂"上的示例在苹果手机上异常的问题。   
